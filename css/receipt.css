@@ -1,0 +1,53 @@
+.font-poppins {
+	font-family: 'Poppins', sans-serif;
+}
+
+.items-container-width {
+	max-width: 788px;
+}
+
+.textColor-1 {
+	color: #2c596b;
+}
+
+.textColor-2 {
+	color: #EC8C77;
+}
+
+.borderColor-1 {
+	border-color: #0000000d;
+}
+
+.borderColor-2 {
+	border-color: #e2e2e2;
+}
+
+.borderColor-3 {
+	border-color: #e5e5e5;
+}
+
+.bgColor-1 {
+	background-color: #f8f9fb;
+}
+
+.bgColor-2 {
+	background-color: #F0F3F9;
+}
+
+.bgColor-3 {
+	background-color: #ec8c77;
+}
+
+.product-content {
+	margin-top: 77px;
+}
+
+@media (max-width: 639px) {
+	.bgColor-1 {
+		background-color: #ffffff;
+	}
+
+	.product-content {
+		margin-top: 67px;
+	}
+}

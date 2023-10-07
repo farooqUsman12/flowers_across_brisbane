@@ -1,0 +1,74 @@
+.font-roboto {
+	font-family: 'Roboto', sans-serif;
+}
+
+.max-w-1360 {
+	max-width: 1360px;
+}
+.bg-dfefd7 {
+	background-color: #dfefd7;
+}
+
+.border-86c764 {
+	border-color: #86c764;
+}
+.send-btn button {
+	background-color: #ec8c77;
+}
+.text-558E37 {
+	color: #558E37;
+}
+
+.text-282752 {
+	color: 282752;
+}
+
+.text-353b41 {
+	color: #353b41;
+}
+
+.bg-f6f7f8 {
+	background-color: #f6f7f8;
+}
+
+.border-d9dee2 {
+	border-color: #d9dee3;
+}
+
+.bg-fff6f0 {
+	background-color: #fff6f0;
+}
+
+.border-ec8c77 {
+	border-color: #ec8c77;
+}
+.div-input a{
+	border: 2px solid #86C764;
+	color: #86C764;
+}
+.upload-text {
+	color: #353B41;
+}
+input[type="checkbox" i] {
+	accent-color: #ec8c77;
+}
+textarea {
+	outline: none;
+}
+.num-btn1 button{
+	
+}
+.num-btn1 button.selected , 
+.number-btn2 button.selected
+{
+    background: #353B41;
+	border: 1px solid #353B41;
+	color: white;
+	outline: none;
+}
+
+.choose-file {
+	border: 2px solid #86c764;
+	color: #86c764;
+	border-radius: 5px;
+}

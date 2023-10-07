@@ -1,0 +1,1086 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="images/logo-mobile.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/checkout.css">
+</head>
+    <body>
+        <div class="wrapper-overlay"></div>
+        <div id="myHeader" class="bg-white border-b border-solid borderColor-1 z-40">
+            <nav class="pg-container mx-auto px-6">
+                <div class="flex justify-between items-center py-2">
+                    <div class="md:hidden" id='open-button'>
+                        <img src="images/bars.png" alt="bars" />
+                    </div>
+                    <div class="sm:w-32 w-10 sm:ml-0 ml-12">
+                        <img class="sm:inline-block hidden" src="images/logo.png" alt="logo" />
+                        <img class="sm:hidden inline-block" src="images/logo-mobile.png" alt="logo">
+                    </div>
+                    <div class="md:hidden flex items-center">
+                        <span>
+                            <img src="images/telephone.png" class="inline mr-9" alt="telephone">
+                        </span>
+                        <span class="">
+                            <img src="images/message.png" alt="message">
+                        </span>
+                    </div>
+                    <div class="flex items-center md:inline-flex hidden font-poppins font-normal text-sm textColor-5">
+                        <a href="#" class="font-semibold ml-8">NEED HELP?</a>
+                        <p class="ml-8">
+                            <a href="#"><span><img src="images/telephone.png" class="inline mr-2" alt="telephone"></span> 888-442-5830
+                            </a>
+                        </p>
+                        <p class="ml-8"><a href="#">Text Us 888-975-1362</a></p>
+                        <p class="ml-8">
+                            <a href="#" class="flex">
+                                <span class="mr-2">
+                                    <img src="images/message.png" alt="message">
+                                </span> 
+                                Live chat
+                            </a>
+                        </p>    
+                    </div>
+                    <div id='menu' class="side-menu">
+                        <div class="main-menu pt-10">
+                            <nav class="nav-bar">
+                                <ul class="site-nav">
+                                    <li class="menu-item font-poppins">
+                                        <input id="home-new-mobile" type="checkbox" name="quick-links" class="hidden input-hidden" />
+                                        <label for="home-new-mobile" class="text-xs font-bold leading-5 sm:border-0 p-5 text-black border-2c596b uppercase block" onclick="homeArrow()">
+                                            <img src="images/home.png" alt="home" class="mr-4 inline-block" /> Home  
+                                            
+                                            <img src="images/right-arrow.png" alt="right arrow" class="inline-block float-right nav-arrow" id="home-arrow" />
+                                            
+                                        </label>
+                                        <ul class="list-none pl-4 sm:pl-0 mb-0 submenu max-h-0 sm:max-h-fit overflow-hidden">
+                                            <div class="dropdown-item pl-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                            <div class="dropdown-item pl-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                            <div class="dropdown-item pl-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                            <div class="dropdown-item pl-4">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item">
+
+                                        <input id="flower-new-mobile" type="checkbox" name="quick-links" class="hidden input-hidden" />
+                                        <label for="flower-new-mobile" class="text-xs font-bold leading-5 sm:border-0 p-5 text-black border-2c596b uppercase block" onclick="flowerArrow()">
+                                            <img src="images/flowers.png" alt="home" class="mr-4 inline-block" /> Flowers  
+                                            
+                                            <img src="images/right-arrow.png" alt="right arrow" class="inline-block float-right nav-arrow" id="flower-arrow" />
+                                            
+                                        </label>
+                                        <ul class="list-none pl-4 sm:pl-0 mb-0 submenu max-h-0 sm:max-h-fit overflow-hidden">
+                                            <div class="dropdown-item pl-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                            <div class="dropdown-item pl-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                            <div class="dropdown-item pl-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                            <div class="dropdown-item pl-4">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item">
+                                        <input id="plants-new-mobile" type="checkbox" name="quick-links" class="hidden input-hidden" />
+                                        <label for="plants-new-mobile" class="text-xs font-bold leading-5 sm:border-0 p-5 text-black border-2c596b uppercase block" onclick="plantArrow()">
+                                            <img src="images/nav-plants.png" alt="home" class="mr-4 inline-block" /> Plants  
+                                            
+                                            <img src="images/right-arrow.png" alt="right arrow" class="inline-block float-right nav-arrow" id="plant-arrow" />
+                                            
+                                        </label>
+                                        <ul class="list-none pl-4 sm:pl-0 mb-0 submenu max-h-0 sm:max-h-fit overflow-hidden">
+                                            <div class="dropdown-item pl-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                            <div class="dropdown-item pl-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                            <div class="dropdown-item pl-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                            <div class="dropdown-item pl-4">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                        </ul>
+                                    </li>
+
+                                    <li class="menu-item">
+                                        <input id="gifts-new-mobile" type="checkbox" name="quick-links" class="hidden input-hidden" />
+                                        <label for="gifts-new-mobile" class="text-xs font-bold leading-5 sm:border-0 p-5 text-black border-2c596b uppercase block" onclick="giftArrow()">
+                                            <img src="images/gifts-nav.png" alt="home" class="mr-4 inline-block" /> Gifts  
+                                            
+                                            <img src="images/right-arrow.png" alt="right arrow" class="inline-block float-right nav-arrow" id="gift-arrow" />
+                                            
+                                        </label>
+                                        <ul class="list-none pl-4 sm:pl-0 mb-0 submenu max-h-0 sm:max-h-fit overflow-hidden">
+                                            <div class="dropdown-item px-4 py-2 border-b border-solid border-slate-300">
+                                                <a href="#" class="flex items-center">
+                                                    <span class="header-top-bg w-5 h-5 text-white rounded-full inline-block text-center float-left">1</span>
+                                                    <span class="text-xs font-normal textColor-3 leading-5 ml-3">Order #1234 to Alexandria, ETA ,4:30pm</span>
+                                                </a>
+                                            </div>
+                                            <div class="dropdown-item px-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 textColor-2 block" href="#">View last order</a>
+                                            </div>
+                                            <div class="dropdown-item px-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 textColor-2 block" href="#">My Account</a>
+                                            </div>
+                                            <div class="dropdown-item px-4">
+                                                <a class="text-xs font-normal leading-8 textColor-2 block" href="#">Sign out</a>
+                                            </div>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>  
+                        </div>
+
+                        <button class='close-button'>
+                            <img src="images/close.png" alt="close" />
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div id="body-content" class="pg-container mx-auto px-6 w-full md:pt-14 font-poppins">
+            <div class="flex lg:flex-row flex-col justify-between md:pb-44 pb-12">
+                <div class="mx-w-400 w-full sm:block hidden pr-3">
+                    <h2 class="text-lg font-semibold leading-7 text-black mb-5">Item card</h2>
+                    <div class="border rounded cardBg card-border">
+                        <div class="flex justify-between items-center px-5 pt-5 mb-2.5">
+                            <p class="text-sm font-normal leading-5">Subtotal (2 items)</p>
+                            <p class="text-sm font-normal leading-5">$90.00</p>
+                        </div>
+                        <div class="flex justify-between items-center px-5 mb-2.5">
+                            <p class="text-sm font-normal leading-5">Delivery</p>
+                            <p class="text-sm font-normal leading-5">$8.00</p>
+                        </div>
+                        <hr class="card-border">
+                        <div class="flex justify-between items-center py-4 px-5">
+                            <p class="text-sm font-normal leading-5">Total</p>
+                            <p class="text-sm font-bold leading-5 textColor-3">$98.00</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center mt-10 mb-5">
+                        <h2 class="text-lg font-semibold leading-7 text-black">Items in your bag (2)</h2>
+                        <p>
+                            <a href="#" class="fs-13 font-normal leading-5 textColor-3">Edit</a>
+                        </p>
+                    </div>
+                    <div class=" pl-5 border card-border pb-4">
+                        <div class="flex justify-between pt-3.5 pb-5">
+                            <div class="w-28 sm:h-28">
+                                <img class="w-full" src="images/Asplenium.png" alt="plants" />
+                            </div>
+                            <div class="ml-10">
+                                <p class="text-sm font-semibold leading-5 text-black w-44 pt-2">Asplenium 2 lines title can go here</p>
+                                <div class="pr-5">
+                                    <div class="mt-2.5">
+                                        <div class="flex justify-between mb-3">
+                                            <p class="flex items-center">Color:<span class="w-4 h-4 rounded-full inline-block ml-2 productColor1"></span>
+                                                <span class="w-4 h-4 ml-5 inline-block">
+                                                    <img src="images/standard.png" />
+                                                </span>
+                                            </p>
+                                            <p class="text-sm font-bold leading-5 sm:pl-9">$49.00</p>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <p>Qty:1</p>
+                                            <p class="flex items-center">
+                                                <a href="#" class="fs-13 font-normal leading-5 textColor-3">Delete</a>
+                                                <a href="#" class="fs-13 font-normal leading-5 textColor-3 pl-5">Edit</a>
+                                                <span class="pl-3"><img src="images/right-arrow.svg" /></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="card-border">
+                        <div class="flex justify-between pt-3.5 pb-5">
+                            <div class="w-28 sm:h-28">
+                                <img class="w-full" src="images/Asplenium.png" alt="plants" />
+                            </div>
+                            <div class="ml-10">
+                                <p class="text-sm font-semibold leading-5 text-black w-44 pt-2">Asplenium 2 lines title can go here</p>
+                                <div class="pr-5">
+                                    <div class="mt-2.5">
+                                        <div class="flex justify-between mb-3">
+                                            <p class="flex items-center">Color:<span class="w-4 h-4 rounded-full inline-block ml-2 productColor1"></span>
+                                                <span class="w-4 h-4 ml-5 inline-block">
+                                                    <img src="images/standard.png" />
+                                                </span>
+                                            </p>
+                                            <p class="text-sm font-bold leading-5 sm:pl-9">$49.00</p>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <p>Qty:1</p>
+                                            <p class="flex items-center">
+                                                <a href="#" class="fs-13 font-normal leading-5 textColor-3">Delete</a>
+                                                <a href="#" class="fs-13 font-normal leading-5 textColor-3 pl-5">Edit</a>
+                                                <span class="pl-3"><img src="images/right-arrow.svg" /></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="card-border">
+                        <div class="flex justify-between items-center pt-3.5">
+                            <div class="w-28 sm:h-28">
+                                <img class="w-full" src="images/Asplenium.png" alt="plants" />
+                            </div>
+                            <div class="ml-10">
+                                <p class="text-sm font-semibold leading-5 text-black w-44">Asplenium 2 lines title can go here</p>
+                                <div class="pr-5">
+                                    <div class="mt-2.5">
+                                        <div class="flex justify-between mb-3">
+                                            <p class="flex items-center">Color:<span class="w-4 h-4 rounded-full inline-block ml-2 productColor1"></span>
+                                                <span class="w-4 h-4 ml-5 inline-block">
+                                                    <img src="images/standard.png" />
+                                                </span>
+                                            </p>
+                                            <p class="text-sm font-bold leading-5 sm:pl-9">$49.00</p>
+                                        </div>
+                                        <div class="flex justify-end">
+                                            <p class="flex items-center">
+                                                <a href="#" class="fs-13 font-normal leading-5 textColor-3">Delete</a>
+                                                <a href="#" class="fs-13 font-normal leading-5 textColor-3 pl-5">Edit</a>
+                                                <span class="pl-3"><img src="images/right-arrow.svg" /></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:max-w-3xl max-w-full w-full lg:px-1">
+                    <div>
+                        <h1 class="text-4xl font-semibold sm:mb-7 mb-5 lg:mt-0 mt-7">Checkout</h1>
+                        <div class="sm:hidden flex justify-between items-center border-b card-border pb-4 mb-6">
+                            <div>
+                                <h4 class="text-sm font-bold leading-5 mb-2">In your bag (3 Items)</h4>
+                                <p class="text-sm font-normal leading-5">Total Delivery inclueded: <span class="textColor-3 font-bold">$98.00</span></p>
+                            </div>
+                            <p class="absolute right-6 checkoutCollaps cursor-pointer"><a class="fs-13 font-normal leading-5 textColor-3 " href="#/">View & Edit</a>
+                                <div class="w-full absolute top-56 left-0 px-6 bg-white z-10 collaps-content">
+                                    <h2 class="text-lg font-semibold leading-7 text-black mb-5">Item card</h2>
+                                    <div class="border rounded cardBg card-border">
+                                        <div class="flex justify-between items-center px-5 pt-5 mb-2.5">
+                                            <p class="text-sm font-normal leading-5">Subtotal (2 items)</p>
+                                            <p class="text-sm font-normal leading-5">$90.00</p>
+                                        </div>
+                                        <div class="flex justify-between items-center px-5 mb-2.5">
+                                            <p class="text-sm font-normal leading-5">Delivery</p>
+                                            <p class="text-sm font-normal leading-5">$8.00</p>
+                                        </div>
+                                        <hr class="card-border">
+                                        <div class="flex justify-between items-center py-4 px-5">
+                                            <p class="text-sm font-normal leading-5">Total</p>
+                                            <p class="text-sm font-bold leading-5 textColor-3">$98.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-between items-center mt-10 mb-5">
+                                        <h2 class="text-lg font-semibold leading-7 text-black">Items in your bag (2)</h2>
+                                        <p>
+                                            <a href="#" class="fs-13 font-normal leading-5 textColor-3">Edit</a>
+                                        </p>
+                                    </div>
+                                    <div class=" pl-5 border card-border pb-4">
+                                        <div class="flex justify-between pt-3.5 pb-5">
+                                            <div class="w-28 sm:h-28">
+                                                <img class="w-full" src="images/Asplenium.png" alt="plants" />
+                                            </div>
+                                            <div class="ml-10">
+                                                <p class="text-sm font-semibold leading-5 text-black w-44 pt-2">Asplenium 2 lines title can go here</p>
+                                                <div class="pr-5">
+                                                    <div class="mt-2.5">
+                                                        <div class="flex justify-between mb-3">
+                                                            <p class="flex items-center">Color:<span class="w-4 h-4 rounded-full inline-block ml-2 productColor1"></span>
+                                                                <span class="w-4 h-4 ml-5 inline-block">
+                                                                    <img src="images/standard.png" />
+                                                                </span>
+                                                            </p>
+                                                            <p class="text-sm font-bold leading-5 sm:pl-9">$49.00</p>
+                                                        </div>
+                                                        <div class="flex justify-between">
+                                                            <p>Qty:1</p>
+                                                            <p class="flex items-center">
+                                                                <a href="#" class="fs-13 font-normal leading-5 textColor-3">Delete</a>
+                                                                <a href="#" class="fs-13 font-normal leading-5 textColor-3 pl-5">Edit</a>
+                                                                <span class="pl-3"><img src="images/right-arrow.svg" /></span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr class="card-border">
+                                        <div class="flex justify-between pt-3.5 pb-5">
+                                            <div class="w-28 sm:h-28">
+                                                <img class="w-full" src="images/Asplenium.png" alt="plants" />
+                                            </div>
+                                            <div class="ml-10">
+                                                <p class="text-sm font-semibold leading-5 text-black w-44 pt-2">Asplenium 2 lines title can go here</p>
+                                                <div class="pr-5">
+                                                    <div class="mt-2.5">
+                                                        <div class="flex justify-between mb-3">
+                                                            <p class="flex items-center">Color:<span class="w-4 h-4 rounded-full inline-block ml-2 productColor1"></span>
+                                                                <span class="w-4 h-4 ml-5 inline-block">
+                                                                    <img src="images/standard.png" />
+                                                                </span>
+                                                            </p>
+                                                            <p class="text-sm font-bold leading-5 sm:pl-9">$49.00</p>
+                                                        </div>
+                                                        <div class="flex justify-between">
+                                                            <p>Qty:1</p>
+                                                            <p class="flex items-center">
+                                                                <a href="#" class="fs-13 font-normal leading-5 textColor-3">Delete</a>
+                                                                <a href="#" class="fs-13 font-normal leading-5 textColor-3 pl-5">Edit</a>
+                                                                <span class="pl-3"><img src="images/right-arrow.svg" /></span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr class="card-border">
+                                        <div class="flex justify-between items-center pt-3.5">
+                                            <div class="w-28 sm:h-28">
+                                                <img class="w-full" src="images/Asplenium.png" alt="plants" />
+                                            </div>
+                                            <div class="ml-10">
+                                                <p class="text-sm font-semibold leading-5 text-black w-44">Asplenium 2 lines title can go here</p>
+                                                <div class="pr-5">
+                                                    <div class="mt-2.5">
+                                                        <div class="flex justify-between mb-3">
+                                                            <p class="flex items-center">Color:<span class="w-4 h-4 rounded-full inline-block ml-2 productColor1"></span>
+                                                                <span class="w-4 h-4 ml-5 inline-block">
+                                                                    <img src="images/standard.png" />
+                                                                </span>
+                                                            </p>
+                                                            <p class="text-sm font-bold leading-5 sm:pl-9">$49.00</p>
+                                                        </div>
+                                                        <div class="flex justify-end">
+                                                            <p class="flex items-center">
+                                                                <a href="#" class="fs-13 font-normal leading-5 textColor-3">Delete</a>
+                                                                <a href="#" class="fs-13 font-normal leading-5 textColor-3 pl-5">Edit</a>
+                                                                <span class="pl-3"><img src="images/right-arrow.svg" /></span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </p>
+                        </div>
+                        <h2 class="text-lg font-semibold leading-7 text-black mb-5">Add Some Special Extras</h2>
+                        <div class="sm:border card-border rounded sm:px-4 sm:pt-5 sm:pb-2.5">
+                            <div class="overflow-x-auto">
+                                <div class="flex justify-between items-center mx-auto checkitemCard">
+                                    <div class="w-119 text-center">
+                                        <div class="w-24 w-24 mx-auto">
+                                            <img src="images/dark_teddy.png" alt="dark_teddy" />
+                                        </div>
+                                        <p class="text-xs font-semibold leading-5 h-10 text-black mt-2.5">Teddy Bears</p>
+                                    </div>
+                                    <div class="w-119 text-center">
+                                        <div class="w-24 w-24 mx-auto">
+                                            <img src="images/dark_teddy.png" alt="dark_teddy" />
+                                        </div>
+                                        <p class="text-xs font-semibold leading-5 h-10 text-black mt-2.5">Teddy Bears</p>
+                                    </div>
+                                    <div class="w-119 text-center">
+                                        <div class="w-24 w-24 mx-auto">
+                                            <img src="images/dark_teddy.png" alt="dark_teddy" />
+                                        </div>
+                                        <p class="text-xs font-semibold leading-5 h-10 text-black mt-2.5">Teddy Bears</p>
+                                    </div>
+                                    <div class="w-119 text-center">
+                                        <div class="w-24 w-24 mx-auto">
+                                            <img src="images/dark_teddy.png" alt="dark_teddy" />
+                                        </div>
+                                        <p class="text-xs font-semibold leading-5 h-10 text-black mt-2.5">Teddy Bears</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border card-border rounded sm:mt-7 mt-6">
+                            <div class="flex justify-between items-center py-3 sm:px-5 pl-5 pr-4 cardHeader">
+                                <h4 class="text-sm font-semibold leading-5"><span class="pr-1">1.</span>Confirm Delivery Options<span class="w-4 h-4 ml-3 inline-flex justify-center items-center text-white text-xs rounded-full relative inline-block checkoutTooltip buttonBg mobTooltip">i
+                                    <span class="text-xs font-normal bg-black w-52 text-white text-center rounded-md py-1 px-2 absolute -top-28 bottom-8 left-4 z-10 -ml-28 -mt-3 checkoutTooltext mobTooltext">Standard Deliveries to business addresses will arrive by 5pm. Deliveries to residential addresses will arrive by 7pm. Express Deliveries will arrive at the destination by 12PM midday.</span></span></h4>
+                                <p>
+                                    <a href="#" class="fs-13 font-normal leading-5 textColor-3">Edit</a>
+                                </p>
+                            </div>
+                            <div class="p-5">
+                                <div class="sm:col-span-3">
+                                    <label for="country" class="block text-xs font-normal text-black">
+                                     Delivery date:
+                                    </label>
+                                    <div class="border mt-2.5 py-3 px-5 rounded card-border">
+                                        <select id="date" name="date" autocomplete="date" class="text-xs font-normal text-black w-full">
+                                            <option>January 4, Tuesday</option>
+                                            <option>Canada</option>
+                                            <option>Mexico</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="sm:px-5 pl-5 pt-3 pb-1.5 mt-3 rounded flex md:items-center itmes-start idea">
+                                    <div class="w-1/12">
+                                        <p class="w-6 h-6 flex justify-center items-center text-white text-xl rounded-full ideatooltip">i</p>
+                                    </div>
+                                    <p class="textColor-6 w-11/12 font-normal text-xs leading-5 sm:pl-0 pl-4">Flowers will arrive to <strong>Alphington</strong> on <strong>Nov 28, Sunday 2021</strong> before <strong>5pm to businesses</strong> and before <strong>7pm to residential</strong> adresses.</p>
+                                </div>
+                                <form>
+                                    <p class="text-xs font-normal leading-5 sm:hidden mt-2.5">Delivery time:</p>
+                                    <div class="flex sm:flex-row flex-col justify-between sm:mt-5 mt-2.5">
+                                        <div class="sm:w-6/12 w-full sm:pr-3.5">
+                                            <label class="w-full border card-border rounded block md:px-5 pl-5 pr-3 py-3">
+                                                <input type="radio" name="radio" checked/>
+                                                <span class="text-xs font-normal leading-5 ml-2"><strong>Standard</strong> Between 9am and 7pm</span>
+                                            </label>
+                                        </div>
+                                        <div class="sm:w-6/12 w-full sm:pl-3.5 sm:mt-0 mt-4">
+                                            <label class="w-full border card-border rounded block md:px-5 pl-5 pr-3 py-3">
+                                                <input type="radio" name="radio"/>
+                                                <span class="text-xs font-normal leading-5 ml-2"><strong>Express</strong> Before noon (+ $5)</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="border card-border rounded mt-5">
+                            <div class="flex justify-between items-center py-3 px-5 cardHeader">
+                                <h4 class="text-sm font-semibold leading-5"><span class="pr-1">2.</span>Deliver To<span class="w-4 h-4 ml-3 inline-flex justify-center items-center text-white text-xs relative inline-block checkoutTooltip rounded-full buttonBg">i
+                                <span class="text-xs font-normal bg-black w-52 text-white text-center rounded-md py-1 px-2 absolute -top-28 bottom-8 left-4 z-10 -ml-28 -mt-3 checkoutTooltext">Please be as specific as possible to ensure prompt delivery. If re-delivery is required due to incorrect details we will need to charge a re-delivery fee.</span></span></h4>
+                                <p>
+                                    <a href="#" class="fs-13 font-normal leading-5 textColor-3">Edit</a>
+                                </p>
+                            </div>
+                            <div class="pt-5 pb-2.5 px-5">
+                                <form>
+                                    <div class="flex sm:flex-row flex-col justify-between">
+                                        <div class="sm:w-6/12 w-full pr-3.5">
+                                            <label for="country" class="block text-xs mb-2.5 font-normal text-black">
+                                             Recipient's full name<sup class="text-xs textColor-3 relative top-0 left-1">*</sup>
+                                            </label>
+                                            <input type="text" name="fname" class="block w-full px-5 py-3 rounded border card-border" />
+                                        </div>
+                                        <div class="sm:w-6/12 w-full sm:pl-3.5">
+                                            <div class="text-xs font-normal cursor-pointer flex flex-row-reverse justify-end leading-5 sm:pt-5 mt-4 textColor-3 checkoutCollaps">
+                                                <span class="ml-2">Add Recipients Phone Number (optional)</span>
+                                            </div>
+                                            <div class="collaps-content mt-5">
+                                                <label for="country" class="block text-xs mb-2.5 font-normal text-black">
+                                                 Recipient's phone (optional)</label>
+                                                <input type="text" name="fname" class="block w-full px-5 py-3 rounded border card-border">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sm:mt-5 mt-5">
+                                        <label for="country" class="block text-xs mb-2.5 font-normal text-black">
+                                         Message to recipient (optional)<span class="w-4 h-4 ml-3 inline-flex justify-center items-center text-white text-xs relative inline-block checkoutTooltip rounded-full buttonBg">i
+                                        <span class="text-xs font-normal bg-black w-44 text-white text-center rounded-md py-1 px-2 absolute -top-12 bottom-8 left-8 z-10 -ml-28 -mt-3 checkoutTooltext messageTooltip">Type your message here in detail...</span></span>
+                                        </label>
+                                        <textarea class="rounded border w-full card-border py-2.5 px-5" rows="4"></textarea>
+                                        <p class="text-xs font-normal leading-5 text-right -mt-2 textarea-bottom">245 <span class="sm:inline-block hidden">Left</span><span class="sm:hidden">/345</span></p>
+                                    </div>
+                                    <div class="mt-2.5">
+                                        <label for="country" class="block text-xs mb-2.5 font-normal text-black">
+                                         Company name (optional)</label>
+                                        <input type="text" name="fname" class="block w-full px-5 py-3 rounded border card-border" />
+                                    </div>
+                                    <div class="mt-5">
+                                        <label for="country" class="block text-xs mb-2.5 font-normal text-black">
+                                         Recipient address<sup class="text-xs textColor-3 relative top-0 left-1">*</sup>
+                                        </label>
+                                        <input type="text" name="fname" class="block w-full px-5 py-3 rounded border border-alert" />
+                                        <p class="text-xs font-normal leading-5 mt-2 text-alert">Please enter the street address you wish to have flowes sent to</p>
+                                    </div>
+                                    <div class="sm:col-span-3 sm:mt-6 mt-3">
+                                        <label for="country" class="block text-xs font-normal text-black">
+                                         Suburb<sup class="text-xs textColor-3 relative top-0 left-1">*</sup>
+                                        </label>
+                                        <div class="border mt-2.5 py-3 px-5 rounded card-border">
+                                            <select id="date" name="date" autocomplete="date" class="text-xs font-normal text-black w-full">
+                                                <option>Aberfeldie, 3040 - $11.90</option>
+                                                <option>Canada</option>
+                                                <option>Mexico</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="mt-5">
+                                        <label for="country" class="block text-xs mb-2.5 font-normal text-black">
+                                         Any special delivery instructions? (optional)
+                                        </label>
+                                        <textarea class="rounded border w-full card-border py-3 px-5" rows="3"></textarea>
+                                        <p class="text-xs font-normal leading-5 text-right -mt-2 textarea-bottom">245 <span class="sm:inline-block hidden">Left</span><span class="sm:hidden">/345</span></p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="border card-border rounded mt-7">
+                            <div class="flex justify-between items-center py-3 px-5 cardHeader">
+                                <h4 class="text-sm font-semibold leading-5"><span class="pr-1">3.</span>Billing Details<span class="w-4 h-4 ml-3 inline-flex justify-center items-center text-white relative inline-block checkoutTooltip text-xs rounded-full buttonBg">i<span class="text-xs font-normal bg-black w-56 text-white text-center rounded-md py-1 px-2 absolute -top-40 bottom-8 left-2 z-10 -ml-28 -mt-3 checkoutTooltext">Please enter the senders details. We use this info in case we need to get in touch with you about any delivery issues. The recipient does not receive these details, so if you would like the recipient to know who this gift is from, please include the senders details in the message field above.</span></span></h4>
+                                <p>
+                                    <a href="#" class="fs-13 font-normal leading-5 textColor-3">Edit</a>
+                                </p>
+                            </div>
+                            <div class="p-5">
+                                <form>
+                                    <div class="">
+                                        <label for="country" class="block text-xs mb-2.5 font-normal text-black">
+                                         Senders name<sup class="text-xs textColor-3 relative top-0 left-1">*</sup>
+                                        </label>
+                                        <input type="text" name="fname" class="block w-full px-5 py-3 rounded border card-border" />
+                                    </div>
+                                    <div class="mt-5">
+                                        <label for="country" class="block text-xs mb-2.5 font-normal text-black">
+                                         Phone<sup class="text-xs textColor-3 relative top-0 left-1">*</sup>
+                                        </label>
+                                        <input type="number" name="phone" class="block w-full px-5 py-3 rounded border card-border" />
+                                    </div>
+                                    <div class="mt-5">
+                                        <label for="country" class="block text-xs mb-2.5 font-normal text-black">
+                                         Email<sup class="text-xs textColor-3 relative top-0 left-1">*</sup>
+                                        </label>
+                                        <input type="email" name="email" class="block w-full px-5 py-3 rounded border card-border" />
+                                    </div>
+                                    <div class="mt-5">
+                                        <!-- <label>
+                                            <input type="checkbox" id="checkbox-1-1" class="regular-checkbox" /><label class="-mb-0.5" for="checkbox-1-1"></label>
+                                            <span class="text-xs font-normal leading-5 ml-3">Subscribe for news and special offers</span>
+                                        </label> -->
+                                        <!-- <label class="custom-checkbox">
+                                           <input type="checkbox" value="checkbox1">
+                                           <span class="text-xs font-normal leading-5 ml-6">Subscribe for news and special offers</span>
+                                        </label> -->
+                                        <label class="checkbox-label">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span class="text-xs font-normal leading-5 ml-9">Subscribe for news and special offers</span>
+                                        </label>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="border card-border rounded mt-7">
+                            <div class="flex justify-between items-center py-3 px-5 cardHeader">
+                                <h4 class="text-sm font-semibold leading-5"><span class="pr-1">4.</span>Payment Details<span class="w-4 h-4 ml-3 inline-flex justify-center items-center text-white text-xs rounded-full relative inline-block checkoutTooltip buttonBg">i<span class="text-xs font-normal bg-black w-52 text-white text-center rounded-md py-1 px-2 absolute -top-10 bottom-6 left-4 z-10 -ml-28 -mt-3 checkoutTooltext">Choose to pay with Credit Card, Paypal, Afterpay or Zip.</span></span></h4>
+                            </div>
+                            
+                            <div class="pb-0">
+                                <form>
+                                    <div id="accordion">
+                                        <ul>
+                                            <li>
+                                                <a href="#/one" class="current">
+                                                    <div class="flex justify-between sm:flex-row flex-col items-center mt-5 px-5 selector-heading-left">
+                                                        <div class="sm:w-6/12 w-full pr-3.5 flex items-end">
+                                                            <span class="selector-radio"></span>
+                                                            <img alt="" class="selector-logo ml-4" src="images/credit-card.png" alt="credit-card" /> 
+                                                            <span class="selector-title ml-5 text-xs pl-4">Credit Card</span>
+
+                                                            <!-- <input type="radio" name="radio" checked name="payment-method" />
+                                                            <span class="ml-4"><img src="images/credit-card.png" alt="credit-card" /></span>
+                                                            <label class="ml-5">Credit Card
+                                                            </label> -->
+                                                        </div>
+                                                        <div class="sm:w-6/12 w-full pr-3.5 sm:mt-0 mt-5 flex sm:justify-end items-center">
+                                                            <span><img src="images/checkout-visa.png"></span>
+                                                            <span class="ml-1.5"><img src="images/checkout-master.png"></span>
+                                                            <span class="ml-1.5"><img src="images/checkout-americanexpress.png"></span>
+                                                            <span class="ml-1.5"><img src="images/checkout-image49.png"></span>
+                                                            <span class="ml-1.5"><img src="images/checkout-discover.png"></span>
+                                                            <span class="ml-1.5"><img src="images/checkout-jcb.png"></span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <div id="one" class="accordion">
+                                                    <div class="mt-7 px-5">
+                                                        <label for="country" class="block text-xs mb-2.5 font-normal text-black">
+                                                         Card number
+                                                        </label>
+                                                        <input type="number" name="card-number" class="block w-full px-5 py-3 rounded border card-border" />
+                                                    </div>
+                                                    <div class="flex justify-between items-center px-5 flex-wrap">
+                                                        <div>
+                                                            <div class="flex flex-wrap">
+                                                                <div class="flex items-end">
+                                                                    <div class="lg:w-44 w-4/12 mt-5">
+                                                                        <label for="country" class="block text-xs font-normal text-black mb-2.5">
+                                                                            Expiration date
+                                                                        </label>
+                                                                        <select id="date" name="month" autocomplete="date" class="text-xs font-normal text-black w-full border py-4 px-4 rounded card-border">
+                                                                            <option>MM</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="lg:w-44 w-4/12 sm:ml-3.5 ml-1.5 mt-5">
+                                                                        <select id="date" name="year" autocomplete="date" class="text-xs font-normal text-black w-full border mt-2.5 py-4 px-4 rounded card-border">
+                                                                            <option>YY</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="lg:w-44 w-4/12 sm:ml-4 ml-1.5 mt-5 ">
+                                                                        <label for="country" class="block text-xs font-normal text-black">
+                                                                            CVC/CVV
+                                                                        </label>
+                                                                        <input type="text" class="text-xs font-normal text-black w-full border mt-2.5 py-4 px-4 rounded card-border"
+                                                                        />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="xl:pl-4">
+                                                            <div class="flex items-center">
+                                                                <div class="flex pt-6">
+                                                                   <span><img src="images/cvv.png" alt="card-cvv" /></span>
+                                                                   <a href="#" class="fs-10 font-normal leading-4 underline pl-2">What's a CVV?</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sm:w-96 ml-auto mt-7 sm:pl-11 pr-5">
+                                                        <button class="text-base font-bold leading-6 text-white flex justify-center rounded buttonBg py-3.5 sm:px-8 px-7 w-full mx-w-327">
+                                                        <span class="mr-8"><img src="images/lock.png" alt="lock" /></span>
+                                                            Pay Now
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="#/two">
+                                                    <div class="flex items-end border-t card-border mt-5 px-5 py-6 selector-heading-left">
+                                                        <span class="selector-radio"></span>
+                                                        <img alt="" class="selector-logo ml-4" src="images/checkout-paypal.png" alt="paypal" />
+                                                        <span class="selector-title text-xs ml-6">Paypal</span>
+                                                    </div>
+                                                </a>
+                                                <div id="two" class="accordion">
+                                                    <div class="p-4 bg-gray-100">
+                                                        <div class="w-40 pr-1">
+                                                            <button class="text-base font-bold leading-7 text-white w-full py-3 rounded buttonBg">Pay Now</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>    
+
+                                            <li>
+                                                <a href="#/three">
+                                                    <div class="flex items-end border-t card-border px-5 py-6 selector-heading-left">
+                                                        <span class="selector-radio"></span>
+                                                        <img alt="" class="selector-logo ml-4" src="images/checkout-afterpay.png" alt="afterpay" />
+                                                        <span class="selector-title text-xs ml-3">Afterpay</span>
+                                                    </div>
+                                                </a>
+                                                <div id="three" class="accordion">
+                                                    <div class="p-4 bg-gray-100">
+                                                        <div class="w-40 pr-1">
+                                                            <button class="text-base font-bold leading-7 text-white w-full py-3 rounded buttonBg">Pay Now</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>    
+                                            <li>
+                                                <a href="#/four">
+                                                    <div class="flex items-end border-t card-border px-5 py-6 selector-heading-left">
+                                                        <span class="selector-radio"></span>
+                                                        <img alt="" class="selector-logo ml-4" src="images/checkout-zip.png" alt="zip" />
+                                                        <span class="selector-title text-xs ml-11">ZipPay</span>
+                                                    </div>
+                                                </a>
+                                                <div id="four" class="accordion">
+                                                    <div class="p-4 bg-gray-100">
+                                                        <div class="w-40 pr-1">
+                                                            <button class="text-base font-bold leading-7 text-white w-full py-3 rounded buttonBg">Pay Now</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>    
+                                        </ul>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Section Starts -->
+            <footer class="font-poppins">
+                <div class="pg-container mx-auto w-full pt-6 sm:pb-16 pb-12 px-6">
+                    <div class="flex flex-wrap lg:justify-between justify-start">
+                        <div class="sm:w-72 w-full sm:mr-4 sm:mb-4 mb-12">
+                            <div class="footer_create-bg flex justify-end items-end px-4 py-3">
+                                <button class="buttonBg text-white w-36 h-8 rounded text-xs font-semibold leading-8">Create a Bouquet</button>
+                            </div>
+                            <p class="text-sm font-normal leading-5 textColor-4 mt-6">Need flowers sent to Sydney?</p>
+                            <p><a class="text-sm font-normal leading-5 textColor-3" href="#">www.flowersacrosssydney.com.au</a></p>
+
+                            <p class="text-sm font-normal leading-5 textColor-4 mt-4">Send dried flowers throughout Australia</p>
+                            <p><a class="text-sm font-normal leading-5 textColor-3" href="#">flowersacrossaustralia.com.au</a></p>
+                        </div>
+                        <div class="sm:w-40 w-full sm:mb-4 mb-5 font-poppins">
+                            <h3 class="text-xs font-bold leading-5 flex justify-between items-center sm:border-0 border-b sm:pb-0 pb-5 sm:px-0 px-5 textColor-4 border-2c596b hidden sm:inline-block">Quick Links
+                                <span class="sm:hidden">
+                                    <img src="images/footer-dropdown.png" />
+                                </span>
+                            </h3>
+
+                            <input id="quick-links" type="checkbox" name="quick-links" class="hidden input-hidden" />
+                            <label for="quick-links" class="text-xs font-bold leading-5 flex justify-between items-center sm:border-0 border-b sm:pb-0 pb-4 sm:px-0 px-4 textColor-4 border-2c596b sm:hidden" onclick="quickLinks()">Quick Links 
+                                <span class="sm:hidden">
+                                    <img src="images/footer-dropdown.png" alt="dropdown" class="footer-arrow" id="quickLinks" />
+                                </span>
+                            </label>
+                            <ul class="list-none pl-4 sm:pl-0 pt-2 mb-0 submenu max-h-0 sm:max-h-fit overflow-hidden sm:overflow-visible">
+                                <li>
+                                    <a class="text-xs font-normal leading-7 textColor-4" href="#">Home</a>
+                                </li>
+                                <li>
+                                    <a class="text-xs font-normal leading-7 textColor-4" href="#">FAQ</a>
+                                </li>
+                                <li>
+                                    <a class="text-xs font-normal leading-7 textColor-4" href="#">Create-A-Bouquet</a>
+                                </li>
+                                <li>
+                                    <a class="text-xs font-normal leading-7 textColor-4" href="#">Daily Flowers</a>
+                                </li>
+                                <li>
+                                    <a class="text-xs font-normal leading-7 textColor-4" href="#">Flower Delivery</a>
+                                </li>
+                                <li>
+                                    <a class="text-xs font-normal leading-7 textColor-4" href="#">Flower Subscriptions</a>
+                                </li>
+                                <li>
+                                    <a class="text-xs font-normal leading-7 textColor-4" href="#">Pet Friendly Flowers</a>
+                                </li>
+                                <li>
+                                    <a class="text-xs font-normal leading-7 textColor-4" href="#">Pickup Options</a>
+                                </li>
+                                <li>
+                                    <a class="text-xs font-normal leading-7 textColor-4" href="#">Track Your Order</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sm:w-40 w-full lg:ml-4 sm:mb-4 mb-5 font-poppins">
+                            <h3 class="text-xs font-bold leading-5 flex justify-between items-center sm:border-0 border-b sm:pb-0 pb-5 sm:px-0 px-5 textColor-4 border-2c596b hidden sm:inline-block">More Links
+                                <span class="sm:hidden">
+                                    <img src="images/footer-dropdown.png" />
+                                </span>
+                            </h3>
+
+                            <input id="more-links1" type="checkbox" name="more-links1" class="hidden input-hidden" />
+                            <label for="more-links1" class="text-xs font-bold leading-5 flex justify-between items-center sm:border-0 border-b sm:pb-0 pb-4 sm:px-0 px-4 textColor-4 border-2c596b block sm:hidden" onclick="moreLinks()">More Links 
+                                <span class="sm:hidden">
+                                    <img src="images/footer-dropdown.png" alt="dropdown" class="footer-arrow" id="moreLinks" />
+                                </span>
+                            </label>
+                            <ul class="list-none pl-4 sm:pl-0 pt-2 mb-0 submenu max-h-0 sm:max-h-fit overflow-hidden sm:overflow-visible">
+                                <li>
+                                    <a class="text-xs font-normal leading-7 textColor-4" href="#">Hospital Deliveries</a>
+                                </li>
+                                <li>
+                                    <a class="text-xs font-normal leading-7 textColor-4" href="#">Customer Reviews</a>
+                                </li>
+                                <li>
+                                    <a class="text-xs font-normal leading-7 textColor-4" href="#">Why Shop With Us?</a>
+                                </li>
+                                <li>
+                                    <a class="text-xs font-normal leading-7 textColor-4" href="#">Givr</a>
+                                </li>
+                                <li>
+                                    <a class="text-xs font-normal leading-7 textColor-4" href="#">Charity Givr</a>
+                                </li>
+                                <li>
+                                    <a class="text-xs font-normal leading-7 textColor-4" href="#">Afterpay</a>
+                                </li>
+                                <li>
+                                    <a class="text-xs font-normal leading-7 textColor-4" href="#">Zip Pay</a>
+                                </li>
+                                <li>
+                                    <a class="text-xs font-normal leading-7 textColor-4" href="#">Florists Blog</a>
+                                </li>
+                                <li>
+                                    <a class="text-xs font-normal leading-7 textColor-4" href="#">Site Map</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sm:w-40 w-full lg:ml-4 sm:mb-4 mb-5 font-poppins">
+                            <h3 class="text-xs font-bold leading-5 flex justify-between items-center sm:border-0 border-b sm:pb-0 pb-5 sm:px-0 px-5 textColor-4 border-2c596b hidden sm:inline-block">More Links
+                                <span class="sm:hidden">
+                                    <img src="images/footer-dropdown.png" />
+                                </span>
+                            </h3>
+
+                            <input id="view-full-detail-new" type="checkbox" name="view-full-detail" class="hidden input-hidden" />
+                            <label for="view-full-detail-new" class="text-xs font-bold leading-5 flex justify-between items-center sm:border-0 border-b sm:pb-0 pb-4 sm:px-0 px-4 textColor-4 border-2c596b block sm:hidden" onclick="viewFullFooter()">View Full Details
+                                <span class="sm:hidden">
+                                    <img src="images/footer-dropdown.png" alt="dropdown" class="footer-arrow" id="viewFull-details" />
+                                </span>
+                            </label>
+                            <ul class="list-none pl-4 sm:pl-0 pt-2 mb-0 submenu max-h-0 sm:max-h-fit overflow-hidden sm:overflow-visible">
+                                <li>
+                                    <a class="text-xs font-normal leading-7 textColor-4" href="#">
+                                        About Us
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="text-xs font-normal leading-7 textColor-4" href="#">
+                                        Contact Us
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="text-xs font-normal leading-7 textColor-4" href="#">
+                                        Privacy Policy
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="text-xs font-normal leading-7 textColor-4" href="#">
+                                        Refunds & Returns
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="text-xs font-normal leading-7 textColor-4" href="#">
+                                        Terms & Conditions
+                                    </a>
+                                </li>
+                            </ul>
+                            
+                            <h3 class="text-xs font-bold leading-5 sm:block hidden mt-40 textColor-4">Connect</h3>
+                            <div class="flex sm:inline-flex hidden pt-7">
+                                <div class="w-7 h-7 flex justify-center items-center rounded-full connectBg">
+                                    <img src="images/instagram.png" alt="instagram" />
+                                </div>
+                                <div class="w-7 h-7 flex justify-center items-center ml-2.5 rounded-full connectBg">
+                                    <img src="images/twitter.png" alt="twitter" />
+                                </div>
+                                <div class="w-7 h-7 flex justify-center items-center ml-2.5 rounded-full connectBg">
+                                    <img src="images/face-book.png" alt="facebook" />
+                                </div>
+                                <div class="w-7 h-7 flex justify-center items-center ml-2.5 rounded-full connectBg">
+                                    <img src="images/pintrest.png" alt="pintrest" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sm:w-40 w-full lg:ml-4 order-1 font-poppins">
+                        <h3 class="text-xs font-bold leading-6 textColor-4">Phone</h3>
+                            <p class="text-xs font-normal leading-7 textColor-4 flex">
+                                <span class="pr-2">
+                                    <img src="images/footer_phone.png" alt="phone" />
+                                </span>
+                                03 9999 7997
+                            </p>
+                            <h3 class="text-xs font-bold leading-6 mt-5 textColor-4">Address</h3>
+                            <p class="text-xs font-normal leading-7 textColor-4 flex">
+                                <span class="pr-3 pt-2">
+                                    <img src="images/location.svg" alt="location-icon" />
+                                </span>
+                                <span class="mt-1 sm:mt-0">45b Quinn St Preston, 3072 VIC Australia</span>
+                            </p>
+                            <h3 class="text-xs font-bold leading-5 mt-7 sm:hidden textColor-4">Connect</h3>
+                            <div class="flex sm:hidden pt-7">
+                                <div class="w-7 h-7 flex justify-center items-center rounded-full connectBg">
+                                    <img src="images/instagram.png" alt="instagram" /> 
+                                </div>
+                                <div class="w-7 h-7 flex justify-center items-center ml-2.5 rounded-full connectBg">
+                                    <img src="images/twitter.png" alt="twitter" />
+                                </div>
+                                <div class="w-7 h-7 flex justify-center items-center ml-2.5 rounded-full connectBg">
+                                    <img src="images/face-book.png" alt="facebook" />
+                                </div>
+                                <div class="w-7 h-7 flex justify-center items-center ml-2.5 rounded-full connectBg">
+                                    <img src="images/pintrest.png" alt="pintrest" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="pg-container mx-auto w-full py-8 px-6">
+                        <div class="flex sm:flex-row flex-col sm:justify-between justify-center">
+                            <p class="text-xs font-normal leading-6 text-center sm:mb-0 mb-4 textColor-4 font-poppins">Copyright Flowers Across Melbourne 2009 - 2021</p>
+                            <div class="flex justify-center">
+                                <span><img src="images/visa.png" alt="visa card" /></span>
+                                <span class="ml-5"><img src="images/master-card.png" alt="master card" /></span>
+                                <span class="ml-5"><img src="images/amex.png" alt="card" /></span>
+                                <span class="ml-5"><img src="images/paypal.png" alt="paypal" /></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- Footer Section Ends -->
+            <script src="js/jquery-3.5.1.min.js"></script>
+            <script type="text/javascript" src="js/owl.carousel.js"></script>
+            <script type="text/javascript">
+                var open = document.getElementById('open-button');
+                var overlay = document.getElementsByClassName('wrapper-overlay')[0];
+                var close = document.getElementsByClassName('close-button')[0];
+                var menu = document.getElementById('menu');
+
+                open.addEventListener('click', () => {
+                    menu.classList.add('open'),
+                    overlay.classList.add('open')
+                })
+
+                close.addEventListener('click', () => {
+                    menu.classList.remove('open'),
+                    overlay.classList.remove('open')
+                })
+
+                overlay.addEventListener('click', () => {
+                    overlay.classList.remove('open'),
+                    menu.classList.remove('open')
+                })
+            </script>
+        <script>
+            window.onscroll = function() {stickyHeader()};
+
+            var header = document.getElementById("myHeader");
+            var sticky = header.offsetTop;
+
+            var productBody = document.getElementById("body-content");
+            var productBodySticky = productBody.offsetTop;
+
+            function stickyHeader() {
+                if (window.pageYOffset > sticky) {
+                    header.classList.add("sticky");
+                    productBody.classList.add("product-content");
+                } 
+                else {
+                    header.classList.remove("sticky");
+                    productBody.classList.remove("product-content");
+                }
+            }
+        </script>
+        <script>
+            var coll = document.getElementsByClassName("checkoutCollaps");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                  content.style.maxHeight = null;
+                } else {
+                  content.style.maxHeight = content.scrollHeight + "px";
+                } 
+              });
+            }
+        </script>
+
+        <script type="text/javascript">
+            $("#accordion ul li").each(function(){
+                var trigger= $(this).find('a')
+                var siblings = $(this).siblings()
+                var acc_text = $(this).find('.accordion')
+                $(trigger).click(function(){
+                    var visible_text = siblings.find('.accordion').filter(":visible")
+                    $(acc_text).slideToggle()
+                    $(visible_text).slideUp()
+                });
+            });
+        </script>
+
+        <script type="text/javascript">
+            $('#accordion li a').on('click', function(){
+                $('li a.current').removeClass('current');
+                $(this).addClass('current');
+            });
+
+        </script>
+        <script type="text/javascript">
+        function rotateOrangeArrow() {
+            var orangeArrow = document.getElementById("sticky-orange-arrow");
+            orangeArrow.classList.toggle("rotate");
+        }
+
+        function viewDetailsRotate() {
+            var orangeArrow = document.getElementById("orange-arrow");
+            orangeArrow.classList.toggle("rotate");
+        }
+
+        function viewMobDetailsRotate() {
+            var orangeArrow = document.getElementById("view-detail-mob");
+            orangeArrow.classList.toggle("rotate");
+        }
+
+        function faqMobRotate() {
+            var orangeArrow = document.getElementById("faq-last");
+            orangeArrow.classList.toggle("rotate");
+        }
+
+        function faqRotate() {
+            var orangeArrow = document.getElementById("faq");
+            orangeArrow.classList.toggle("rotate");
+        }
+
+        function quickLinks() {
+            var orangeArrow = document.getElementById("quickLinks");
+            orangeArrow.classList.toggle("rotate");
+        }
+
+        function moreLinks() {
+            var orangeArrow = document.getElementById("moreLinks");
+            orangeArrow.classList.toggle("rotate");
+        }
+
+        function viewFullFooter() {
+            var orangeArrow = document.getElementById("viewFull-details");
+            orangeArrow.classList.toggle("rotate");
+        }
+
+        function homeArrow() {
+            var orangeArrow = document.getElementById("home-arrow");
+            orangeArrow.classList.toggle("rotate");
+        }
+
+        function flowerArrow() {
+            var orangeArrow = document.getElementById("flower-arrow");
+            orangeArrow.classList.toggle("rotate");
+        }
+
+        function plantArrow() {
+            var orangeArrow = document.getElementById("plant-arrow");
+            orangeArrow.classList.toggle("rotate");
+        }
+
+        function giftArrow() {
+            var orangeArrow = document.getElementById("gift-arrow");
+            orangeArrow.classList.toggle("rotate");
+        }
+
+    </script>
+    </body>
+</html>

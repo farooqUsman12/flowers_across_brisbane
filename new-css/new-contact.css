@@ -1,0 +1,44 @@
+.text-xs {
+    font-size: 12px;
+    line-height: 18px;
+}
+.input-type{
+    border: 1px solid #E5E5E5;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+.h-13 {
+    height: 52px;
+}
+.h-42 {
+    height: 168px;
+}
+.text-xs1 {
+    font-size: 13px;
+    line-height: 19.5px;
+}
+.check-box-bg {
+    accent-color:#FFC0B2;
+ 
+}
+.buttonBg {
+	background-color: #EC8C77;
+}
+.mt-4-5 {
+    margin-top: 18px;
+}
+.pl-13-7 {
+    padding-left: 13px;
+}
+.mt-14px {
+    margin-top: 14px;
+}
+.Review-link-color {
+    color : #EC8C77;
+}
+.max-w-3xl-1 {
+    max-width: 760px;
+}
+tr:nth-child(odd) {
+    background-color: #F7F7F7;
+}

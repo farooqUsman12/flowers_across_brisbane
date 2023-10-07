@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="images/logo-mobile.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/SignIn.css">
+    <script src="https://cdn.tailwindcss.com/3.0.24"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        purple: '#800080',
+                        primary: '#ec8c77',
+                        dark: '#272727',
+                        lightPink: '#fff6f0'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="w-56 pt-5 px-1">
+        <a href="#signIn-modal" class="text-base font-semibold rounded text-white leading-7 block text-center w-full buttonBg py-3 leaveReview">Leave a review</a>
+    </div>
+
+    <div id="signIn-modal" class="sign_in_modal z-40 fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center">
+        <div class="mx-auto w-full sm:px-6 z-40 pg-container sign-in">
+            <div class="bg-white sm:rounded font-poppins h-full relative flex justify-between sm:h-auto h-screen modal__content">
+                <div class="left-mx-w sm:px-7 px-5 w-full overflow-auto">
+                    <div class="relative sm:hidden">
+                        <a href="#/" class="absolute left-1.5 top-4 z-10 w-4 h-4">
+                            <img src="images/sign-in-close-black.svg" />
+                        </a>
+                    </div>
+                    <div class="sub-heading sm:mt-4 mt-14">
+                       <p class="sign-in-fs-22 text-lg font-semibold">Sign in for faster checkout</p>
+                    </div>
+                    <div class="bg-lightPink rounded p-5 mt-7">
+                       <div class="lg:flex justify-between items-center">
+                            <div class="text-xs font-normal leading-5 sm:pr-0 pr-1.5">
+                                <p class="max-w-187">Proceed to checkout and you will have a chance to create your account at the end.</p>
+                            </div>
+                            <span class="my-auto mt-4 block lg:mt-0 mb-0 lg:w-40 lg:pl-0.5">
+                                <button type="button" class="text-white w-full py-2.5 px-2 rounded fs-13 font-semibold leading-7 bg-primary">
+                                    Check out as a guest
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between mt-7 flex-wrap sm:flex-row lg:flex-row md:flex-col items-center  md:items-baseline lg:items-center">
+                       <p class="text-lg font-semibold mb-2">Returning Customer</p>
+                       <p class="text-xs font-normal leading-5 sm:mt-0 md:mt-5 lg:mt-0 mb-2">Are you not a member? <a href="#/" class="text-primary">Sign up</a> </p>
+                    </div>
+                    <div class="mt-8">
+                        <form action="/#">
+                            <div class="email">
+                               <p class="text-xs font-normal leading-5">Email <sup class="sup text-primary">*</sup></p>
+                               <input type="text" class="h-12 w-full mt-2 px-3 py-2.5">
+                            </div>
+                            <div class="password mt-5">
+                                <p class="text-xs">Password<sup class="sup text-primary">*</sup></p>
+                                <input type="password" class="h-12 w-full mt-2 px-3 py-2.5">
+                            </div>
+                            <div class="cheakbox flex items-center mt-5">
+                                <input class="w-4 h-4" type="checkbox" id="Remember" name="Remember" value="Remember">
+                                <label for="Remember" class="text-xs font-normal leading-5 ml-4">Remember me</label>
+                            </div>
+                            <div class="mt-5">
+                                <button type="submit" class="py-4 text-sm text-white w-full bg-primary flex items-center justify-center rounded">Sign in</button>
+                            </div>
+                            <div class="mt-8 mb-8">
+                                <a href="#/" class="forgot-p text-primary text-xs">Forgot Password</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="right w-full relative">
+                    <div class="sm:block hidden">
+                        <a href="#/" class="absolute right-6 top-4 z-10 w-4 h-4">
+                            <img src="images/sign-in-close-white.svg" />
+                        </a>
+                    </div>
+                    <div class="bg-black opacity-30 bg-black w-full h-full"></div>
+                </div>
+            </div>
+        </div>
+        <a href="#/" class="fixed top-0 bottom-0 left-0 right-0 opacity-0 block z-20 cursor-pointer closeoverlay"></a>
+    </div>
+  </body>
+</html>

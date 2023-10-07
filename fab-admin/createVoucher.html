@@ -1,0 +1,229 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="images/logo-mobile.png">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/admin-panel.css">
+        <link rel="stylesheet" href="/fab-admin/order-details/css/createVoucher.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        
+    </head>
+    <body>
+        <div id="wrapper" onclick="hideSidebar()"></div>
+        <div class="body-bg font-inter">
+            <div class="w-full mx-auto md:px-4 px-3 pt-16 mt-2 max-w-720 font-inter">
+                
+                <div class="flex relative shadow-lg flex-col-reverse md:flex-row mb-8 rounded-full">
+                    <div class="w-full max-w-full md:max-w-640 bg-white  md:rounded-tl-2xl md:rounded-bl-2xl md:rounded-br-none">
+                        <div class="flex justify-between items-center bg-f6f4fb  md:rounded-tl-2xl md:rounded-br-none pb-5 pt-6 sm:px-6 px-4">
+                            <h2 class="sm:text-xl text-sm text-3C3949 font-semibold leading-6 my-2">Add Voucher</h2>
+                            <button type="button"> 
+                                <img src="images/crossGrey.png" alt="not found">
+                            </button>
+                        </div>
+                        <div class="w-full pt-5 md:px-5 px-4 bg-fff6f0 font-inter">
+                            <div class="border-l-2 py-2 pl-3.5 borderColor2">
+                                <ul class="list-disc pl-5">
+                                    <li>Vouchers can be sent via email or printed</li>
+                                    <li>You can re-send or print vouchers later after you have created the voucher</li>
+                                </ul>
+                            </div>
+                        
+                            <a href="#/" class="block text-center read-more mt-3 rotate " id="read-less" onclick="slideOpen()">
+                                <img src="images/arrow-dropdown.png" alt="arrow" class="inline-block mr-2 arrow-rotate" />
+                                <span class="text-xs font-normal text-ec8c77 inline-block readless-span">Read more </span></a>
+    
+                            <div class="border-l-2 pl-3.5 mt-5 borderColor2 instruction-close-box" id="diff-types">
+                                <div class=" pb-8 pl-3.5">
+                                    <ul class="list-disc pl-5">
+                                        <li>Vouchers can be sent via email or printed</li>
+                                        <li class="pt-2">You can re-send or print vouchers later after you have created the voucher</li>
+                                        <li class="pt-2">Vouchers can be sent via email or printed</li>
+                                        <li class="pt-2">You can re-send or print vouchers later after you have created the voucher</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        <div>
+                            <div class="pt-6 sm:px-6 px-4">
+                                <label class="text-base font-semibold leading-6 block mb-2 text-3C3949">Name of Voucher Recipient</label>
+                                <div class="flex justify-between items-center w-full relative rounded-lg borderColor1 bg-transparent">
+                                    <input class="rounded-lg w-full py-2 pl-3 pr-8" type="text" name="name" for="name" placeholder="John Doe">
+                                </div>
+                                <p class="text-sm font-normal leading-5 mt-2 text-726f80">If the voucher is promotional and we don’t know the person’s name, you might want to add something like ‘To the lucky recipient’</p>
+                            </div>
+                            <div class="pt-6 sm:px-6 px-4">
+                                <label class="text-base font-semibold leading-6 block mb-2 text-3C3949">Email</label>
+                                <div class="flex justify-between items-center w-full relative rounded-lg borderColor1 bg-transparent">
+                                    <input class="rounded-lg w-full py-2 pl-3 pr-8" type="email" name="email" for="email" placeholder="dhuparpayal@gmail.com">
+                                </div>
+                                <p class="text-sm font-normal leading-5 mt-2 text-726f80">If no recipient email available or you want to print the voucher, enter our email</p>
+                            </div>
+                            <div class="pt-6 sm:px-6 px-4">
+                                <label class="text-base font-semibold leading-6 block mb-2 text-3C3949">Voucher amount</label>
+                                <div class="flex justify-between items-center w-full relative rounded-lg borderColor1">
+                                    <select class="w-full rounded-lg py-2 pl-3 pr-8 bg-transparent">
+                                        <option>$1000</option>
+                                        <option>$2000</option>
+                                        <option>$3000</option>
+                                    </select>
+                                    <img class="absolute right-3" src="images/down-arrow.png" />
+                                </div>
+                            </div>
+                            <div class="pt-6 sm:px-6 px-4">
+                                <label class="text-base font-semibold leading-6 block mb-2 text-3C3949">Address (optional)</label>
+                                <div class="flex justify-between items-center w-full relative rounded-lg borderColor1 bg-transparent">
+                                    <input class="rounded-lg w-full py-2 pl-3 pr-8" type="address" name="address" for="address">
+                                </div>
+                            </div>
+                            <div class="pt-6 sm:px-6 px-4">
+                                <label class="text-base font-semibold leading-6 block mb-2 text-3C3949">Suburb (optional)</label>
+                                <div class="flex justify-between items-center w-full relative rounded-lg borderColor1 bg-transparent">
+                                    <input class="rounded-lg w-full py-2 pl-3 pr-8" type="subrub" name="subrub" for="subrub">
+                                </div>
+                            </div>
+                            <div class="pt-6 sm:px-6 px-4">
+                                <label class="text-base font-semibold leading-6 block mb-2 text-3C3949">Name of Sender</label>
+                                <div class="flex justify-between items-center w-full relative rounded-lg borderColor1 bg-transparent">
+                                    <input class="rounded-lg w-full py-2 pl-3 pr-8" type="senderName" name="senderName" for="senderName">
+                                </div>
+                                <p class="text-sm font-normal leading-5 mt-2 text-726f80">If the voucher is promotional and from us you might want to add <a href="#/" class="text-8a6ccf font-semibold"> Flowers Accross Sydney</a></p>
+                            </div>
+                            <div class="pt-6 sm:px-6 px-4">
+                                <label class="text-base font-semibold leading-6 block mb-2 text-3C3949">Message to Recipient</label>
+                                <div class="flex justify-between items-center w-full relative rounded-lg borderColor1" >
+                                    <textarea class="rounded-lg w-full py-3 px-3" rows="3" cols="1" id="message-box"></textarea>
+                                </div>
+                                <p class="text-sm font-normal leading-5 mt-2 text-726f80" id="char_count">250 character left</p>
+                            </div>
+                            <div class="sm:px-6 px-4 mt-2">
+                            <div class="p-2.5 flex items-center rounded-lg bg-fff6f0">
+                                <span class="w-5 h-5 rounded-full mr-2.5">
+                                    <img class="w-full" src="images/info.png" />
+                                </span>
+                                <p class="text-sm font-normal leading-5 info-width text-3c3949">
+                                    Remember to add who it’s from in the message if applicable
+                                </p>
+                            </div>
+                        </div>
+                            <div class="mt-8 sm:px-6 px-4">
+                                <div class="flex items-center">
+                                    <p class="text-xl font-semibold leading-7 text-8a6ccf w-44">Send Date & Time</p>
+                                    <div class="border-b w-3/5 ml-4 sm:block hidden"></div>
+                                </div>
+                                <div class="w-full mt-2 pt-5 pb-4 md:px-5 px-4 bg-fff6f0 font-inter rounded-t-2xl md:rounded-t-none md:rounded-r-2xl">
+                                    <div class="border-l-2 pl-5 borderColor2">
+                                        <p class="text-sm font-normal leading-5 text-3c3949 imp-text">
+                                            Important: Check the send date! The voucher will be sent immediately unless you have specified a different future date (wouldn’t want to ruin the surprise if a specific date is supposed to be set)
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="p-2.5 flex items-center rounded-lg mt-4 bg-fff6f0">
+                                    <span class="w-5 h-5 rounded-full">
+                                        <img class="w-full" src="images/info.png" />
+                                    </span>
+                                    <p class="pl-2.5 text-sm font-normal leading-5 info-width text-3c3949 imp-text">
+                                        Can be used to send at a date in the future -<strong> if you want to send the voucher now, leave as is</strong>.
+                                    </p>
+                                </div>
+                                <div class="flex md:flex-row flex-col mt-8">
+                                    <div class="md:w-6/12 w-full md:pr-2">
+                                        <label class="text-base font-semibold leading-6 block mb-2 text-3c3949">Send Date</label>
+                                        <div class="flex justify-between items-center w-full relative rounded-lg borderColor1">
+                                            <input class="w-full rounded-lg py-2 pl-3 pr-8" type="text" name="date" placeholder="DD-MM-YYYY">
+                                            <img class="absolute right-3" src="images/calender.png" /> 
+                                        </div>
+                                    </div>
+                                    <div class="md:w-6/12 w-full md:mt-0 mt-6 md:pl-2">
+                                        <label class="text-base font-semibold leading-6 block mb-2">Send Time</label>
+                                        <div class="flex justify-between items-center w-full relative rounded-lg borderColor1">
+                                            <input class="w-full rounded-lg py-2 pl-3 pr-8" type="text" name="time" placeholder="HH:MM">
+                                            <img class="absolute right-3" src="images/clock.png" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4 sm:px-6 px-4">
+                            <div class="flex items-center rounded-lg sm:p-4 p-2  p-4 bg-f6f4fb">
+                                <label class="switch">
+                                      <input type="checkbox">
+                                      <span class="slider round"></span>
+                                </label>
+                                <span class="pl-3 sm:mt-0 mt-4 switch-text-width">
+                                <p class="text-base font-semibold leading-6 text-3c3949">Currently Active</p>
+                                <p class="text-726f80 leading-6 font-normal">Uncheck the box to make the voucher inactive - the customer will no longer be able to use this voucher</p>
+                            </span>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="flex justify-between items-center border-t mt-8 pt-4 pb-5 bg-f6f4fb sm:px-6 px-4 rounded-bl-2xl flex-wrap ">
+                            <button class="text-base text-726f80 bg-eeecf4 font-semibold rounded-lg px-3 py-2 ">Cancel</button>
+                            <button class="py-2 pr-3 pl-4 rounded-lg text-base font-semibold leading-6 text-white flex items-center bg-8a6ccf">
+                                <span class="mr-2.5">
+                                    <img src="images/check.png" />
+                                </span>
+                                Create Voucher
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function slideOpen() {
+                let element = document.getElementById("diff-types");
+                element.classList.toggle("instruction-box-open");
+
+                let readmore = document.getElementsByClassName("read-more")[0];
+                readmore.classList.toggle("rotate");
+            }
+        </script>
+        <script>
+            let textArea = document.getElementById("message-box");
+            let characterCounter = document.getElementById("char_count");
+            const maxNumOfChars = 250;
+            const countCharacters = () => {
+                 let numOfEnteredChars = textArea.value.length;
+                let counter = maxNumOfChars - numOfEnteredChars;
+                characterCounter.textContent = counter + " character left";
+            if (counter < 0) {
+                characterCounter.style.color = "red";
+            } else if (counter < 20) {
+                characterCounter.style.color = "orange";
+            } else {
+                characterCounter.style.color = "black";
+            }
+            };
+            textArea.addEventListener("input", countCharacters);
+
+            
+        </script>
+        <script>
+            $(document).ready(function() {
+              $("#read-less").click(function() {
+                $(".readless-span").text(function(i, t) {
+                  return t == 'Read less' ? 'Read more' : 'Read less';
+                });
+              });
+            });
+            </script>
+            <script>
+                 $(".rotate").click(function(){
+                 $(".arrow-rotate").toggleClass("down")  ; 
+            })
+            $(".read-more").click(function(){
+                 $(".read-more").toggleClass("position-bottom")  ; 
+            })
+            </script>
+    </body>
+</html>

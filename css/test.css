@@ -1,0 +1,46 @@
+.collapse a {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.9rem 1.8rem;
+  color: #fff;
+  position: relative;
+}
+
+.collapse a.instagram {
+  background: #db2e7d;
+}
+
+.collapse a.twitter {
+  background: #1dabdd;
+}
+
+.collapse a.dribbble {
+  background: #444;
+}
+
+.collapse a.youtube {
+  background: #ff0000;
+}
+
+.inner-content {
+  padding: 1.8rem;
+}
+
+.content {
+  max-height: 0em;
+  transition: 0.3s linear 0s;
+  overflow: hidden;
+}
+
+.collapse + .collapse a {
+  border-top: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+h3 {
+  margin-bottom: 15px;
+}
+
+.collapse:target .content {
+  max-height: 15em;
+}

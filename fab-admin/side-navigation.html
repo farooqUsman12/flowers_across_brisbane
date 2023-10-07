@@ -1,0 +1,277 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="images/logo-mobile.png">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/admin-panel.css">
+        <link rel="stylesheet" href="css/menu-sidebar.css">
+    </head>
+    <body>
+        <div id="wrapper" onclick="hideSidebar()"></div>
+        <header class="flex justify-between items-center bg-white lg:px-10 px-4 lg:py-4 py-2">
+            <div class="flex items-center">
+                <div class="sm:hidden mr-11">
+                    <button  onclick="adminSidebar()">
+                        <img src="images/menu-bars.png">
+                    </button>
+                </div>
+                <div class="lg:w-7 w-6 lg:h-12 h-10">
+                    <img class="w-full h-full" src="images/logo.png">
+                </div>
+            </div>
+            <div class="flex items-center">
+                <div class="mr-14">
+                    <img src="images/header-search.png" />
+                </div>
+                <div>
+                    <img src="images/bell.png" />
+                </div>
+            </div>
+        </header>
+        <div id="admin-sidebar" class="flex h-full p-0 menu-sidebar fixed">
+            <div class="lg:w-60 sm:w-14 h-full bg-eeec4f font-inter">
+                <div class="lg:pt-20 pt-9 h-full mob-width bg-eeec4f">
+                    
+                    <div class="h-full overflow-auto  bg-eeec4f">
+                        <a class="block flex items-center lg:py-0 sm:py-4 px-5 text-3C3949 sidebar-items" href="#/">
+                            <span>
+                                <img src="images/dashboard.png" />
+                            </span>
+                            <span class="text-base font-normal leading-6 w-full py-3 lg:block sm:hidden block border-b border-e1dfe9 ml-3.5">Dashboard</span>
+                        </a>
+                        <a class="block flex items-center lg:py-0 sm:py-4 px-5 text-3C3949 sidebar-items" href="#/">
+                            <span>
+                                <img src="images/goals.png" />
+                            </span>
+                            <span class="text-base font-normal leading-6 w-full py-3 lg:block sm:hidden block border-b border-e1dfe9 ml-3.5">Goals</span>
+                        </a>
+                        <a class="block flex items-center lg:py-0 sm:py-4 px-5 text-3C3949 sidebar-items sidebar-dropdown" href="#/" onclick="orders()">
+                            <span>
+                                <img src="images/orders.png" />
+                            </span>
+                            <span class="flex justify-between items-center w-full pr-5 lg:flex sm:hidden border-b border-e1dfe9 ">
+                                <span class="text-base font-normal leading-6 w-full py-3 ml-3.5">Orders </span>
+                                <span>
+                                    <img class="right-arrow" src="images/right-arrow-sidebar.png" id="orders">
+                                </span>
+                            </span>
+                        </a>
+                        <div class="dropdown-content">
+                            <div class="text-xs font-semibold leading-4 bg-white pl-5 py-2.5 border-b border-e1dfe9 text-726f80 sidebar-menu-items sidebar-dropdown-submenu">
+                                Manual Transactions
+                            </div>
+                            <div class="">
+                                <div class="py-2 pl-7 pr-5 border-b border-e1dfe9 bg-eeec4f">
+                                    <a class="flex items-center w-full" href="#">
+                                        <span>
+                                            <img src="images/submenu-arrow.png">
+                                        </span>
+                                        <span class="text-sm font-normal leading-5 pl-3.5 text-3C3949">New Transaction</span>
+                                    </a>
+                                </div>
+                                <div class="py-2 pl-7 pr-5 border-b border-e1dfe9 bg-eeec4f">
+                                    <a class="flex items-center w-full" href="#">
+                                        <span>
+                                            <img src="images/submenu-arrow.png">
+                                        </span>
+                                        <span class="text-sm font-normal leading-5 pl-3.5 text-3C3949">View Drafts</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="text-xs font-semibold leading-4 bg-white pl-5 py-2.5 border-b border-e1dfe9 text-726f80 sidebar-menu-items sidebar-dropdown-submenu">
+                                Current Orders
+                            </div>
+                            <div class="">
+                                <div class="py-2 pl-7 pr-5 border-b border-e1dfe9 bg-eeec4f">
+                                    <a class="flex items-center w-full" href="#">
+                                        <span>
+                                            <img src="images/submenu-arrow.png">
+                                        </span>
+                                        <span class="text-sm font-normal leading-5 pl-3.5 text-3C3949">Todays Orders</span>
+                                    </a>
+                                </div>
+                                <div class="py-2 pl-7 pr-5 border-b border-e1dfe9 bg-eeec4f">
+                                    <a class="flex justify-between items-center w-full" href="#">
+                                        <div class="flex items-center">
+                                            <span>
+                                                <img src="images/submenu-arrow.png">
+                                            </span>
+                                            <span class="text-sm font-normal leading-5 pl-3.5 text-3C3949">Delivery Issues</span>
+                                        </div>
+                                        <div class="w-5 h-5 flex justify-center items-center rounded-full text-xs font-semibold leading-4 text-white bg-cf6c7f">2</div>
+                                    </a>
+                                </div>
+                                <div class="py-2 pl-7 pr-5 border-b border-e1dfe9 bg-eeec4f">
+                                    <a class="flex items-center w-full" href="#">
+                                        <span>
+                                            <img src="images/submenu-arrow.png">
+                                        </span>
+                                        <span class="text-sm font-normal leading-5 pl-3.5 text-3C3949">On Hold</span>
+                                    </a>
+                                </div>
+                                <div class="py-2 pl-7 pr-5 border-b border-e1dfe9 bg-eeec4f">
+                                    <a class="flex items-center w-full" href="#">
+                                        <span>
+                                            <img src="images/submenu-arrow.png">
+                                        </span>
+                                        <span class="text-sm font-normal leading-5 pl-3.5 text-3C3949">Declined Orders</span>
+                                    </a>
+                                </div>
+                                <div class="py-2 pl-7 pr-5 border-b border-e1dfe9 bg-eeec4f">
+                                    <a class="flex items-center w-full" href="#">
+                                        <span>
+                                            <img src="images/submenu-arrow.png">
+                                        </span>
+                                        <span class="text-sm font-normal leading-5 pl-3.5 text-3C3949">Subscription Orders</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="block flex items-center lg:py-0 sm:py-4 px-5 text-3C3949 sidebar-items" href="#/">
+                            <span>
+                                <img src="images/product.png" />
+                            </span>
+                            <span class="flex justify-between items-center w-full pr-5 lg:flex sm:hidden border-b border-e1dfe9 ">
+                                <span class="text-base font-normal leading-6 w-full py-3 ml-3.5">Products</span>
+                                <span>
+                                    <img class="right-arrow" src="images/right-arrow-sidebar.png">
+                                </span>
+                            </span>
+                        </a>
+                        <a class="block flex items-center lg:py-0 sm:py-4 px-5 text-3C3949 sidebar-items" href="#/">
+                            <span>
+                                <img src="images/reports.png" />
+                            </span>
+                            <span class="flex justify-between items-center w-full pr-5 lg:flex sm:hidden border-b border-e1dfe9 ">
+                                <span class="text-base font-normal leading-6 w-full py-3 ml-3.5">Reports</span>
+                                <div class="flex items-center">
+                                    <div class="w-5 h-5 flex justify-center items-center rounded-full text-xs font-semibold leading-4 text-white bg-cf6c7f">9+</div>
+                                    <span class="w-2 h-1 ml-3">
+                                        <img class="right-arrow" src="images/right-arrow-sidebar.png">
+                                    </span>
+                                </div>
+                            </span>
+                        </a>
+                        <a class="block flex items-center lg:py-0 sm:py-4 px-5 text-3C3949 sidebar-items" href="#/">
+                            <span>
+                                <img src="images/map.png" />
+                            </span>
+                            <span class="flex justify-between items-center w-full pr-5 lg:flex sm:hidden border-b border-e1dfe9 ">
+                                <span class="text-base font-normal leading-6 w-full py-3 ml-3.5">Maps</span>
+                                <span>
+                                    <img class="right-arrow" src="images/right-arrow-sidebar.png">
+                                </span>
+                            </span>
+                        </a>
+                        <a class="block flex items-center lg:py-0 sm:py-4 px-5 text-3C3949 sidebar-items" href="#/">
+                            <span>
+                                <img src="images/admin.png" />
+                            </span>
+                            <span class="flex justify-between items-center w-full pr-5 lg:flex sm:hidden border-b border-e1dfe9 ">
+                                <span class="text-base font-normal leading-6 w-full py-3 ml-3.5">Admin</span>
+                                <span>
+                                    <img class="right-arrow" src="images/right-arrow-sidebar.png">
+                                </span>
+                            </span>
+                        </a>
+                        <a class="block flex items-center lg:py-0 sm:py-4 px-5  text-3C3949 sidebar-items" href="#/">
+                            <span>
+                                <img src="images/setting.png" />
+                            </span>
+                            <span class="flex justify-between items-center w-full pr-5 lg:flex sm:hidden border-b border-e1dfe9 ">
+                                <span class="text-base font-normal leading-6 w-full py-3 ml-3.5">Setting</span>
+                                <span>
+                                    <img class="right-arrow" src="images/right-arrow-sidebar.png">
+                                </span>
+                            </span>
+                        </a>
+                        <a class="block flex items-center lg:py-0 sm:py-4 px-5 text-3C3949 sidebar-items" href="#/">
+                            <span>
+                                <img src="images/store.png" />
+                            </span>
+                            <span class="flex justify-between items-center w-full pr-5 lg:flex sm:hidden border-b border-e1dfe9 ">
+                                <span class="text-base font-normal leading-6 w-full py-3 ml-3.5">Visit Store</span>
+                                <span>
+                                    <img class="right-arrow" src="images/right-arrow-sidebar.png">
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="sm:hidden ml-4 mt-12">
+                <button onclick="hideSidebar()" class="w-9 h-9 rounded-full bg bg-black p-2">
+                    <img src="images/close.png" alt="close" />
+                </button>
+            </div>
+        </div>
+      
+        <script>
+            var coll = document.getElementsByClassName("sidebar-dropdown");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                  content.style.maxHeight = null;
+                } else {
+                  content.style.maxHeight = content.scrollHeight + "px";
+                } 
+              });
+            }
+        </script>
+        <script>
+            var coll = document.getElementsByClassName("sidebar-dropdown-submenu");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                  content.style.maxHeight = null;
+                } else {
+                  content.style.maxHeight = content.scrollHeight + "px";
+                } 
+              });
+            }
+        </script>
+        
+    <script>
+            function adminSidebar() {
+                   let element = document.getElementById("admin-sidebar");
+                   element.classList.toggle("admin-sidebar-style");
+
+
+                  let wrapperID = document.getElementById("wrapper");
+                  wrapperID.classList.add("wrapperStyle");
+                
+            }
+
+            function hideSidebar() {
+                let element = document.getElementById("admin-sidebar");
+                 element.classList.remove("admin-sidebar-style");
+
+                 let wrapperID = document.getElementById("wrapper");
+                  wrapperID.classList.remove("wrapperStyle");
+            }
+
+        </script>
+        <script>
+            function orders() {
+            var orangeArrow = document.getElementById("orders");
+            orangeArrow.classList.toggle("rotate");
+            }
+        </script>
+    </body>
+</html>

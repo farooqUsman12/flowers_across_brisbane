@@ -1,0 +1,106 @@
+.sign_in_modal {
+    visibility: hidden;
+    opacity: 0;
+    background: rgba(77, 77, 77, .7);
+    transition: all .4s;
+    z-index: 9999;
+}
+
+.sign_in_modal:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.sign_in_modal:target>.closeoverlay {
+    display: block;
+}
+
+
+.sign_in_modal-mobile {
+    visibility: hidden;
+    opacity: 0;
+    background: rgba(77, 77, 77, .7);
+    transition: all .4s;
+    z-index: 9999;
+}
+
+.sign_in_modal-mobile:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.main-heading h1 {
+    line-height: 85px;
+}
+
+
+.pg-container.sign-in {
+    max-width: 920px;
+}
+
+.pg-container.sign-in .left-mx-w {
+    max-width: 463px;
+}
+
+.pg-container.sign-in .right {
+
+}
+
+
+.fs-13 {
+    font-size: 13px;
+}
+
+
+
+
+.right{
+    background-image: url(../images/sign-in-img.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 412px;
+    background-color: #000000;
+}
+
+.EC8C77 {
+    color: #EC8C77;
+}
+
+
+.sign-in form input 
+{
+    border: 1px solid #E5E5E5;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+.cheakbox input {
+    accent-color: #EC8C77;
+}
+
+
+
+@media (min-width: 1024px) {
+    .max-w-187 {
+        max-width: 187px;
+    }
+
+    .pg-container.sign-in {
+        height: 622px;
+    }
+}
+
+@media (min-width: 768px) {
+    .sign-in-fs-22 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 639px) {
+    .right {
+        display: none;
+    }
+
+    .pg-container.sign-in .left-mx-w {
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,170 @@
+.font-inter {
+	font-family: 'Inter', sans-serif;
+}
+
+body {
+	background-color: #eeecf4;
+}
+
+.max-w-992 {
+	max-width: 992px;
+}
+
+.text-3C3949 {
+	color: #3C3949;
+}
+
+.bg-8a6ccf {
+	background-color: #8a6ccf;
+} 
+
+.card {
+	box-shadow: 0px 2px 12px -4px rgba(0, 0, 0, 0.16);
+}
+
+.text-8A6CCF {
+	color: #8A6CCF;
+}
+
+.text-726f80 {
+	color: #726f80;
+}
+
+.bg-f6f4fb {
+	background-color: #f6f4fb;
+}
+
+.rounded-20 {
+	border-radius: 20px;
+}
+
+.bg-3e9979 {
+	background-color: #3e9979;
+}
+
+.bg-cf6c7f {
+	background-color: #cf6c7f;
+}
+
+.bg-ec8c77 {
+	background-color: #ec8c77;
+}
+
+.text-ec8c77 {
+	color: #ec8c77;
+}
+
+.text-cf6c7f {
+	color: #cf6c7f;
+}
+
+.borderColor1 {
+	border: 1px solid #c1c2cd;
+}
+
+.borderColor2 {
+	border-color: #ec8c77;
+}
+
+select {
+ 	-moz-appearance: none;
+ 	-webkit-appearance: none;
+ 	appearance: none;
+ 	border: none;
+}
+
+.bg-fff6f0 {
+	background-color: #fff6f0;
+}
+
+.radio-tabs[type='radio']:after {
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    top: -4px;
+    left: -6px;
+    position: relative;
+    background-color: #ffffff;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 1px solid #d1d3d1;
+}
+
+.radio-tabs[type='radio']:checked:after {
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    top: -4px;
+    left: -6px;
+    position: relative;
+    background-color: #ffffff;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 6px solid #8a6ccf;
+}
+
+.tabcontent {
+  	display: none;
+ }
+
+.text-8a6ccf {
+ 	color: #8a6ccf;
+}
+
+.max-w-515 {
+ 	max-width: 515px;
+}
+
+.text-cf6c7f {
+	color: #cf6c7f;
+}  
+
+.action-buttons .action-buttons-listing {
+	display: none;
+}
+
+.action-buttons.mystyle .action-buttons-listing {
+	display: block;
+} 
+
+@media (min-width: 640px) {
+	.fs-32 {
+		font-size: 32px;
+	}
+
+	.max-w-640 {
+		max-width: 640px;
+	}
+}
+
+@media (min-width: 768px) {
+	.max-w-320 {
+		max-width: 320px;
+	}
+}
+
+@media (max-width: 767px) {
+	.instruction-box-close {
+		max-height: 0;
+	    transition: max-height 0.5s ease-out;
+	    overflow: hidden;
+	}
+
+	.instruction-box-close.instruction-box-open {
+		max-height: 500px;
+    	transition: max-height 0.5s ease-in;
+	    padding-bottom: 0.5rem;
+	}
+}
+
+@media (max-width: 639px) {
+	.mob-sidebar {
+		position: fixed;
+		top: 0px;
+		right: -280px;
+		max-width: 280px;
+		transition: 0.5s all;
+	}
+}

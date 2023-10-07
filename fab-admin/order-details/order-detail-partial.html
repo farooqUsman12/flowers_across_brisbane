@@ -1,0 +1,1458 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="images/logo-mobile.png">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/order-details.css">
+        <link rel="stylesheet" href="css/menu-sidebar.css">
+        <script src="https://cdn.tailwindcss.com/3.0.24"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            primaryBrand: '#8a6ccf',
+                            primary: '#ec8c77',
+                            dark: '#272727',
+                            lightPink: '#fff6f0',
+                            neutralDarkest: '#3c3949',
+                            greenLightest: '#E4F8F1',
+                            neutralLightest: '#f6f4fb',
+                            neutralDark: '#726f80',
+                            neutralMidLight: '#C2C1CD'
+                        }
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="wrapper" onclick="hideSidebar()"></div>
+        <header class="flex justify-between items-center bg-white lg:px-10 px-4 lg:py-4 py-2">
+            <div class="flex items-center">
+                <div class="sm:hidden mr-11">
+                    <button  onclick="adminSidebar()">
+                        <img src="images/menu-bars.png">
+                    </button>
+                </div>
+                <div class="lg:w-7 w-6 lg:h-12 h-10">
+                    <img class="w-full h-full" src="images/logo.png">
+                </div>
+            </div>
+            <div class="flex items-center">
+                <div class="mr-14">
+                    <img src="images/header-search.png" />
+                </div>
+                <div>
+                    <img src="images/bell.png" />
+                </div>
+            </div>
+        </header>
+        <div class="flex">
+            <div id="admin-sidebar" class="flex h-full p-0 menu-sidebar fixed">
+            <div class="lg:w-60 sm:w-14 h-full bg-eeec4f font-inter">
+                <div class="lg:pt-20 pt-9 h-full mob-width bg-eeec4f">
+                    
+                    <div class="h-full overflow-auto  bg-eeec4f">
+                        <a class="block flex items-center lg:py-0 sm:py-4 px-5 text-neutralDarkest sidebar-items" href="#/">
+                            <span>
+                                <img src="images/dashboard.png" />
+                            </span>
+                            <span class="text-base font-normal leading-6 w-full py-3 lg:block sm:hidden block border-b border-e1dfe9 ml-3.5">Dashboard</span>
+                        </a>
+                        <a class="block flex items-center lg:py-0 sm:py-4 px-5 text-neutralDarkest sidebar-items" href="#/">
+                            <span>
+                                <img src="images/goals.png" />
+                            </span>
+                            <span class="text-base font-normal leading-6 w-full py-3 lg:block sm:hidden block border-b border-e1dfe9 ml-3.5">Goals</span>
+                        </a>
+                        <a class="block flex items-center lg:py-0 sm:py-4 px-5 text-neutralDarkest sidebar-items sidebar-dropdown" href="#/" onclick="orders()">
+                            <span>
+                                <img src="images/orders.png" />
+                            </span>
+                            <span class="flex justify-between items-center w-full pr-5 lg:flex sm:hidden border-b border-e1dfe9 ">
+                                <span class="text-base font-normal leading-6 w-full py-3 ml-3.5">Orders </span>
+                                <span>
+                                    <img class="right-arrow" src="images/right-arrow-sidebar.png" id="orders">
+                                </span>
+                            </span>
+                        </a>
+                        <div class="dropdown-content">
+                            <div class="text-xs font-semibold leading-4 bg-white pl-5 py-2.5 border-b border-e1dfe9 text-726f80 sidebar-menu-items sidebar-dropdown-submenu">
+                                Manual Transactions
+                            </div>
+                            <div class="">
+                                <div class="py-2 pl-7 pr-5 border-b border-e1dfe9 bg-eeec4f">
+                                    <a class="flex items-center w-full" href="#">
+                                        <span>
+                                            <img src="images/submenu-arrow.png">
+                                        </span>
+                                        <span class="text-sm font-normal leading-5 pl-3.5 text-neutralDarkest">New Transaction</span>
+                                    </a>
+                                </div>
+                                <div class="py-2 pl-7 pr-5 border-b border-e1dfe9 bg-eeec4f">
+                                    <a class="flex items-center w-full" href="#">
+                                        <span>
+                                            <img src="images/submenu-arrow.png">
+                                        </span>
+                                        <span class="text-sm font-normal leading-5 pl-3.5 text-neutralDarkest">View Drafts</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="text-xs font-semibold leading-4 bg-white pl-5 py-2.5 border-b border-e1dfe9 text-726f80 sidebar-menu-items sidebar-dropdown-submenu">
+                                Current Orders
+                            </div>
+                            <div class="">
+                                <div class="py-2 pl-7 pr-5 border-b border-e1dfe9 bg-eeec4f">
+                                    <a class="flex items-center w-full" href="#">
+                                        <span>
+                                            <img src="images/submenu-arrow.png">
+                                        </span>
+                                        <span class="text-sm font-normal leading-5 pl-3.5 text-neutralDarkest">Todays Orders</span>
+                                    </a>
+                                </div>
+                                <div class="py-2 pl-7 pr-5 border-b border-e1dfe9 bg-eeec4f">
+                                    <a class="flex justify-between items-center w-full" href="#">
+                                        <div class="flex items-center">
+                                            <span>
+                                                <img src="images/submenu-arrow.png">
+                                            </span>
+                                            <span class="text-sm font-normal leading-5 pl-3.5 text-neutralDarkest">Delivery Issues</span>
+                                        </div>
+                                        <div class="w-5 h-5 flex justify-center items-center rounded-full text-xs font-semibold leading-4 text-white bg-cf6c7f">2</div>
+                                    </a>
+                                </div>
+                                <div class="py-2 pl-7 pr-5 border-b border-e1dfe9 bg-eeec4f">
+                                    <a class="flex items-center w-full" href="#">
+                                        <span>
+                                            <img src="images/submenu-arrow.png">
+                                        </span>
+                                        <span class="text-sm font-normal leading-5 pl-3.5 text-neutralDarkest">On Hold</span>
+                                    </a>
+                                </div>
+                                <div class="py-2 pl-7 pr-5 border-b border-e1dfe9 bg-eeec4f">
+                                    <a class="flex items-center w-full" href="#">
+                                        <span>
+                                            <img src="images/submenu-arrow.png">
+                                        </span>
+                                        <span class="text-sm font-normal leading-5 pl-3.5 text-neutralDarkest">Declined Orders</span>
+                                    </a>
+                                </div>
+                                <div class="py-2 pl-7 pr-5 border-b border-e1dfe9 bg-eeec4f">
+                                    <a class="flex items-center w-full" href="#">
+                                        <span>
+                                            <img src="images/submenu-arrow.png">
+                                        </span>
+                                        <span class="text-sm font-normal leading-5 pl-3.5 text-neutralDarkest">Subscription Orders</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="block flex items-center lg:py-0 sm:py-4 px-5 text-neutralDarkest sidebar-items" href="#/">
+                            <span>
+                                <img src="images/product.png" />
+                            </span>
+                            <span class="flex justify-between items-center w-full pr-5 lg:flex sm:hidden border-b border-e1dfe9 ">
+                                <span class="text-base font-normal leading-6 w-full py-3 ml-3.5">Products</span>
+                                <span>
+                                    <img class="right-arrow" src="images/right-arrow-sidebar.png">
+                                </span>
+                            </span>
+                        </a>
+                        <a class="block flex items-center lg:py-0 sm:py-4 px-5 text-neutralDarkest sidebar-items" href="#/">
+                            <span>
+                                <img src="images/reports.png" />
+                            </span>
+                            <span class="flex justify-between items-center w-full pr-5 lg:flex sm:hidden border-b border-e1dfe9 ">
+                                <span class="text-base font-normal leading-6 w-full py-3 ml-3.5">Reports</span>
+                                <div class="flex items-center">
+                                    <div class="w-5 h-5 flex justify-center items-center rounded-full text-xs font-semibold leading-4 text-white bg-cf6c7f">9+</div>
+                                    <span class="w-2 h-1 ml-3">
+                                        <img class="right-arrow" src="images/right-arrow-sidebar.png">
+                                    </span>
+                                </div>
+                            </span>
+                        </a>
+                        <a class="block flex items-center lg:py-0 sm:py-4 px-5 text-neutralDarkest sidebar-items" href="#/">
+                            <span>
+                                <img src="images/map.png" />
+                            </span>
+                            <span class="flex justify-between items-center w-full pr-5 lg:flex sm:hidden border-b border-e1dfe9 ">
+                                <span class="text-base font-normal leading-6 w-full py-3 ml-3.5">Maps</span>
+                                <span>
+                                    <img class="right-arrow" src="images/right-arrow-sidebar.png">
+                                </span>
+                            </span>
+                        </a>
+                        <a class="block flex items-center lg:py-0 sm:py-4 px-5 text-neutralDarkest sidebar-items" href="#/">
+                            <span>
+                                <img src="images/admin.png" />
+                            </span>
+                            <span class="flex justify-between items-center w-full pr-5 lg:flex sm:hidden border-b border-e1dfe9 ">
+                                <span class="text-base font-normal leading-6 w-full py-3 ml-3.5">Admin</span>
+                                <span>
+                                    <img class="right-arrow" src="images/right-arrow-sidebar.png">
+                                </span>
+                            </span>
+                        </a>
+                        <a class="block flex items-center lg:py-0 sm:py-4 px-5  text-neutralDarkest sidebar-items" href="#/">
+                            <span>
+                                <img src="images/setting.png" />
+                            </span>
+                            <span class="flex justify-between items-center w-full pr-5 lg:flex sm:hidden border-b border-e1dfe9 ">
+                                <span class="text-base font-normal leading-6 w-full py-3 ml-3.5">Setting</span>
+                                <span>
+                                    <img class="right-arrow" src="images/right-arrow-sidebar.png">
+                                </span>
+                            </span>
+                        </a>
+                        <a class="block flex items-center lg:py-0 sm:py-4 px-5 text-neutralDarkest sidebar-items" href="#/">
+                            <span>
+                                <img src="images/store.png" />
+                            </span>
+                            <span class="flex justify-between items-center w-full pr-5 lg:flex sm:hidden border-b border-e1dfe9 ">
+                                <span class="text-base font-normal leading-6 w-full py-3 ml-3.5">Visit Store</span>
+                                <span>
+                                    <img class="right-arrow" src="images/right-arrow-sidebar.png">
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="sm:hidden ml-4 mt-12">
+                <button onclick="hideSidebar()" class="w-9 h-9 rounded-full bg bg-black p-2">
+                    <img src="images/close.png" alt="close" />
+                </button>
+            </div>
+            </div>
+            <div class="body-right-content font-inter">
+                <div class="px-4 md:pt-12 pt-4 pb-24 w-full mx-auto max-w-992">
+                    <div>
+                        <div class="flex justify-between sm:items-end mt-4 sm:mb-0 mb-12 relative">
+                            <div class="flex flex-col">
+                                <div>
+                                    <button class="text-sm font-normal leading-6 flex items-center sm:mt-0 mt-1 text-neutralDark">
+                                        <span class="mr-2">
+                                            <img class="h-2" src="images/left-arrow.png" />
+                                        </span>
+                                        <span class="sm:block hidden">Back to all orders</span>
+                                        <span class="sm:hidden">Back</span>
+                                    </button>
+                                </div>
+                                <h1 class="sm:text-[2rem] text-lg font-semibold leading-10 text-neutralDarkest sm:static absolute right-0 left-0 text-center sm:mt-4 mt-9">Order Details</h1>
+                            </div>
+                            <div class="flex items-center">
+                                <div>
+                                    <button class="flex items-center text-base font-semibold leading-6 p-2 text-neutralDark">
+                                        <span class="mr-2.5">
+                                            <img src="images/edit-icon.png" />
+                                        </span>
+                                        <span class="sm:block hidden">
+                                            Edit
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="sm:w-24 w-[4.25rem] sm:pl-2 relative">
+                                    <select class="sm:text-base text-sm font-semibold leading-6 text-white cursor-pointer sm:rounded-lg rounded sm:h-10 h-8 w-full bg-primaryBrand sm:px-3 px-2">Print
+                                        <option>Print</option>
+                                    </select>
+                                    <img class="sm:w-3.5 w-2.5 sm:h-2 h-1.5 absolute sm:top-4 top-3 sm:right-4 right-2" src="images/down-arrow-white.png" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="body-right-main">
+                            <div class="flex mt-6 border-b relative">
+                                <div class="md:max-w-[720px] max-w-full w-full">
+                                    <div class="bg-white md:rounded-l-3xl rounded-t-2xl">
+                                        <div class="md:hidden py-1.5 px-5 border-b">
+                                            <div>
+                                                <button class="flex items-center p-2 ml-auto text-sm font-semibold leading-5 text-neutralDark" onclick="tabBttns()">
+                                                    <span>Select Action</span>
+                                                    <img class="w-2.5 h-1.5 ml-1.5" src="images/down-arrow.png" />
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="order-re">
+                                            <div id="tab1" class="links w-full lg:pl-10 lg:pr-6 px-5 pt-10 -mb-2 tabcontent">
+                                                <div class="bg-greenLightest flex items-center py-4 px-5 rounded-lg">
+                                                    <span class="w-4 h-3 mr-3">
+                                                        <img src="images/green-tick.png" alt="Checked" />
+                                                    </span>
+                                                    <p class="sm:text-base text-sm font-normal leading-6 text-[#3e9979]">Receipt successfully sent to client.</p>
+                                                </div>
+                                            </div>
+                                            <div id="tab2" class="links w-full pl-4 pr-4 lg:pr-0 md:py-4 -mb-2 tabcontent">
+                                                <div class="lg:px-6 px-5 border-4 pt-8 md:pb-10 pb-7 min-h-[28rem] border-primary">
+                                                    <form>
+                                                        <div class="flex justify-between items-center mb-6 relative center-border">
+                                                            <h1 class="sm:text-lg text-base font-semibold sm:leading-7 leading-5 text-primaryBrand bg-white pr-2 z-50 tab-h1">Refund Full or Partial Amount</h1>
+                                                            <!-- <div class="border-b absolute"></div> -->
+                                                            <div class="pl-2 z-50 bg-white tab-closebtn">
+                                                                <button class="text-sm font-semibold leading-5 text-neutralDark bg-neutralLightest flex items-center py-1.5 px-2 rounded">
+                                                                    Close
+                                                                    <span class="ml-2 w-2.5 h-2">
+                                                                        <img src="images/order-close.png" />
+                                                                    </span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <p class="text-sm font-semibold leading-5 text-neutralDarkest mt-2">Select Items to Return and Refund</p>
+                                                        <div class="mt-4 overflow-auto">
+                                                            <table class="md:w-full w-[40rem]">
+                                                                <thead>
+                                                                    <th class="sm:w-16 w-12 sm:pl-4 pl-2 pt-4 pb-3 border-b-2 bg-neutralLightest">
+                                                                        <label class="checkbox-label">
+                                                                            <input type="checkbox" class="w-5 h-5 -top-2.5 rounded" />
+                                                                            <span class="checkmark w-5 h-5 -top-2.5 -left-4 rounded"></span>
+                                                                        </label>
+                                                                    </th>
+                                                                    <th class="sm:w-[183px] w-[152px] border-b sm:pl-4 pl-2 pt-4 pb-3 text-left border-b-2 text-sm font-semibold leading-5 text-neutralDarkest bg-neutralLightest">
+                                                                        Item / Description
+                                                                    </th>
+                                                                    <th class="sm:[175px] w-36 border-b sm:pl-4 pl-2 pt-4 pb-3 text-left border-b-2 text-sm font-semibold leading-5 text-neutralDarkest bg-neutralLightest">
+                                                                        Type
+                                                                    </th>
+                                                                    <th class="w-16 border-b pr-4 pt-4 pb-3 text-right border-b-2 text-sm font-semibold leading-5 text-neutralDarkest bg-neutralLightest">
+                                                                        Qty
+                                                                    </th>
+                                                                    <th class="w-32 border-b pr-4 pt-4 pb-3 text-right border-b-2 text-sm font-normal leading-5 text-neutralDarkest bg-neutralLightest">
+                                                                        Price
+                                                                    </th>
+                                                                    <th class="w-32 border-b pr-4 pt-4 pb-3 text-right border-b-2 text-sm font-semibold leading-5 text-neutralDarkest bg-neutralLightest">
+                                                                        Total
+                                                                    </th>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="sm:w-16 w-12 sm:pl-4 pl-2 py-2.5 border-b-2">
+                                                                           <label class="checkbox-label">
+                                                                                <input type="checkbox" class="w-5 h-5 -top-2.5 rounded" />
+                                                                                <span class="checkmark w-5 h-5 -top-2.5 rounded"></span>
+                                                                            </label>
+                                                                        </td>
+                                                                        <td class="sm:w-[183px] w-[152px] py-2.5 sm:pl-4 pl-2 border-b-2">
+                                                                            <div class="flex items-center">
+                                                                                <div class="w-12 h-12 bg-[#E1DFDF]"></div>
+                                                                                <div class="ml-3 sm:text-sm text-xs font-normal leading-5 text-neutralDarkest sm:w-24 w-20 sm:pr-1">
+                                                                                    <p>Earl Grey Organic Tea Colour: As....</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="sm:w-[175px] w-36 border-b sm:pl-4 pl-2 py-2.5 border-b-2">
+                                                                            <p class="py-1 lg:px-2 md:px-1.5 px-2 text-xs font-semibold leading-4 text-white text-center rounded-full inline-block bg-[#3E9979]">Original Purchase</p>
+                                                                        </td>
+                                                                        <td class="w-16 border-b pr-4 py-2.5 text-right border-b-2 text-sm font-semibold leading-5 text-neutralDarkest">
+                                                                            1
+                                                                        </td>
+                                                                        <td class="w-32 border-b pr-4 py-2.5 text-right border-b-2 text-sm font-semibold leading-5 text-neutralDarkest">
+                                                                            AUD $15.00
+                                                                        </td>
+                                                                        <td class="w-32 border-b pr-4 py-2.5 text-right border-b-2 text-sm font-semibold leading-5 text-neutralDarkest">
+                                                                            AUD $15.00
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="sm:w-16 w-12 sm:pl-4 pl-2 py-2.5 border-b-2">
+                                                                           <label class="checkbox-label">
+                                                                                <input type="checkbox" class="w-5 h-5 -top-2.5 rounded" />
+                                                                                <span class="checkmark w-5 h-5 -top-2.5 rounded"></span>
+                                                                            </label>
+                                                                        </td>
+                                                                        <td class="sm:w-[183px] w-[152px] py-2.5 sm:pl-4 pl-2 border-b-2">
+                                                                            <div class="flex items-center">
+                                                                                <div class="w-12 h-12 bg-[#E1DFDF]"></div>
+                                                                                <div class="ml-3 sm:text-sm text-xs font-normal leading-5 text-neutralDarkest sm:w-24 w-20 sm:pr-1">
+                                                                                    <p>Earl Grey Organic Tea Colour: As....</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="sm:w-[175px] w-36 border-b sm:pl-4 pl-2 py-2.5 border-b-2">
+                                                                            <p class="py-1 lg:px-2 md:px-1.5 px-2 text-xs font-semibold leading-4 text-white text-center rounded-full inline-block bg-[#3E9979]">Original Purchase</p>
+                                                                        </td>
+                                                                        <td class="w-16 border-b pr-4 py-2.5 text-right border-b-2 text-sm font-semibold leading-5 text-neutralDarkest">
+                                                                            1
+                                                                        </td>
+                                                                        <td class="w-32 border-b pr-4 py-2.5 text-right border-b-2 text-sm font-semibold leading-5 text-neutralDarkest">
+                                                                            AUD $15.00
+                                                                        </td>
+                                                                        <td class="w-32 border-b pr-4 py-2.5 text-right border-b-2 text-sm font-semibold leading-5 text-neutralDarkest">
+                                                                            AUD $15.00
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div class="">
+                                                            <div class="flex justify-between items-center border-b-2">
+                                                                <div class="flex items-center">
+                                                                    <div class="sm:w-16 w-12 sm:pl-4 pl-2 py-2.5">
+                                                                        <label class="checkbox-label">
+                                                                            <input type="checkbox" class="w-5 h-5 -top-2.5 rounded" />
+                                                                            <span class="checkmark w-5 h-5 -top-2.5 rounded"></span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <td class="sm:w-[183px] w-[152px] py-2 sm:pl-4 pl-2 text-sm font-semibold leading-5 text-neutralDarkest">
+                                                                        Delivery:
+                                                                    </td>
+                                                                </div>
+                                                                <div class="md:w-32 border-b pr-4 py-2.5 text-right text-sm font-normal leading-5 text-neutralDarkest">
+                                                                    AUD $15.00
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex justify-between items-center border-b-2">
+                                                                <div class="flex items-center">
+                                                                    <div class="sm:w-16 w-12 sm:pl-4 pl-2 py-2.5">
+                                                                        <label class="checkbox-label">
+                                                                            <input type="checkbox" class="w-5 h-5 -top-2.5 rounded" />
+                                                                            <span class="checkmark w-5 h-5 -top-2.5 rounded"></span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <td class="sm:w-[183px] w-[152px] py-2 sm:pl-4 pl-2 text-sm font-semibold leading-5 text-neutralDarkest">
+                                                                        Total (incl. GST):
+                                                                    </td>
+                                                                </div>
+                                                                <div class="md:w-32 border-b pr-4 py-2.5 text-right text-sm font-normal leading-5 text-neutralDarkest">
+                                                                    AUD $15.00
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="max-w-md w-full ml-auto sm:pl-12 pt-4">
+                                                            <div class="sm:flex items-center">
+                                                                <label class="sm:w-40 w-full text-base font-semibold leading-6 text-neutralDarkest">Amount to Refund:</label>
+                                                                <input class="sm:w-60 w-full border border-neutralMidLight rounded-lg py-2 px-3 sm:mt-0 mt-2" type="text" name="Amount Refund" placeholder="AUD $0">
+                                                            </div>
+                                                            <div class="sm:flex items-center mt-4">
+                                                                <label class="sm:w-40 w-full text-base font-semibold leading-6 text-neutralDarkest">Select Reason:</label>
+
+                                                                <div class="sm:w-60 w-full border border-neutralMidLight rounded-lg sm:mt-0 mt-2 relative">
+                                                                    <select class="w-full py-2 px-3 rounded-lg text-base font-semibold leading-6 text-neutralDarkest">
+                                                                        <option>Select</option>
+                                                                    </select>
+                                                                    <img class="absolute top-4 right-4" src="images/down-arrow.png" />
+                                                                </div>
+                                                            </div>
+                                                            <textarea class="w-full py-2 px-3 text-base font-normal leading-6 text-neutralDark border border-neutralMidLight rounded-lg mt-4" rows="2" placeholder="Add a note"></textarea>
+                                                            <div class="text-right mt-4">
+                                                                <button class="bg-primaryBrand py-2 px-3 text-base font-semibold leading-6 text-white rounded-lg">
+                                                                    Make Refund
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div id="tab3" class="links w-full pl-4 pr-4 lg:pr-0 md:py-4 -mb-2 tabcontent">
+                                                <div class="lg:px-6 px-5 border-4 pt-8 md:pb-10 pb-7 min-h-[28rem] border-primary">   
+                                                    <div class="flex justify-between items-center mb-6 relative center-border">
+                                                        <h1 class="sm:text-lg text-base font-semibold sm:leading-7 leading-5 text-primaryBrand bg-white pr-2 z-50 tab-h1 recharge">Recharge</h1>
+                                                        <!-- <div class="border-b absolute"></div> -->
+                                                        <div class="pl-2 z-50 bg-white tab-closebtn">
+                                                            <button class="text-sm font-semibold leading-5 text-neutralDark bg-neutralLightest flex items-center py-1.5 px-2 rounded">
+                                                                Close
+                                                                <span class="ml-2 w-2.5 h-2">
+                                                                    <img src="images/order-close.png" />
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <p class="sm:text-base text-sm font-normal leading-6 text-neutralDark">Request a recharge for this order (additional delivery charge, more flowers, etc.)</p>
+                                                    <div class="w-full ml-auto pt-4">
+                                                        <div class="sm:flex justify-between items-center">
+                                                            <label class="md:w-64 sm:w-48 w-full sm:mr-6 text-base font-semibold leading-6 text-neutralDarkest">Amount to Recharge:</label>
+                                                            <input class="xl:w-96 sm:w-72 w-full sm:mt-0 mt-2 border border-neutralMidLight rounded-lg py-2 px-3" type="text" name="Amount Recharge" placeholder="AUD $0">
+                                                        </div>
+                                                        <div class="sm:flex justify-between items-center mt-4">
+                                                            <label class="md:w-64 sm:w-48 w-full sm:mr-6 text-base font-semibold leading-6 text-neutralDarkest">Select Reason:</label>
+
+                                                            <textarea class="xl:w-96 sm:w-72 w-full sm:mt-0 mt-2 py-2 px-3 text-base font-normal leading-6 text-neutralDark border border-neutralMidLight rounded-lg" rows="2" placeholder="Recharge Reason"></textarea>
+                                                        </div>
+                                                        <div class="text-right mt-4">
+                                                            <button class="bg-primaryBrand py-2 px-3 text-base font-semibold leading-6 text-white rounded-lg">
+                                                                Send Recharge Request
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="tab4" class="links w-full pl-4 pr-4 lg:pr-0 md:py-4 -mb-2 tabcontent mb-6">
+                                                <div class="lg:px-6 px-5 border-4 pt-8 md:pb-10 pb-7 min-h-[28rem] border-primary">
+                                                    <div class="flex justify-between items-center mb-6 relative center-border">
+                                                        <h1 class="sm:text-lg text-base font-semibold sm:leading-7 leading-5 text-primaryBrand bg-white pr-2 z-50 tab-h1 add-item">Search and Add Flowers</h1>
+                                                        <!-- <div class="border-b absolute"></div> -->
+                                                        <div class="pl-2 z-50 bg-white tab-closebtn">
+                                                            <button class="text-sm font-semibold leading-5 text-neutralDark bg-neutralLightest flex items-center py-1.5 px-2 rounded">
+                                                                Close
+                                                                <span class="ml-2 w-2.5 h-2">
+                                                                    <img src="images/order-close.png" />
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="mt-7 search-bar relative">
+                                                        <input class="place-text h-10 border-solid border border-neutralMidLight text-base font-normal leading-6 placeholder:text-neutralDarkest rounded-lg w-full outline-none px-7 sm:pl-9 sm:pr-8 py-2" type="text" placeholder="Gerberas" />
+                                                        <a href="#/" class="absolute top-3 left-2.5">
+                                                            <img src="images/search-icon.png" alt="not found" />
+                                                        </a>
+                                                    </div>
+                                                    <div class="mt-8 flex items-center justify-between">
+                                                        <h3 class="text-base font-semibold leading-6 text-neutralDarkest">Select Option</h3>
+                                                        <p class="text-xs text-neutralDark">3 Found</p>
+                                                    </div>
+                                                    <div class="flex items-center justify-center sm:justify-between flex-wrap">
+                                                        <div class="w-full sm:w-52 mt-2 sm:mt-4 flex items-center border rounded-lg border-primaryBrand flower-container selected">
+                                                            <label class="flex items-center w-full border card-border rounded-lg block pl-3">
+                                                                <input type="radio" name="radio" checked />
+                                                                <span class="text-sm font-semibold leading-5 text-neutralDark pl-4 mr-auto"><strong>Standard</strong>
+                                                                    <div class="text-sm font-normal leading-5 text-neutralDark">$21</div>
+                                                                </span>
+                                                                <div class="w-16 h-16 ">
+                                                                    <img class="border rounded-r-lg w-full h-full" src="images/standerd-flowr.png" alt="not found" />
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                        <div class="w-full sm:w-52 mt-2 sm:mt-4 flex items-center border rounded-lg border-primaryBrand flower-container">
+                                                            <label class="flex items-center w-full border card-border rounded-lg block pl-3">
+                                                                <input type="radio" name="radio" />
+                                                                <span class="text-sm font-semibold leading-5 text-neutralDark pl-4 mr-auto"><strong>Deluxe</strong>
+                                                                    <div class="text-sm font-normal leading-5 text-neutralDark">$38</div>
+                                                                </span>
+                                                                <div class="w-16 h-16 ">
+                                                                    <img class="border rounded-r-lg w-full h-full" src="images/delux-flower.png" />
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                        <div class="w-full sm:w-52 mt-2 sm:mt-4 flex items-center border rounded-lg border-primaryBrand flower-container">
+                                                            <label class="flex items-center w-full border card-border rounded-lg block pl-3">
+                                                                <input type="radio" name="radio" />
+                                                                <span class="text-sm font-semibold leading-5 text-neutralDark pl-4 mr-auto"><strong>Premium</strong>
+                                                                    <div class="text-sm font-normal leading-5 text-neutralDark">$45</div>
+                                                                </span>
+                                                              <div class="w-16 h-16">
+                                                                <img class="border rounded-r-lg w-full h-full" src="images/pramium-flower.png" alt="not found"/>
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mt-4">
+                                                        <div class="border rounded-lg border-neutralMidLight sm:px-2 px-4 pb-4">
+                                                            <div class="w-full max-w-[300px] mx-auto">
+                                                                <div class="flex justify-between mt-4">
+                                                                    <p class=" text-sm sm:text-base font-semibold leading-5 text-neutralDarkest">Colour</p>
+                                                                    <p class="text-xs sm:text-sm font-normal leading-5 text-neutralDark">Subject of Availability</p>
+                                                                </div>
+                                                                <div class="relative flex items-center mt-2">
+                                                                    <select class="text-sm sm:text-base outline-none pl-3 rounded-lg border border-neutralMidLight sm:h-10 h-8 w-full text-base font-normal cursor-pointer text-neutralDark bg-white">
+                                                                        Choose Colour
+                                                                        <option value="none">Choose Colour</option>
+                                                                    </select>
+                                                                    <img class="w-3.5 h-2 absolute right-4" src="images/down-arrow.png"/>
+                                                                </div>
+                                                                <div class="flex items-center justify-between mt-4">
+                                                                    <div class="h-px w-28 bg-neutralLight"></div>
+                                                                    <p class="text-sm text-neutralDark">and/or</p>
+                                                                    <div class="h-px w-28 bg-neutralLight"></div>
+                                                                </div>
+                                                                <div class="mt-4">
+                                                                    <input class="placeholder:text-sm sm:placeholder:text-base outline-none pl-3 w-full h-10 rounded-lg border border-neutralMidLight text-neutralDark font-normal" type="text"
+                                                                    placeholder="Enter custom colour"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <div class="mt-4">
+                                                        <div class="border rounded-lg border-neutralMidLight pb-4">
+                                                            <div class="w-full max-w-[300px] mx-auto sm:px-0 px-4">
+                                                                <div class="flex justify-between mt-4">
+                                                                    <p class="text-base font-semibold leading-5 text-neutralDark">Add a Vase</p>
+                                                                    <div class="toggle-btn">
+                                                                        <label class="switch relative">
+                                                                            <input type="checkbox" checked />
+                                                                            <span class="slider round"></span>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div> -->
+                                                    <div class="mt-4">
+                                                        <div class="border rounded-lg border-neutralMidLight pb-4">
+                                                            <div class="w-full max-w-[300px] mx-auto sm:px-0 px-4">
+                                                                <div class="flex justify-between mt-4">
+                                                                    <p class="text-base font-semibold leading-5 text-neutralDarkest">Add a Vase</p>
+                                                                    <div class="toggle-btn">
+                                                                        <label class="switch relative">
+                                                                            <input type="checkbox" checked />
+                                                                            <span class="slider round"></span>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flex items-center border rounded-lg border-primaryBrand flower-container2 selected mt-4 h-[64px]">
+                                                                    <label class="flex items-center w-full border card-border rounded block pl-3">
+                                                                        <input type="radio" name="radio1" checked/>
+                                                                        <span class="text-sm font-semibold leading-5 text-neutralDarkest ml-4 mr-auto">Standard Vase
+                                                                            <div class="text-sm font-normal leading-5 text-neutralDark">$21</div>
+                                                                        </span>
+                                                                        <div class="w-16 h-16 py-px">
+                                                                            <img class="border rounded-r-lg w-full h-full" src="images/standerd-vase.png" alt="not found" />
+                                                                        </div>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="flex items-center border rounded-lg border-primaryBrand flower-container2 mt-2 sm:mt-3 h-[64px]">
+                                                                    <label class="flex items-center w-full border card-border rounded block pl-3">
+                                                                        <input type="radio" name="radio1" />
+                                                                        <span class="text-sm font-semibold leading-5 text-neutralDarkest ml-4 mr-auto">
+                                                                            Premium Vase
+                                                                            <div class="text-sm font-normal leading-5 text-neutralDark">$21</div>
+                                                                        </span>
+                                                                        <div class="w-16 h-16 py-px">
+                                                                            <img class="border rounded-r-lg w-full h-full" src="images/Premium-vase.png" alt="not found"/>
+                                                                        </div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mt-4">
+                                                        <div class="border rounded-t-lg border-neutralMidLight h-[112px] bg-neutralLightest">
+                                                            <div class="w-full max-w-[300px] mx-auto mt-6 sm:px-0 px-4">
+                                                                <label class="flex items-center w-full block ">
+                                                                    <input type="radio" name="radio2" />
+                                                                    <span class="text-neutralDarkest flex text-sm sm:text-base font-normal leading-5 sm:ml-4 ml-2 mr-auto">
+                                                                         Charge
+                                                                        <div class="pl-2 font-semibold">$43.99</div>
+                                                                    </span>
+                                                                </label>
+                                                                <label class="flex items-center w-full block mt-4">
+                                                                    <input type="radio" name="radio2" />
+                                                                    <span class="text-neutralDarkest flex text-sm sm:text-base font-normal leading-5 sm:ml-4 ml-2 mr-auto">
+                                                                        Don’t Charge 
+                                                                        <div class="pl-2 font-semibold">(Free Item)</div>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <button class="w-full h-10 bg-primaryBrand border-primaryBrand border-4 rounded-b-lg ">
+                                                            <h3 class="text-white text-base font-semibold"> Add to Order</h3>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="tab5" class="links w-full pl-4 pr-4 lg:pr-0 md:py-4 -mb-2 tabcontent">
+                                                <div class="lg:px-6 px-5 border-4 pt-8 md:pb-10 pb-7 min-h-[28rem] border-primary">  
+                                                    <div class="flex justify-between items-center mb-6 relative center-border">
+                                                        <h1 class="sm:text-lg text-base font-semibold sm:leading-7 leading-5 text-primaryBrand bg-white pr-2 z-50 tab-h1">Payment Issue Investigation</h1>
+                                                        <!-- <div class="border-b absolute"></div> -->
+                                                        <div class="pl-2 z-50 bg-white tab-closebtn">
+                                                            <button class="text-sm font-semibold leading-5 text-neutralDark bg-neutralLightest flex items-center py-1.5 px-2 rounded">
+                                                                Close
+                                                                <span class="ml-2 w-2.5 h-2">
+                                                                    <img src="images/order-close.png" />
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <p class="sm:text-base text-sm font-normal leading-6 text-neutralDark mt-2.5">Put in a request to investigate a payment issue for this order (double charges, etc.)</p>
+                                                    <p class="sm:text-base text-sm font-normal leading-6 text-neutralDark">Enter your name in case we need further info</p>
+                                                    <div class="w-full ml-auto pt-4">
+                                                        <div class="sm:flex justify-between items-center">
+                                                            <label class="lg:w-64 md:w-48 sm:w-48 w-full sm:mr-6 text-base font-semibold leading-6 text-neutralDarkest">Your Name:</label>
+                                                            <input class="xl:w-96 md:w-64 sm:w-72 w-full sm:mt-0 mt-2 border border-neutralMidLight rounded-lg py-2 px-3" type="text" name="Name" placeholder="AUD $0">
+                                                        </div>
+                                                        <div class="sm:flex justify-between items-center mt-4">
+                                                            <label class="lg:w-64 md:w-48 sm:w-48 sm:mr-6 text-base font-semibold leading-6 text-neutralDarkest">Payment issue details</label>
+
+                                                            <textarea class="xl:w-96 md:w-64 sm:w-72 w-full sm:mt-0 mt-2 py-2 px-3 text-base font-normal leading-6 text-neutralDark border border-neutralMidLight rounded-lg" rows="2" placeholder="Please be as specific as possible"></textarea>
+                                                        </div>
+                                                        <div class="text-right mt-4">
+                                                            <button class="bg-primaryBrand sm:w-auto w-full py-2 px-2 text-base font-semibold leading-6 text-white rounded-lg">
+                                                                Send Investigation Request
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="tab6" class="links w-full pl-4 pr-4 lg:pr-0 md:py-4 -mb-2 tabcontent">
+                                                <div class="lg:px-6 px-5 border-4 pt-8 md:pb-10 pb-7 sm:min-h-[28rem] border-primary">
+                                                    <div class="flex justify-between items-center mb-6 relative center-border">
+                                                        <h1 class="sm:text-lg text-base font-semibold sm:leading-7 leading-5 text-primaryBrand bg-white pr-2 z-50 tab-h1 transaction">Transaction Info</h1>
+                                                        <!-- <div class="border-b absolute"></div> -->
+                                                        <div class="pl-2 z-50 bg-white tab-closebtn">
+                                                            <button class="text-sm font-semibold leading-5 text-neutralDark bg-neutralLightest flex items-center py-1.5 px-2 rounded">
+                                                                Close
+                                                                <span class="ml-2 w-2.5 h-2">
+                                                                    <img src="images/order-close.png" />
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mt-4 overflow-auto">
+                                                        <table class="md:w-full w-[41rem]">
+                                                            <thead>
+                                                                <th class="sm:w-48 w-20 border-b sm:pl-4 pl-2 pt-4 pb-3 text-left border-b-2 text-sm font-semibold leading-5 text-neutralDarkest bg-neutralLightest">
+                                                                    Time
+                                                                </th>
+                                                                <th class="sm:w-28 w-[50px] border-b sm:pl-4 pl-2 pt-4 pb-3 text-left border-b-2 sm:text-sm text-xs font-semibold leading-5 text-neutralDarkest bg-neutralLightest">
+                                                                    Amount
+                                                                </th>
+                                                                <th class="sm:32 w-8 border-b pl-4 pt-4 pb-3 border-b-2 text-left sm:text-sm text-xs font-semibold leading-5 text-neutralDarkest bg-neutralLightest">
+                                                                    Type
+                                                                </th>
+                                                                <th class="sm:w-36 w-20 text-center border-b pl-4 pt-4 pb-3 border-b-2 text-left sm:text-sm text-xs font-semibold leading-5 text-neutralDarkest bg-neutralLightest">
+                                                                    Successful
+                                                                </th>
+                                                                <th class="md:w-32 sm:w-20 w-24 border-b pl-4 pt-4 pb-3 border-b-2 text-sm font-semibold leading-5 text-neutralDarkest bg-neutralLightest">
+                                                                    Status Message
+                                                                </th>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="sm:w-48 w-20 py-4 sm:pl-4 pl-2 border-b-2">
+                                                                        <div class="sm:text-sm text-xs font-normal leading-5 text-neutralDarkest">
+                                                                            <p>29 March 2022</p>
+                                                                            <p>03:21:584 PM AEST</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="sm:w-28 w-[50px] border-b sm:pl-4 pl-2 pt-4 pb-3 border-b-2 sm:text-sm text-xs font-normal leading-5 text-neutralDarkest">
+                                                                        $36.99
+                                                                    </td>
+                                                                    <td class="sm:32 w-8 border-b pl-4 py-3 text-left border-b-2 sm:text-sm text-xs font-normal leading-5 text-neutralDarkest">
+                                                                        purchase
+                                                                    </td>
+                                                                    <td class="md:w-36 w-20 text-center border-b pl-4 py-3 border-b-2 text-sm leading-5 text-neutralDarkest">
+                                                                        <p class="py-1 lg:px-2 md:px-1.5 px-2 text-xs font-semibold leading-4 text-white text-center rounded-full inline-block bg-[#3E9979]">True</p>
+                                                                    </td>
+                                                                    <td class="md:w-32 w-20 border-b pr-4 py-3 text-right border-b-2 text-sm font-normal leading-5 text-neutralDarkest">
+                                                                        Transaction Approved
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="tab7" class="links w-full pl-4 pr-4 lg:pr-0 md:py-4 -mb-2 tabcontent">
+                                                <div class="lg:px-6 px-5 border-4 pt-8 md:pb-10 pb-7 sm:min-h-[28rem] border-primary">    
+                                                    <div class="flex justify-between items-center mb-6 relative center-border">
+                                                        <h1 class="sm:text-lg text-base font-semibold sm:leading-7 leading-5 text-primaryBrand bg-white pr-2 z-50">Order Logs</h1>
+                                                    </div>
+                                                    <div class="mt-4 overflow-auto">
+                                                        <table class="w-full">
+                                                            <thead class="align-top">
+                                                                <th class="xl:w-72 sm:w-96 w-32 border-b md:pl-4 pl-2 pt-4 pb-3 text-left border-b-2 text-sm font-semibold leading-5 text-neutralDarkest bg-neutralLightest">
+                                                                    Time
+                                                                </th>
+                                                                <th class="xl:w-60 sm:w-56 w-28 border-b md:pl-4 pl-2 pt-4 pb-3 text-left border-b-2 sm:text-sm text-xs font-semibold leading-5 text-neutralDarkest bg-neutralLightest">
+                                                                    Changes
+                                                                </th>
+                                                                <th class="sm:w-28 w-20 border-b md:pl-4 pl-2 pt-4 pb-3 border-b-2 text-left sm:text-sm text-xs font-semibold leading-5 text-neutralDarkest bg-neutralLightest">
+                                                                    User
+                                                                </th>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="align-top">
+                                                                   <td class="xl:w-72 sm:w-96 w-32 border-b md:pl-4 pl-2 pt-4 pb-3 border-b-2 text-left sm:text-sm text-xs font-normal leading-5 text-neutralDarkest">29 March 2022 03:21:584 PM AEST</td>
+                                                                   <td class="xl:w-60 sm:w-56 w-28 border-b md:pl-4 pl-2 pt-4 pb-3 border-b-2 text-left sm:text-sm text-xs font-normal leading-5 text-neutralDarkest">Resent out receipt</td>
+                                                                   <td class="sm:w-28 w-20 border-b md:pl-4 pl-2 pt-4 pb-3 border-b-2 text-left sm:text-sm text-xs font-normal leading-5 text-neutralDarkest">Demo</td>
+                                                                </tr>
+                                                                <tr class="align-top">
+                                                                   <td class="xl:w-72 sm:w-96 w-32 border-b md:pl-4 pl-2 pt-4 pb-3 border-b-2 text-left sm:text-sm text-xs font-normal leading-5 text-neutralDarkest">29 March 2022 03:21:584 PM AEST</td>
+                                                                   <td class="xl:w-60 sm:w-56 w-28 border-b pl-4 pt-4 pb-3 border-b-2 text-left sm:text-sm text-xs font-normal leading-5 text-neutralDarkest">Florist completed order</td>
+                                                                   <td class="sm:w-28 w-20 border-b pl-4 pt-4 pb-3 border-b-2 text-left sm:text-sm text-xs font-normal leading-5 text-neutralDarkest">Amanda</td>
+                                                                </tr>
+                                                                <tr class="align-top">
+                                                                   <td class="xl:w-72 sm:w-96 w-32 border-b md:pl-4 pl-2 pt-4 pb-3 border-b-2 text-left sm:text-sm text-xs font-normal leading-5 text-neutralDarkest">29 March 2022 03:21:584 PM AEST</td>
+                                                                   <td class="xl:w-60 sm:w-56 w-28 border-b md:pl-4 pl-2 pt-4 pb-3 border-b-2 text-left sm:text-sm text-xs font-normal leading-5 text-neutralDarkest">Florist Amanda assigned</td>
+                                                                   <td class="sm:w-28 w-20 border-b md:pl-4 pl-2 pt-4 pb-3 border-b-2 text-left sm:text-sm text-xs font-normal leading-5 text-neutralDarkest">Admin</td>
+                                                                </tr>
+                                                                <tr class="align-top">
+                                                                   <td class="xl:w-72 sm:w-96 w-32 border-b md:pl-4 pl-2 pt-4 pb-3 border-b-2 text-left sm:text-sm text-xs font-normal leading-5 text-neutralDarkest">29 March 2022 03:21:584 PM AEST</td>
+                                                                   <td class="xl:w-60 sm:w-56 w-28 border-b pl-4 pt-4 pb-3 border-b-2 text-left sm:text-sm text-xs font-normal leading-5 text-neutralDarkest">Order Created</td>
+                                                                   <td class="sm:w-28 w-20 border-b pl-4 pt-4 pb-3 border-b-2 text-left sm:text-sm text-xs font-normal leading-5 text-neutralDarkest"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="tab8" class="links w-full pl-4 pr-4 lg:pr-0 md:py-4 -mb-2 tabcontent">
+                                                <div class="lg:px-6 px-5 border-4 pt-8 md:pb-10 pb-7 sm:min-h-[28rem] border-primary">    
+                                                    <div class="flex justify-between items-center mb-6 relative center-border">
+                                                        <h1 class="sm:text-lg text-base font-semibold sm:leading-7 leading-5 text-primaryBrand bg-white pr-2 z-50">Duplicate Order</h1>
+                                                    </div>
+                                                    <div>
+                                                        <label class="checkbox-label">
+                                                            <input type="checkbox" class="w-5 h-5 top-px rounded">
+                                                            <span class="checkmark w-5 h-5 top-px rounded"></span>
+                                                            <span class="text-base font-normal leading-6 text-neutralDarkest ml-9">Reduce line item quantities</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="mt-6">
+                                                        <button class="px-3 py-2 sm:w-auto w-full bg-primaryBrand text-base font-semibold leading-6 text-white rounded-lg">Submit to Duplicate</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="tab9" class="links w-full pl-4 pr-4 lg:pr-0 md:py-4 -mb-2 tabcontent">
+                                                <div class="lg:px-6 px-5 border-4 pt-8 md:pb-10 pb-7 sm:min-h-[28rem] border-primary">    
+                                                    <div class="flex justify-between items-center mb-6 relative center-border">
+                                                        <h1 class="sm:text-lg text-base font-semibold sm:leading-7 leading-5 text-primaryBrand bg-white pr-2 z-50 tab-h1 transaction">Duplicate Order (Alcohol Only)</h1>
+                                                    </div>
+                                                    <div>
+                                                        <label class="checkbox-label">
+                                                            <input type="checkbox" class="w-5 h-5 top-px rounded">
+                                                            <span class="checkmark w-5 h-5 top-px rounded"></span>
+                                                            <span class="text-base font-normal leading-6 text-neutralDarkest ml-9">Reduce line item quantities</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="mt-6">
+                                                        <button class="px-3 py-2 sm:w-auto w-full bg-primaryBrand text-base font-semibold leading-6 text-white rounded-lg">Submit to Duplicate (Alcohol only)</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="tab11" class="links w-full pl-4 pr-4 lg:pr-0 md:py-4 -mb-2 tabcontent">
+                                                <div class="lg:px-6 px-5 border-4 pt-8 md:pb-10 pb-7 sm:min-h-[28rem] border-primary">    
+                                                    <div class="flex justify-between items-center mb-6 relative center-border">
+                                                        <h1 class="sm:text-lg text-base font-semibold sm:leading-7 leading-5 text-primaryBrand bg-white pr-2 z-50 tab-h1 add-item">Swap Items</h1>
+                                                        <!-- <div class="border-b absolute"></div> -->
+                                                        <div class="pl-2 z-50 bg-white tab-closebtn">
+                                                            <button class="text-sm font-semibold leading-5 text-neutralDark bg-neutralLightest flex items-center py-1.5 px-2 rounded">
+                                                                Close
+                                                                <span class="ml-2 w-2.5 h-2">
+                                                                    <img src="images/order-close.png" />
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <p class="sm:text-base text-sm font-semibold leading-6 text-neutralDarkest mt-5">Select order items you want to swap</p>
+                                                    <div class="w-full border rounded-lg border-primaryBrand pb-4 mt-4">
+                                                        <div class="rounded-t-lg bg-[#ecf9fc]">
+                                                            <label class="flex justify-between items-center border rounded-t-lg border-neutralMidLight w-full pl-3">
+                                                                <div class="flex items-center">
+                                                                    <div class="toggle-btn mr-3">
+                                                                        <label class="switch relative">
+                                                                            <input type="checkbox" checked />
+                                                                            <span class="slider round"></span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div>
+                                                                        <p class="text-sm font-semibold leading-5 text-neutralDarkest">Earl Grey Organic Tea</p>
+                                                                        <p class="text-sm font-normal leading-5 text-neutralDark">$21</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="w-16 h-16 ">
+                                                                    <img class="border rounded-r-lg w-full h-full" src="images/standerd-flowr.png" alt="not found" />
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                        <div class="px-3">
+                                                            <div class="mt-7 search-bar relative">
+                                                                <input class="placeholder:text-neutralDarkest h-10 border-solid border border-neutralMidLight rounded-lg w-full outline-none px-7 sm:pl-9 sm:pr-8 py-2" type="text" placeholder="Gerberas" />
+                                                                <a href="#/" class="absolute top-3 left-2.5">
+                                                                    <img src="images/search-icon.png" alt="not found" />
+                                                                </a>
+                                                            </div>
+                                                            <div class="flex justify-between items-center mt-8">
+                                                                <p class="text-base font-semibold leading-6 text-neutralDarkest">Swap ‘Earl Grey Organic Tea’ with:</p>
+                                                                <p class="text-sm font-normal leading-5 text-neutralDark">2 found</p>
+                                                            </div>
+                                                            <!-- <div class="w-full rounded-lg mt-4">
+                                                                <div class="flex justify-between items-center pl-3 border rounded-lg border-neutralMidLight">
+                                                                    <div class="sm:w-6/12 w-9/12">
+                                                                        <div class="flex sm:flex-col flex-row sm:mr-3">
+                                                                            <p class="sm:text-sm text-xs font-semibold leading-5 sm:mr-0 mr-1 text-neutralDark">6 Roses (half dozen)</p>
+                                                                            <p class="sm:text-sm text-xs font-normal leading-5 text-neutralDark">$24</p>
+                                                                        </div>
+                                                                        <div class="flex sm:hidden mt-2">
+                                                                            <div class="mr-3 flex items-center">
+                                                                                <p class="text-xs font-semibold leading-5 sm:mr-0 mr-1 text-neutralDarkest">Qty</p>
+                                                                                <p class="text-xs font-normal leading-5 text-neutralDark">2</p>
+                                                                            </div>
+                                                                            <div class="mr-3 flex items-center">
+                                                                                <p class="text-xs font-semibold leading-5 sm:mr-0 mr-1 text-neutralDarkest">Total Price</p>
+                                                                                <p class="text-xs font-normal leading-5 text-neutralDark">AUD $48</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="flex sm:justify-between justify-end items-center sm:w-6/12 w-3/12">
+                                                                        <div class="mr-3 sm:block hidden">
+                                                                            <p class="text-sm font-semibold leading-5 text-neutralDarkest">Qty</p>
+                                                                            <p class="text-sm font-normal leading-5 text-neutralDark">2</p>
+                                                                        </div>
+                                                                        <div class="mr-3 sm:block hidden">
+                                                                            <p class="text-sm font-semibold leading-5 text-neutralDarkest">Total Price</p>
+                                                                            <p class="text-sm font-normal leading-5 text-neutralDark">AUD $48</p>
+                                                                        </div>
+                                                                        <div class="w-16 h-16 ">
+                                                                            <img class="border rounded-r-lg w-full h-full" src="images/standerd-flowr.png" alt="not found" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flex justify-between items-center pl-3 border rounded-lg border-neutralMidLight mt-4">
+                                                                    <div class="sm:w-6/12 w-9/12">
+                                                                        <div class="flex sm:flex-col flex-row sm:mr-3">
+                                                                            <p class="sm:text-sm text-xs font-semibold leading-5 sm:mr-0 mr-1 text-neutralDark">6 Roses (half dozen)</p>
+                                                                            <p class="sm:text-sm text-xs font-normal leading-5 text-neutralDark">$24</p>
+                                                                        </div>
+                                                                        <div class="flex sm:hidden mt-2">
+                                                                            <div class="mr-3 flex items-center">
+                                                                                <p class="text-xs font-semibold leading-5 sm:mr-0 mr-1 text-neutralDarkest">Qty</p>
+                                                                                <p class="text-xs font-normal leading-5 text-neutralDark">2</p>
+                                                                            </div>
+                                                                            <div class="mr-3 flex items-center">
+                                                                                <p class="text-xs font-semibold leading-5 sm:mr-0 mr-1 text-neutralDarkest">Total Price</p>
+                                                                                <p class="text-xs font-normal leading-5 text-neutralDark">AUD $48</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="flex sm:justify-between justify-end items-center sm:w-6/12 w-3/12">
+                                                                        <div class="mr-3 sm:block hidden">
+                                                                            <p class="text-sm font-semibold leading-5 text-neutralDarkest">Qty</p>
+                                                                            <p class="text-sm font-normal leading-5 text-neutralDark">2</p>
+                                                                        </div>
+                                                                        <div class="mr-3 sm:block hidden">
+                                                                            <p class="text-sm font-semibold leading-5 text-neutralDarkest">Total Price</p>
+                                                                            <p class="text-sm font-normal leading-5 text-neutralDark">AUD $48</p>
+                                                                        </div>
+                                                                        <div class="w-16 h-16 ">
+                                                                            <img class="border rounded-r-lg w-full h-full" src="images/standerd-flowr.png" alt="not found" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div> -->
+                                                            <div class="flower-container selected rounded-lg mt-4 bg-neutralLightest">
+                                                                <div class="flex justify-between items-center rounded-t-lg pl-3 bg-white">
+                                                                    <div class="sm:w-6/12 w-9/12">
+                                                                        <div class="flex sm:flex-col flex-row sm:mr-3">
+                                                                            <p class="sm:text-sm text-xs font-semibold leading-5 sm:mr-0 mr-1 text-neutralDarkest">6 Roses (half dozen)</p>
+                                                                            <p class="sm:text-sm text-xs font-normal leading-5 text-neutralDark">$24</p>
+                                                                        </div>
+                                                                        <div class="flex sm:hidden mt-2">
+                                                                            <div class="mr-3 flex items-center">
+                                                                                <p class="text-xs font-semibold leading-5 sm:mr-0 mr-1 text-neutralDarkest">Qty</p>
+                                                                                <p class="text-xs font-normal leading-5 text-neutralDark">2</p>
+                                                                            </div>
+                                                                            <div class="mr-3 flex items-center">
+                                                                                <p class="text-xs font-semibold leading-5 sm:mr-0 mr-1 text-neutralDarkest">Total Price</p>
+                                                                                <p class="text-xs font-normal leading-5 text-neutralDark">AUD $48</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="flex sm:justify-between justify-end items-center sm:w-6/12 w-3/12">
+                                                                        <div class="mr-3 sm:block hidden">
+                                                                            <p class="text-sm font-semibold leading-5 text-neutralDarkest">Qty</p>
+                                                                            <p class="text-sm font-normal leading-5 text-neutralDark">2</p>
+                                                                        </div>
+                                                                        <div class="mr-3 sm:block hidden">
+                                                                            <p class="text-sm font-semibold leading-5 text-neutralDarkest">Total Price</p>
+                                                                            <p class="text-sm font-normal leading-5 text-neutralDark">AUD $48</p>
+                                                                        </div>
+                                                                        <div class="w-16 h-16 ">
+                                                                            <img class="border rounded-tr-lg w-full h-full" src="images/standerd-flowr.png" alt="not found" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="bg-lightPink py-4 px-3">
+                                                                    <p class="sm:text-sm text-xs font-normal leading-5 text-neutralDarkest pl-5 border-l-2 border-primary">Note: when replacing extras in an order recharges are only possible on orders made with card. Refunds can be done with card, afterpay and PayPal orders.</p>
+                                                                </div>
+                                                                <div class="py-5 px-4">
+                                                                    <div class="flex items-center justify-between">
+                                                                        <div class="left w-[240px]">
+                                                                            <h2 class="text-sm font-semibold text-primaryBrand">
+                                                                                Select Swap Option
+                                                                            </h2>
+                                                                        </div>
+                                                                        <div class="center-line center h-px w-full max-w-xs border border-neutralLight"></div>
+                                                                        <div class="right mt-4 sm:mt-0">
+                                                                            <button type="button" class=" w-[74px] flex items-center h-8 rounded bg-neutralLightest close-btn">
+                                                                                <span class="pr-2 text-sm text-neutralDark">Close</span>
+                                                                                <img src="images/order-close.png" />
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="border rounded-lg border-neutralMidLight flower-container2 selected bg-white mt-4">
+                                                                        <label class="flex items-center w-full rounded-lg block pl-3 py-3">
+                                                                            <input type="radio" name="radio1" checked/>
+                                                                            <span class="text-sm leading-5 flex items-center text-neutralDarkest ml-4 mr-auto">Swap
+                                                                                <img class="ml-3 w-3.5 h-3.5" src="images/ques-mark.png" />
+                                                                            </span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="border rounded-lg border-neutralMidLight flower-container2 bg-white mt-4">
+                                                                        <label class="flex items-center w-full rounded-lg block pl-3 py-3">
+                                                                            <input type="radio" name="radio1" />
+                                                                            <span class="text-sm leading-5 flex items-center text-neutralDarkest ml-4 mr-auto">Out of Stock
+                                                                                <img class="ml-3 w-3.5 h-3.5" src="images/ques-mark.png" />
+                                                                            </span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="border rounded-lg border-neutralMidLight flower-container2 bg-white mt-4">
+                                                                        <label class="flex items-center w-full rounded-lg block pl-3 py-3">
+                                                                            <input type="radio" name="radio1" />
+                                                                            <span class="text-sm leading-5 flex items-center text-neutralDarkest ml-4 mr-auto">Swap (no qty change)
+                                                                                <img class="ml-3 w-3.5 h-3.5" src="images/ques-mark.png" />
+                                                                            </span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="w-full max-w-[300px] mx-auto mt-4">
+                                                                        <label class="flex items-center w-full block ">
+                                                                            <input type="radio" name="radio2" />
+                                                                            <span class="text-neutralDarkest flex text-sm font-normal leading-5 sm:ml-4 ml-2 mr-auto">
+                                                                                 Change and Recharge
+                                                                                <div class="pl-2 font-semibold">+$5</div>
+                                                                            </span>
+                                                                        </label>
+                                                                        <label class="flex items-center w-full block mt-4">
+                                                                            <input type="radio" name="radio2" />
+                                                                            <span class="text-neutralDarkest flex text-sm font-normal leading-5 sm:ml-4 ml-2 mr-auto">
+                                                                                Change without recharges
+                                                                            </span>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                                <button class="w-full h-10 bg-primaryBrand border border rounded-b-lg ">
+                                                                    <h3 class="text-white text-base font-semibold leading-6">Swap</h3>
+                                                                </button>
+                                                            </div>
+                                                            <div class="w-full rounded-lg mt-4">
+                                                                
+                                                                <div class="flex justify-between items-center pl-3 border rounded-lg border-neutralMidLight mt-4">
+                                                                    <div class="sm:w-6/12 w-9/12">
+                                                                        <div class="flex sm:flex-col flex-row sm:mr-3">
+                                                                            <p class="sm:text-sm text-xs font-semibold leading-5 sm:mr-0 mr-1 text-neutralDarkest">6 Roses (half dozen)</p>
+                                                                            <p class="sm:text-sm text-xs font-normal leading-5 text-neutralDark">$24</p>
+                                                                        </div>
+                                                                        <div class="flex sm:hidden mt-2">
+                                                                            <div class="mr-3 flex items-center">
+                                                                                <p class="text-xs font-semibold leading-5 sm:mr-0 mr-1 text-neutralDarkest">Qty</p>
+                                                                                <p class="text-xs font-normal leading-5 text-neutralDark">2</p>
+                                                                            </div>
+                                                                            <div class="mr-3 flex items-center">
+                                                                                <p class="text-xs font-semibold leading-5 sm:mr-0 mr-1 text-neutralDarkest">Total Price</p>
+                                                                                <p class="text-xs font-normal leading-5 text-neutralDark">AUD $48</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="flex sm:justify-between justify-end items-center sm:w-6/12 w-3/12">
+                                                                        <div class="mr-3 sm:block hidden">
+                                                                            <p class="text-sm font-semibold leading-5 text-neutralDarkest">Qty</p>
+                                                                            <p class="text-sm font-normal leading-5 text-neutralDark">2</p>
+                                                                        </div>
+                                                                        <div class="mr-3 sm:block hidden">
+                                                                            <p class="text-sm font-semibold leading-5 text-neutralDarkest">Total Price</p>
+                                                                            <p class="text-sm font-normal leading-5 text-neutralDark">AUD $48</p>
+                                                                        </div>
+                                                                        <div class="w-16 h-16 ">
+                                                                            <img class="border rounded-r-lg w-full h-full" src="images/standerd-flowr.png" alt="not found" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex justify-between items-center border rounded-lg border-neutralMidLight mt-4">
+                                                        <label class="flex justify-between items-center w-full rounded-lg pl-3">
+                                                            <div class="flex items-center">
+                                                                <div class="toggle-btn mr-3">
+                                                                    <label class="switch relative">
+                                                                        <input type="checkbox" checked />
+                                                                        <span class="slider round"></span>
+                                                                    </label>
+                                                                </div>
+                                                                <div>
+                                                                    <p class="text-sm font-normal leading-5 text-neutralDarkest">Earl Grey Organic Tea<br> Colour: As Displayed</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="w-16 h-16 ">
+                                                                <img class="border rounded-r-lg w-full h-full" src="images/standerd-flowr.png" alt="not found" />
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="flex justify-between items-center border rounded-lg border-neutralMidLight mt-4">
+                                                        <label class="flex justify-between items-center w-full rounded-lg pl-3">
+                                                            <div class="flex items-center">
+                                                                <div class="toggle-btn mr-3">
+                                                                    <label class="switch relative">
+                                                                        <input type="checkbox" checked />
+                                                                        <span class="slider round"></span>
+                                                                    </label>
+                                                                </div>
+                                                                <div>
+                                                                    <p class="text-sm font-normal leading-5 text-neutralDarkest">Earl Grey Organic Tea<br> Colour: As Displayed</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="w-16 h-16 ">
+                                                                <img class="border rounded-r-lg w-full h-full" src="images/standerd-flowr.png" alt="not found" />
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="lg:py-12 pb-5 pt-2 lg:px-10 px-5">
+                                            <div class="flex sm:mb-4 mb-2.5">
+                                                <h3 class="lg:w-48 sm:w-[17rem] w-full max-w-md sm:text-base text-sm font-semibold sm:leading-6 leading-5 text-neutralDarkest mr-2">Date Purchased:</h3>
+                                                <p class="sm:text-base text-sm font-normal sm:leading-6 leading-5 max-w-md w-full text-neutralDarkest">22 March 2022 10:53AM AEST</p>
+                                            </div>
+                                            <div class="flex sm:mb-4 mb-2.5">
+                                                <h3 class="lg:w-48 sm:w-[17rem] w-full max-w-md sm:text-base text-sm font-semibold sm:leading-6 leading-5 text-neutralDarkest mr-2">Order Number:</h3>
+                                                <p class="sm:text-base text-sm font-normal sm:leading-6 leading-5 max-w-md w-full text-neutralDarkest">#FAS-12913</p>
+                                            </div>
+                                            <div class="flex sm:mb-4 mb-2.5">
+                                                <h3 class="lg:w-48 sm:w-[17rem] w-full max-w-md sm:text-base text-sm font-semibold sm:leading-6 leading-5 text-neutralDarkest mr-2">Delivery Date:</h3>
+                                                <p class="sm:text-base text-sm font-normal sm:leading-6 leading-5 max-w-md w-full text-neutralDarkest">Wednesday, 23 March 2022</p>
+                                            </div>
+                                            <div class="flex">
+                                                <h3 class="lg:w-48 sm:w-[17rem] w-full max-w-md sm:text-base text-sm font-semibold sm:leading-6 leading-5 text-neutralDarkest mr-2">Delivery Option:</h3>
+                                                <p class="sm:text-base text-sm font-normal sm:leading-6 leading-5 max-w-md w-full text-neutralDarkest">Standard</p>
+                                            </div>
+                                            <div class="sm:mt-12 mt-7">
+                                                <div class="flex items-center sm:mb-4 mb-3">
+                                                    <h1 class="text-xl font-semibold leading-6 mr-2 text-primaryBrand">Recipient</h1>
+                                                    <div class="border-b w-full max-w-full"></div>
+                                                </div>
+                                                <div class="flex sm:mb-4 mb-2.5">
+                                                    <h3 class="lg:w-48 sm:w-[17rem] w-full max-w-md sm:text-base text-sm font-semibold sm:leading-6 leading-5 text-neutralDarkest mr-2">Name:</h3>
+                                                    <p class="sm:text-base text-sm font-normal sm:leading-6 leading-5 max-w-md w-full text-neutralDarkest">Recipient Test One</p>
+                                                </div>
+                                                <div class="flex sm:mb-4 mb-2.5">
+                                                    <h3 class="lg:w-48 sm:w-[17rem] w-full max-w-md sm:text-base text-sm font-semibold sm:leading-6 leading-5 text-neutralDarkest mr-2">Company:</h3>
+                                                    <p class="sm:text-base text-sm font-normal sm:leading-6 leading-5 max-w-md w-full text-neutralDarkest">Bobs Burgers</p>
+                                                </div>
+                                                <div class="flex sm:mb-4 mb-2.5">
+                                                    <h3 class="lg:w-48 sm:w-[17rem] w-full max-w-md sm:text-base text-sm font-semibold sm:leading-6 leading-5 text-neutralDarkest mr-2">Phone:</h3>
+                                                    <p class="sm:text-base text-sm font-normal sm:leading-6 leading-5 max-w-md w-full text-neutralDarkest">0123 789 765</p>
+                                                </div>
+                                                <div class="flex sm:mb-4 mb-2.5">
+                                                    <h3 class="lg:w-48 sm:w-[17rem] w-full max-w-md sm:text-base text-sm font-semibold sm:leading-6 leading-5 text-neutralDarkest mr-2">Address 1:</h3>
+                                                    <p class="sm:text-base text-sm font-normal sm:leading-6 leading-5 max-w-md w-full text-neutralDarkest">10 Waterhouse St.</p>
+                                                </div>
+                                                <div class="flex sm:mb-4 mb-5">
+                                                    <h3 class="lg:w-48 sm:w-[17rem] w-full max-w-md sm:text-base text-sm font-semibold sm:leading-6 leading-5 text-neutralDarkest mr-2">Suburb:</h3>
+                                                    <p class="sm:text-base text-sm font-normal sm:leading-6 leading-5 max-w-md w-full text-neutralDarkest">10 Abbotsbury, 2176</p>
+                                                </div>
+                                                <div class="sm:flex sm:mb-4 mb-2.5">
+                                                    <h3 class="lg:w-48 sm:w-[17rem] w-full max-w-md sm:text-base text-sm font-semibold sm:leading-6 leading-5 text-neutralDarkest mr-2">Message on Card:</h3>
+                                                    <div class="w-full sm:max-w-md max-w-full sm:mt-0 mt-1.5">
+                                                        <div class="pl-4 md:pr-2 pr-4 pt-3 pb-4 bg-greenLightest sm:max-w-md max-w-full w-full rounded">
+                                                            <p class="text-sm font-normal sm:leading-6 leading-5 text-neutralDarkest">Remember, you may be older than you’ve ever been before…but you’re also younger than you’ll ever be again!!.</p>
+                                                            <p class="text-sm font-normal sm:leading-6 leading-5 text-neutralDarkest">Happy Birthday!</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex sm:mb-4 mb-2.5">
+                                                    <h3 class="lg:w-48 sm:w-[17rem] w-full max-w-md sm:text-base text-sm font-semibold sm:leading-6 leading-5 text-neutralDarkest mr-2">Delivery Instructions: </h3>
+                                                    <p class="sm:text-base text-sm font-normal sm:leading-6 leading-5 max-w-md w-full text-neutralDarkest">10 Deliver to back door</p>
+                                                </div>
+                                                <div class="flex sm:mb-4 mb-2.5">
+                                                    <h3 class="lg:w-48 sm:w-[17rem] w-full max-w-md sm:text-base text-sm font-semibold sm:leading-6 leading-5 text-neutralDarkest mr-2">Delivery Date: </h3>
+                                                    <p class="sm:text-base text-sm font-normal sm:leading-6 leading-5 max-w-md w-full text-neutralDarkest">Wednesday, 23 March 2022</p>
+                                                </div>
+                                            </div>
+                                            <div class="sm:mt-12 mt-7">
+                                                <div class="flex items-center mb-4">
+                                                    <h1 class="text-xl font-semibold sm:leading-6 leading-5 mr-2 text-primaryBrand">Sender</h1>
+                                                    <div class="border-b w-full max-w-full"></div>
+                                                </div>
+                                                <div class="flex sm:mb-4 mb-2.5">
+                                                    <h3 class="lg:w-48 sm:w-[17rem] w-[75px] sm:text-base text-sm font-semibold sm:leading-6 leading-5 text-neutralDarkest mr-2">Name:</h3>
+                                                    <p class="sm:text-base text-sm font-normal sm:leading-6 leading-5 max-w-md w-full text-neutralDarkest">Rob Lambert</p>
+                                                </div>
+                                                <div class="flex sm:mb-4 mb-2.5">
+                                                    <h3 class="lg:w-48 sm:w-[17rem] w-[75px] sm:text-base text-sm font-semibold sm:leading-6 leading-5 text-neutralDarkest mr-2">Phone:</h3>
+                                                    <p class="sm:text-base text-sm font-normal sm:leading-6 leading-5 max-w-md w-full text-neutralDarkest">0413 464 138</p>
+                                                </div>
+                                                <div class="flex">
+                                                    <h3 class="lg:w-48 sm:w-[17rem] w-[75px] sm:text-base text-sm font-semibold sm:leading-6 leading-5 text-neutralDarkest mr-2">Email:</h3>
+                                                    <p class="sm:text-base text-sm font-normal sm:leading-6 leading-5 max-w-md w-full text-neutralDarkest">roblambert@company.com</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tabsBtn-mob" class="lg:pt-10 pt-3 bg-lightPink w-60 max-w-full md:rounded-tr-3xl md:rounded-br-none z-50 md:rounded-l-none rounded-lg md:block hidden">
+                                    <div class="icons tabs  w-full">
+                                        <div>
+                                            <button type="button" class="tabs-btn text-sm font-normal leading-5 text-neutralDarkest px-5 w-full text-left tabBtn resend group" onclick="question(event, 'tab1')">
+                                                <div class="border-b py-2.5 flex justify-between items-center">
+                                                    <span>Resend Receipt</span>
+                                                    <span class="group:focus ">
+                                                        <img src="images/green-tick.png" checked />
+                                                    </span>
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div>
+                                            <button type="button" class="tabs-btn text-sm font-normal leading-5 text-neutralDarkest px-5 w-full text-left tabBtn" onclick="question(event, 'tab2')">
+                                                <span class="border-b py-2.5 block">Refund Full or Partial Amount</span>
+                                            </button>
+                                        </div>
+                                        <div>
+                                            <button type="button" class="tabs-btn text-sm font-normal leading-5 text-neutralDarkest px-5 w-full text-left tabBtn" onclick="question(event, 'tab3')">
+                                                <span class="border-b py-2.5 w-full block">Recharge</span>
+                                            </button>
+                                        </div>
+                                        <div>
+                                            <button type="button" class="tabs-btn text-sm font-normal leading-5 text-neutralDarkest px-5 w-full text-left tabBtn"  onclick="question(event, 'tab4')">
+                                                <span class="border-b py-2.5 w-full block">Add Items</span>
+                                            </button>
+                                        </div>
+                                        <div>
+                                            <button type="button" class="tabs-btn text-sm font-normal leading-5 text-neutralDarkest px-5 w-full text-left tabBtn"  onclick="question(event, 'tab11')">
+                                                <span class="border-b py-2.5 w-full block">Swap Items</span>
+                                            </button>
+                                        </div>
+                                        <div>
+                                            <button type="button" class="tabs-btn text-sm font-normal leading-5 text-neutralDarkest px-5 w-full text-left tabBtn" onclick="question(event, 'tab5')">
+                                                <span class="border-b py-2.5 w-full block">Payment Issue/Investigation</span>
+                                            </button>
+                                        </div>
+                                        <div>
+                                            <button type="button" class="tabs-btn text-sm font-normal leading-5 text-neutralDarkest px-5 w-full text-left tabBtn" onclick="question(event, 'tab6')">
+                                                <span class="border-b py-2.5 w-full block">View Transactions Info</span>
+                                            </button>
+                                        </div>
+                                        <div>
+                                            <button type="button" class="tabs-btn text-sm font-normal leading-5 text-neutralDarkest px-5 w-full text-left tabBtn" onclick="question(event, 'tab7')">
+                                                <span class="border-b py-2.5 w-full block">View Order Logs</span>
+                                            </button>
+                                        </div>
+                                        <div>
+                                            <button type="button" class="tabs-btn text-sm font-normal leading-5 text-neutralDarkest px-5 w-full text-left tabBtn" onclick="question(event, 'tab8')">
+                                                <span class="border-b py-2.5 w-full block">Duplicate Order</span>
+                                            </button>
+                                        </div>
+                                        <div>
+                                            <button type="button" class="tabs-btn text-sm font-normal leading-5 text-neutralDarkest px-5 w-full text-left tabBtn" onclick="question(event, 'tab9')">
+                                                <span class="border-b py-2.5 w-full block">Duplicate Order (Alcohol only)</span>
+                                            </button>
+                                        </div>
+                                        <div>
+                                            <button type="button" class="tabs-btn text-sm font-normal leading-5 text-neutralDarkest px-5 w-full text-left tabBtn" onclick="question(event, 'tab10')">
+                                                <span class="border-b py-2.5 w-full block">Apology Voucher</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="py-10">
+                                    <div class="flex items-center mb-4 lg:px-10 px-5">
+                                        <div class="flex items-center">
+                                            <h1 class="text-xl font-semibold leading-6 text-primaryBrand w-36">Items Ordered</h1>
+                                            <div class="w-6 h-6 rounded-full mr-2 bg-primaryBrand flex justify-center items-center text-white">
+                                                2
+                                            </div>
+                                        </div>
+                                        <div class="border-b w-full max-w-full"></div>
+                                    </div>
+                                    <div class="mt-4 overflow-auto lg:px-10 md:px-5">
+                                        <table class="md:w-full w-[40rem]">
+                                            <thead>
+                                                <th class="lg:w-96 sm:w-72 w-48 border-b border-l- pl-4 pt-4 pb-3 text-left border-b-2 text-sm font-semibold leading-5 text-neutralDarkest bg-neutralLightest">
+                                                    Item / Description
+                                                </th>
+                                                <th class="md:w-40 w-32 border-b pl-4 pt-4 pb-3 text-left border-b-2 text-sm font-semibold leading-5 text-neutralDarkest bg-neutralLightest">
+                                                    Type
+                                                </th>
+                                                <th class="md:w-20 w-16 border-b pr-4 pt-4 pb-3 text-right border-b-2 text-sm font-semibold leading-5 text-neutralDarkest bg-neutralLightest">
+                                                    Qty
+                                                </th>
+                                                <th class="md:w-32 sm:w-20 w-24 border-b pr-4 pt-4 pb-3 text-right border-b-2 text-sm font-semibold leading-5 text-neutralDarkest bg-neutralLightest">
+                                                    Price
+                                                </th>
+                                                <th class="md:w-32 sm:w-20 w-24 border-b pr-4 pt-4 pb-3 text-right border-b-2 text-sm font-semibold leading-5 text-neutralDarkest bg-neutralLightest">
+                                                    Total
+                                                </th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="lg:w-96 w-48 py-4 pl-4 border-b-2">
+                                                        <div class="flex items-center">
+                                                            <div class="w-12 h-12 bg-[#E1DFDF]"></div>
+                                                            <div class="ml-3 sm:text-sm text-xs font-normal leading-5 text-neutralDarkest">
+                                                                <p>Earl Grey Organic Tea</p>
+                                                                <p>Colour: As Displayed</p>
+                                                                <p>Option: Standard</p>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="w-40 border-b pl-4 pt-4 pb-3 border-b-2">
+                                                        <p class="py-1 lg:px-2 md:px-1.5 px-2 text-xs font-semibold leading-4 text-white text-center rounded-full inline-block bg-[#3E9979]">Original Purchase</p>
+                                                    </td>
+                                                    <td class="md:w-20 w-16 border-b pr-4 py-3 text-right border-b-2 text-sm font-semibold leading-5 text-neutralDarkest">
+                                                        1
+                                                    </td>
+                                                    <td class="md:w-32 w-20 border-b pr-4 py-3 text-right border-b-2 text-sm font-semibold leading-5 text-neutralDarkest">
+                                                        AUD $15.00
+                                                    </td>
+                                                    <td class="md:w-32 w-20 border-b pr-4 py-3 text-right border-b-2 text-sm font-semibold leading-5 text-neutralDarkest">
+                                                        AUD $15.00
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="lg:w-96 w-48 py-4 pl-4 border-b-2">
+                                                        <div class="flex items-center">
+                                                            <div class="w-12 h-12 bg-[#E1DFDF]"></div>
+                                                            <div class="ml-3 sm:text-sm text-xs font-normal leading-5 text-neutralDarkest">
+                                                                <p>Earl Grey Organic Tea</p>
+                                                                <p>Colour: As Displayed</p>
+                                                                <p>Option: Standard</p>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="w-40 border-b pl-4 pt-4 pb-3 border-b-2">
+                                                        <p class="py-1 lg:px-2 md:px-1.5 px-2 text-xs font-semibold leading-4 text-white text-center rounded-full inline-block bg-[#3E9979]">Original Purchase</p>
+                                                    </td>
+                                                    <td class="md:w-20 w-16 border-b pr-4 py-3 text-right border-b-2 text-sm font-semibold leading-5 text-neutralDarkest">
+                                                        1
+                                                    </td>
+                                                    <td class="md:w-32 w-20 border-b pr-4 py-3 text-right border-b-2 text-sm font-semibold leading-5 text-neutralDarkest">
+                                                        AUD $15.00
+                                                    </td>
+                                                    <td class="md:w-32 w-20 border-b pr-4 py-3 text-right border-b-2 text-sm font-semibold leading-5 text-neutralDarkest">
+                                                        AUD $15.00
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="pt-2 lg:px-10 px-5">
+                                        <div class="w-full max-w-xs ml-auto">
+                                            <div class="flex justify-between items-center border-b py-2.5">
+                                                <p class="text-sm font-semibold leading-5 text-neutralDarkest">Subtotal:</p>
+                                                <p class="text-sm font-normal leading-5 text-neutralDarkest">AUD $83.00</p>
+                                            </div>
+                                            <div class="flex justify-between items-center border-b py-2.5">
+                                                <p class="text-sm font-semibold leading-5 text-neutralDarkest">Delivery:</p>
+                                                <p class="text-sm font-normal leading-5 text-neutralDarkest">AUD $12.00</p>
+                                            </div>
+                                            <div class="flex justify-between items-center border-b py-2.5">
+                                                <p class="text-sm font-semibold leading-5 text-neutralDarkest">Total (incl. GST):</p>
+                                                <p class="text-sm font-normal leading-5 text-neutralDarkest">AUD $95.00</p>
+                                            </div>
+                                            <div class="flex justify-between items-center border-b py-2.5">
+                                                <p class="text-sm font-semibold leading-5 text-neutralDarkest">Includes Total GST:</p>
+                                                <p class="text-sm font-normal leading-5 text-neutralDarkest">AUD $8.64</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script>
+            function question(evt, cityName) {
+              var i, tabcontent, tablinks;
+              tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+              tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+              document.getElementById(cityName).style.display = "block";
+              evt.currentTarget.className += " active";
+            }
+        </script>
+       <script>
+            $('.tabBtn').on('click', function(){
+            $('.tabBtn').removeClass('selected');
+            $(this).addClass('selected');
+        });
+        </script>
+        <script>
+            var coll = document.getElementsByClassName("sidebar-dropdown");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                  content.style.maxHeight = null;
+                } else {
+                  content.style.maxHeight = content.scrollHeight + "px";
+                } 
+              });
+            }
+        </script>
+        <script>
+            var coll = document.getElementsByClassName("sidebar-dropdown-submenu");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                  content.style.maxHeight = null;
+                } else {
+                  content.style.maxHeight = content.scrollHeight + "px";
+                } 
+              });
+            }
+        </script>
+        
+        <script>
+            function adminSidebar() {
+                   let element = document.getElementById("admin-sidebar");
+                   element.classList.toggle("admin-sidebar-style");
+
+
+                  let wrapperID = document.getElementById("wrapper");
+                  wrapperID.classList.add("wrapperStyle");
+                
+            }
+
+            function hideSidebar() {
+                let element = document.getElementById("admin-sidebar");
+                 element.classList.remove("admin-sidebar-style");
+
+                 let wrapperID = document.getElementById("wrapper");
+                  wrapperID.classList.remove("wrapperStyle");
+            }
+
+        </script>
+        <script>
+            function orders() {
+            var orangeArrow = document.getElementById("orders");
+            orangeArrow.classList.toggle("rotate");
+            }
+        </script>
+        <script>
+            function tabBttns() {
+               var element = document.getElementById("tabsBtn-mob");
+               element.classList.toggle("tabs_buttons");
+            }
+        </script>
+        <script>
+            $('.flower-container').on('click', function(){
+            $('.flower-container').removeClass('selected');
+            $(this).addClass('selected');
+            });
+            $('.flower-container2').on('click', function(){
+            $('.flower-container2').removeClass('selected');
+            $(this).addClass('selected');
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,602 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="images/logo-mobile.png">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/common.css">
+        <link rel="stylesheet" href="../order-tracking/orderTracking-common.css">
+        <script src="https://cdn.tailwindcss.com/3.0.24"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            primaryBrand: '#8a6ccf',
+                            primary: '#ec8c77',
+                            dark: '#272727',
+                            lightPink: '#fff6f0',
+                            neutralDarkest: '#3c3949',
+                            greenLightest: '#E4F8F1',
+                            neutralLightest: '#f6f4fb',
+                            neutralDark: '#726f80',
+                            neutralMidLight: '#C2C1CD',
+                            dueForDeleveryBg:'#DE5C3F'
+                        }
+                    }
+                }
+            }
+        </script> 
+    </head>
+    <body>
+        <!-- Main Header Section Starts -->
+           <div id="myHeader" class="border-b border-opacity bg-white z-10">
+            <div class="pg-container mx-auto w-full px-6">
+                <nav class="flex items-center justify-between py-2.5 font-poppins">
+                    <div class="md:hidden" id='open-button'>
+                        <img src="../images/bars.png" alt="bars" />
+                    </div>
+                    <div class="sm:w-32 w-10 sm:ml-0 ml-12">
+                        <img class="sm:inline-block hidden" src="../images/logo.png" alt="logo" />
+                        <img class="sm:hidden inline-block" src="../images/logo-mobile.png" alt="logo">
+                    </div>
+                    <div class="flex items-center">
+                        <ul class="list-none md:inline-flex hidden items-center p-0 m-0">
+                            <li class="text-base font-semibold leading-8 uppercase textColor-1 relative">
+                                <a href="#">home</a>
+                            </li>
+                            <li class="text-base font-semibold leading-8 uppercase textColor-1 lg:pl-20 pl-12">
+                                <a href="#">flowers</a>
+                            </li>
+                            <li class="text-base font-semibold leading-8 uppercase textColor-1 lg:pl-20 pl-12">
+                                <a href="#">plants</a>
+                            </li>
+                            <li class="text-base font-semibold leading-8 uppercase textColor-1 lg:pl-20 pl-12">
+                                <a href="#">gifts</a>
+                            </li>
+                        </ul>
+                        <div class="flex sm:pl-20">
+                            <div class="w-7">
+                                <a href="#">
+                                    <img src="../images/shopping.png" alt="trolley" />
+                                </a>
+                            </div>
+                            <div class="w-6 sm:ml-12 ml-9 relative">
+                                <a href="#">
+                                    <img src="../images/user.png" alt="profile-icon" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id='menu' class="side-menu">
+                        <div class="main-menu pt-10">
+                            <nav class="nav-bar">
+                                <ul class="site-nav">
+                                    <li class="menu-item font-poppins">
+                                        <input id="home-new-mobile" type="checkbox" name="quick-links" class="hidden input-hidden" />
+                                        <label for="home-new-mobile" class="text-xs font-bold leading-5 sm:border-0 p-5 text-black border-2c596b uppercase block" onclick="homeArrow()">
+                                            <img src="../images/home.png" alt="home" class="mr-4 inline-block" /> Home  
+                                            
+                                            <img src="../images/right-arrow.png" alt="right arrow" class="inline-block float-right nav-arrow" id="home-arrow" />
+                                            
+                                        </label>
+                                        <ul class="list-none pl-4 sm:pl-0 mb-0 submenu max-h-0 sm:max-h-fit overflow-hidden">
+                                            <div class="dropdown-item pl-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                            <div class="dropdown-item pl-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                            <div class="dropdown-item pl-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                            <div class="dropdown-item pl-4">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item">
+
+                                        <input id="flower-new-mobile" type="checkbox" name="quick-links" class="hidden input-hidden" />
+                                        <label for="flower-new-mobile" class="text-xs font-bold leading-5 sm:border-0 p-5 text-black border-2c596b uppercase block" onclick="flowerArrow()">
+                                            <img src="../images/flowers.png" alt="home" class="mr-4 inline-block" /> Flowers  
+                                            
+                                            <img src="../images/right-arrow.png" alt="right arrow" class="inline-block float-right nav-arrow" id="flower-arrow" />
+                                            
+                                        </label>
+                                        <ul class="list-none pl-4 sm:pl-0 mb-0 submenu max-h-0 sm:max-h-fit overflow-hidden">
+                                            <div class="dropdown-item pl-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                            <div class="dropdown-item pl-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                            <div class="dropdown-item pl-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                            <div class="dropdown-item pl-4">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item">
+                                        <input id="plants-new-mobile" type="checkbox" name="quick-links" class="hidden input-hidden" />
+                                        <label for="plants-new-mobile" class="text-xs font-bold leading-5 sm:border-0 p-5 text-black border-2c596b uppercase block" onclick="plantArrow()">
+                                            <img src="../images/nav-plants.png" alt="home" class="mr-4 inline-block" /> Plants  
+                                            
+                                            <img src="../images/right-arrow.png" alt="right arrow" class="inline-block float-right nav-arrow" id="plant-arrow" />
+                                            
+                                        </label>
+                                        <ul class="list-none pl-4 sm:pl-0 mb-0 submenu max-h-0 sm:max-h-fit overflow-hidden">
+                                            <div class="dropdown-item pl-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                            <div class="dropdown-item pl-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                            <div class="dropdown-item pl-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                            <div class="dropdown-item pl-4">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                        </ul>
+                                    </li>
+
+                                    <li class="menu-item">
+                                        <input id="gifts-new-mobile" type="checkbox" name="quick-links" class="hidden input-hidden" />
+                                        <label for="gifts-new-mobile" class="text-xs font-bold leading-5 sm:border-0 p-5 text-black border-2c596b uppercase block" onclick="giftArrow()">
+                                            <img src="../images/gifts-nav.png" alt="home" class="mr-4 inline-block" /> Gifts  
+                                            
+                                            <img src="../images/right-arrow.png" alt="right arrow" class="inline-block float-right nav-arrow" id="gift-arrow" />
+                                            
+                                        </label>
+                                        <ul class="list-none pl-4 sm:pl-0 mb-0 submenu max-h-0 sm:max-h-fit overflow-hidden">
+                                            <div class="dropdown-item px-4 py-2 border-b border-solid border-slate-300">
+                                                <a href="#" class="flex items-center">
+                                                    <span class="header-top-bg w-5 h-5 text-white rounded-full inline-block text-center float-left">1</span>
+                                                    <span class="text-xs font-normal textColor-3 leading-5 ml-3">Order #1234 to Alexandria, ETA ,4:30pm</span>
+                                                </a>
+                                            </div>
+                                            <div class="dropdown-item px-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 textColor-2 block" href="#">View last order</a>
+                                            </div>
+                                            <div class="dropdown-item px-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 textColor-2 block" href="#">My Account</a>
+                                            </div>
+                                            <div class="dropdown-item px-4">
+                                                <a class="text-xs font-normal leading-8 textColor-2 block" href="#">Sign out</a>
+                                            </div>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>  
+                        </div>
+
+                        <button class='close-button'>
+                            <img src="../images/close.png" alt="close" />
+                        </button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <hr />
+        <!-- Main Header Section Ends -->
+
+        <!-- <Page 1 from orderTracking section start> -->
+
+            <div class="bg-f6f7f8">
+                <div id="body-content" class="w-full max-w-1440 mx-auto font-roboto flex justify-center">
+                    <div>
+                        <div class="flex justify-between lg:flex-row flex-col">
+                            <div class="max-width-left w-full px-5  sm:px-12 font-poppins pt-8">
+                                <div class="pb-5">
+                                    <h2 class="font-semibold sm:text-3xl text-2xl line-height1">Order Tracking</h2>
+                                </div>
+                                <div class="pb-3">
+                                    <h3 class="text-base font-semibold">Your delivery (Order #1854)</h3>
+                                </div>
+                                <div class="border mt-4 sm:flex justify-between"> 
+                                    <div class="pt-4 pl-2 pr-6 pb-1 sm:pb-0 sm:order-2">   
+                                         <div class="rounded mt-2 bg-dueForDeleveryBg w-32 text-right ml-auto flex justify-center py-1 px-2">
+                                            <button class="text-xs text-white" type="button">Due for delivery</button>
+                                        </div>
+                                    </div>
+                                    <div class="pl-6 pb-4 sm:pt-4">
+                                    <div class="flex items-center pb-4">
+                                        <img src="../ordertracking-images/case-carry.png" alt="not found">
+                                        <div class="pl-5">
+                                            <h3 class="text-xs line-height-18 font-semibold">Estimated date of arrival</h3>
+                                            <p class="text-xs line-height-18">Arriving Today</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <img src="../ordertracking-images/Frame.png" alt="not found">
+                                    <div class="pl-5 w-full max-w-md">
+                                        <h3 class="text-xs line-height-18 font-semibold">Estimated time of arrival</h3>
+                                        <p class="text-xs line-height-18">05:31 PM</p>
+                                    </div>
+                                    </div>
+                                </div>     
+                            </div>
+                            <div class="buttonBg max-width-546 flex items-center rounded pt-3 pl-5 pr-3 pb-2 font-poppins my-5">
+                                <img src="../ordertracking-images/cross-icon.png" alt="">
+                                <p class="pl-4 text-xs line-height-18 text-white">If your order was unable to be delivered we should have attemted to contact you by now. If you haven’t heard from us yet for a resolution, please <a class="underline" href="">contact us</a></p>
+                            </div>
+                            <div class="py-5">
+                                <p class="text-xs">Please check back for updates throughout the day</p>
+                            </div>
+                            <div class="flex items-center">
+                                    <img src="../ordertracking-images/tracking-img.png" alt="not found">
+                                <div class="pl-4 ">
+                                    <p class="text-xs">You can track the progress of your delivery here (goes to an external link): <br>
+                                       <a href="#/" class="text-primary">Track your delivery progress</a> </p>
+                                </div>
+                            </div>
+                            <div class="mt-5 bg-lightPink p-7 rounded">
+                                <p class="text-xs leading-6">If you have any questions or need further information about this delivery, please view our 
+                                    <a href="#/" class="text-primary">Delivery information</a> page, send us a message via chat, or call us on <strong> 02 9055 7795</strong> (International: +61 2 9055 7795)</p>
+                            </div>
+                            <div class="mt-9">
+                                <h2 class="text-xl font-semibold leading-8">FAQ</h2>
+                               <div class="border-b border-solid">
+                                <button class=" accordion font-roboto text-xs sm:text-sm leading-9">Can I set a time for delivery?</button>
+                                <div class="panel">
+                                    <div class="xl:p-5 lg:p-3 sm:p-5 p-3 ">
+                                    <p class="font-bold leading-7 text-xs">Standard</p>
+                                    <p class="text-xs mb-2">Delivery charges depend on which suburb/area of Melbourne your order will be sent to. To find the charges for your delivery suburb please visit our deliveries page.</p>
+                                    <p class="font-bold leading-7 text-xs">Express</p>
+                                    <p class="text-xs">An additional $5.00 surcharge applies for Express deliveries.</p>
+                                </div>
+                                </div>
+                               </div>
+                               <div class="border-b border-solid">
+                                <button class="accordion font-roboto text-xs sm:text-sm leading-9">General delivry times</button>
+                                <div class="panel">
+                                    <div class="xl:p-5 lg:p-3 sm:p-5 p-3 ">
+                                        <p class="font-bold leading-7 text-xs">Standard</p>
+                                        <p class="text-xs mb-2">Delivery charges depend on which suburb/area of Melbourne your order will be sent to. To find the charges for your delivery suburb please visit our deliveries page.</p>
+                                        <p class="font-bold leading-7 text-xs">Express</p>
+                                        <p class="text-xs">An additional $5.00 surcharge applies for Express deliveries.</p>
+                                    </div>
+                                </div>
+                               </div>
+                               <div class="mb-10 border-b border-solid">
+                                <button class="accordion font-roboto text-xs sm:text-sm leading-9">Phasellus fermentum</button>
+                                <div class="panel">
+                                    <div class="xl:p-5 lg:p-3 sm:p-5 p-3 ">
+                                        <p class="font-bold leading-7 text-xs">Standard</p>
+                                        <p class="text-xs mb-2">Delivery charges depend on which suburb/area of Melbourne your order will be sent to. To find the charges for your delivery suburb please visit our deliveries page.</p>
+                                        <p class="font-bold leading-7 text-xs">Express</p>
+                                        <p class="text-xs">An additional $5.00 surcharge applies for Express deliveries.</p>
+                                    </div>
+                                </div>
+                               </div>
+                            </div>
+                        </div>
+                        <div class="hidden lg:block max-width-right lg:py-0 py-3 max-w-full mx-auto ">
+                            <img class="w-full" src="../ordertracking-images/cute-woman-working-in-flower-center 1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <Page 1 from orderTracking section ends> -->
+
+
+
+        <!-- Footer Section Starts -->
+        <footer class="font-poppins">
+            <div class="pg-container mx-auto w-full pt-6 sm:pb-16 pb-12 px-6">
+                <div class="flex flex-wrap lg:justify-between justify-start">
+                    <div class="sm:w-72 w-full sm:mr-4 sm:mb-4 mb-12">
+                        <div class="footer_create-bg flex justify-end items-end px-4 py-3">
+                            <button class="buttonBg text-white w-36 h-8 rounded text-xs font-semibold leading-8">Create a Bouquet</button>
+                        </div>
+                        <p class="text-sm font-normal leading-5 textColor-4 mt-6">Need flowers sent to Sydney?</p>
+                        <p><a class="text-sm font-normal leading-5 textColor-3" href="#">www.flowersacrosssydney.com.au</a></p>
+
+                        <p class="text-sm font-normal leading-5 textColor-4 mt-4">Send dried flowers throughout Australia</p>
+                        <p><a class="text-sm font-normal leading-5 textColor-3" href="#">flowersacrossaustralia.com.au</a></p>
+                    </div>
+                    <div class="sm:w-40 w-full sm:mb-4 mb-5 font-poppins">
+                        <h3 class="text-xs font-bold leading-5 flex justify-between items-center sm:border-0 border-b sm:pb-0 pb-5 sm:px-0 px-5 textColor-4 border-2c596b hidden sm:inline-block">Quick Links
+                            <span class="sm:hidden">
+                                <img src="../images/footer-dropdown.png" />
+                            </span>
+                        </h3>
+
+                        <input id="quick-links" type="checkbox" name="quick-links" class="hidden input-hidden" />
+                        <label for="quick-links" class="text-xs font-bold leading-5 flex justify-between items-center sm:border-0 border-b sm:pb-0 pb-4 sm:px-0 px-4 textColor-4 border-2c596b sm:hidden" onclick="quickLinks()">Quick Links 
+                            <span class="sm:hidden">
+                                <img src="../images/footer-dropdown.png" alt="dropdown" class="footer-arrow" id="quickLinks" />
+                            </span>
+                        </label>
+                        <ul class="list-none pl-4 sm:pl-0 pt-2 mb-0 submenu max-h-0 sm:max-h-fit overflow-hidden sm:overflow-visible">
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Home</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">FAQ</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Create-A-Bouquet</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Daily Flowers</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Flower Delivery</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Flower Subscriptions</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Pet Friendly Flowers</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Pickup Options</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Track Your Order</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sm:w-40 w-full lg:ml-4 sm:mb-4 mb-5 font-poppins">
+                        <h3 class="text-xs font-bold leading-5 flex justify-between items-center sm:border-0 border-b sm:pb-0 pb-5 sm:px-0 px-5 textColor-4 border-2c596b hidden sm:inline-block">More Links
+                            <span class="sm:hidden">
+                                <img src="../images/footer-dropdown.png" />
+                            </span>
+                        </h3>
+
+                        <input id="more-links1" type="checkbox" name="more-links1" class="hidden input-hidden" />
+                        <label for="more-links1" class="text-xs font-bold leading-5 flex justify-between items-center sm:border-0 border-b sm:pb-0 pb-4 sm:px-0 px-4 textColor-4 border-2c596b block sm:hidden" onclick="moreLinks()">More Links 
+                            <span class="sm:hidden">
+                                <img src="../images/footer-dropdown.png" alt="dropdown" class="footer-arrow" id="moreLinks" />
+                            </span>
+                        </label>
+                        <ul class="list-none pl-4 sm:pl-0 pt-2 mb-0 submenu max-h-0 sm:max-h-fit overflow-hidden sm:overflow-visible">
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Hospital Deliveries</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Customer Reviews</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Why Shop With Us?</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Givr</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Charity Givr</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Afterpay</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Zip Pay</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Florists Blog</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Site Map</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sm:w-40 w-full lg:ml-4 sm:mb-4 mb-5 font-poppins">
+                        <h3 class="text-xs font-bold leading-5 flex justify-between items-center sm:border-0 border-b sm:pb-0 pb-5 sm:px-0 px-5 textColor-4 border-2c596b hidden sm:inline-block">More Links
+                            <span class="sm:hidden">
+                                <img src="../images/footer-dropdown.png" />
+                            </span>
+                        </h3>
+
+                        <input id="view-full-detail-new" type="checkbox" name="view-full-detail" class="hidden input-hidden" />
+                        <label for="view-full-detail-new" class="text-xs font-bold leading-5 flex justify-between items-center sm:border-0 border-b sm:pb-0 pb-4 sm:px-0 px-4 textColor-4 border-2c596b block sm:hidden" onclick="viewFullFooter()">View Full Details
+                            <span class="sm:hidden">
+                                <img src="../images/footer-dropdown.png" alt="dropdown" class="footer-arrow" id="viewFull-details" />
+                            </span>
+                        </label>
+                        <ul class="list-none pl-4 sm:pl-0 pt-2 mb-0 submenu max-h-0 sm:max-h-fit overflow-hidden sm:overflow-visible">
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">
+                                    About Us
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">
+                                    Contact Us
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">
+                                    Privacy Policy
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">
+                                    Refunds & Returns
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">
+                                    Terms & Conditions
+                                </a>
+                            </li>
+                        </ul>
+                        
+                        <h3 class="text-xs font-bold leading-5 sm:block hidden mt-40 textColor-4">Connect</h3>
+                        <div class="flex sm:inline-flex hidden pt-7">
+                            <div class="w-7 h-7 flex justify-center items-center rounded-full connectBg">
+                                <img src="../images/instagram.png" alt="instagram" />
+                            </div>
+                            <div class="w-7 h-7 flex justify-center items-center ml-2.5 rounded-full connectBg">
+                                <img src="../images/twitter.png" alt="twitter" />
+                            </div>
+                            <div class="w-7 h-7 flex justify-center items-center ml-2.5 rounded-full connectBg">
+                                <img src="../images/face-book.png" alt="facebook" />
+                            </div>
+                            <div class="w-7 h-7 flex justify-center items-center ml-2.5 rounded-full connectBg">
+                                <img src="../images/pintrest.png" alt="pintrest" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sm:w-40 w-full lg:ml-4 order-1 font-poppins">
+                    <h3 class="text-xs font-bold leading-6 textColor-4">Phone</h3>
+                        <p class="text-xs font-normal leading-7 textColor-4 flex">
+                            <span class="pr-2">
+                                <img src="../images/footer_phone.png" alt="phone" />
+                            </span>
+                            03 9999 7997
+                        </p>
+                        <h3 class="text-xs font-bold leading-6 mt-5 textColor-4">Address</h3>
+                        <p class="text-xs font-normal leading-7 textColor-4 flex">
+                            <span class="pr-3 pt-2">
+                                <img src="../images/location.svg" alt="location-icon" />
+                            </span>
+                            <span class="mt-1 sm:mt-0">45b Quinn St Preston, 3072 VIC Australia</span>
+                        </p>
+                        <h3 class="text-xs font-bold leading-5 mt-7 sm:hidden textColor-4">Connect</h3>
+                        <div class="flex sm:hidden pt-7">
+                            <div class="w-7 h-7 flex justify-center items-center rounded-full connectBg">
+                                <img src="../images/instagram.png" alt="instagram" /> 
+                            </div>
+                            <div class="w-7 h-7 flex justify-center items-center ml-2.5 rounded-full connectBg">
+                                <img src="../images/twitter.png" alt="twitter" />
+                            </div>
+                            <div class="w-7 h-7 flex justify-center items-center ml-2.5 rounded-full connectBg">
+                                <img src="../images/face-book.png" alt="facebook" />
+                            </div>
+                            <div class="w-7 h-7 flex justify-center items-center ml-2.5 rounded-full connectBg">
+                                <img src="../images/pintrest.png" alt="pintrest" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="pg-container mx-auto w-full py-8 px-6">
+                    <div class="flex sm:flex-row flex-col sm:justify-between justify-center">
+                        <p class="text-xs font-normal leading-6 text-center sm:mb-0 mb-4 textColor-4 font-poppins">Copyright Flowers Across Melbourne 2009 - 2021</p>
+                        <div class="flex justify-center">
+                            <span><img src="images/visa.png" alt="visa card" /></span>
+                            <span class="ml-5"><img src="../images/master-card.png" alt="master card" /></span>
+                            <span class="ml-5"><img src="../images/amex.png" alt="card" /></span>
+                            <span class="ml-5"><img src="../images/paypal.png" alt="paypal" /></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer Section Ends -->
+       
+        <script>
+            window.onscroll = function() {stickyHeader()};
+
+            var header = document.getElementById("myHeader");
+            var sticky = header.offsetTop;
+
+            var productBody = document.getElementById("body-content");
+            var productBodySticky = productBody.offsetTop;
+
+            function stickyHeader() {
+                if (window.pageYOffset > sticky) {
+                    header.classList.add("sticky");
+                } 
+            }
+        </script>
+        <script type="text/javascript">
+            function rotateOrangeArrow() {
+                var orangeArrow = document.getElementById("sticky-orange-arrow");
+                orangeArrow.classList.toggle("rotate");
+            }
+
+            function viewDetailsRotate() {
+                var orangeArrow = document.getElementById("orange-arrow");
+                orangeArrow.classList.toggle("rotate");
+            }
+
+            function viewMobDetailsRotate() {
+                var orangeArrow = document.getElementById("view-detail-mob");
+                orangeArrow.classList.toggle("rotate");
+            }
+
+            function faqMobRotate() {
+                var orangeArrow = document.getElementById("faq-last");
+                orangeArrow.classList.toggle("rotate");
+            }
+
+            function faqRotate() {
+                var orangeArrow = document.getElementById("faq");
+                orangeArrow.classList.toggle("rotate");
+            }
+
+            function quickLinks() {
+                var orangeArrow = document.getElementById("quickLinks");
+                orangeArrow.classList.toggle("rotate");
+            }
+
+            function moreLinks() {
+                var orangeArrow = document.getElementById("moreLinks");
+                orangeArrow.classList.toggle("rotate");
+            }
+
+            function viewFullFooter() {
+                var orangeArrow = document.getElementById("viewFull-details");
+                orangeArrow.classList.toggle("rotate");
+            }
+
+            function homeArrow() {
+                var orangeArrow = document.getElementById("home-arrow");
+                orangeArrow.classList.toggle("rotate");
+            }
+
+            function flowerArrow() {
+                var orangeArrow = document.getElementById("flower-arrow");
+                orangeArrow.classList.toggle("rotate");
+            }
+
+            function plantArrow() {
+                var orangeArrow = document.getElementById("plant-arrow");
+                orangeArrow.classList.toggle("rotate");
+            }
+
+            function giftArrow() {
+                var orangeArrow = document.getElementById("gift-arrow");
+                orangeArrow.classList.toggle("rotate");
+            }
+        </script>
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+            
+            for (i = 0; i < acc.length; i++) {
+              acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                  panel.style.maxHeight = null;
+                } else {
+                  panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+              });
+            }
+            </script>
+
+        
+       
+    </body>
+</html>

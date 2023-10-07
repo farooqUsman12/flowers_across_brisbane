@@ -1,0 +1,972 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="images/logo-mobile.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/DeliverySuburb.css">
+
+</head>
+<body>
+    <div>
+        <div class="wrapper-overlay"></div>
+
+        <!-- Top Header Section Starts -->
+        <div class="header-top-bg">
+            <div class="pg-container mx-auto w-full py-4 px-6">
+                <div class="flex font-poppins">
+                    <p class="text-sm font-normal leading-5 text-white flex">
+                        <span class="sm:pr-4 pr-2.5"><img src="images/phone.png" alt="phone-icon" /></span>
+                        <b>Call us</b> <span class="sm:inline-block hidden pl-1">03 9999 7997</span>
+                    </p>
+                    <p class="sm:text-sm text-xs font-normal leading-5 text-white flex sm:pl-14 pl-8">
+                        <span class="sm:pr-4 pr-2.5"><img src="images/truck.png" alt="deliver-truck" /></span>
+                        Order by 2pm for same day
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Top Header Section Ends -->
+
+
+
+        <!-- Main Header Section Starts -->
+        <div id="myHeader" class="border-b border-opacity bg-white z-10">
+            <div class="pg-container mx-auto w-full px-6">
+                <nav class="flex items-center justify-between py-2.5 font-poppins">
+                    <div class="md:hidden" id='open-button'>
+                        <img src="images/bars.png" alt="bars" />
+                    </div>
+                    <div class="sm:w-32 w-10 sm:ml-0 ml-12">
+                        <img class="sm:inline-block hidden" src="images/logo.png" alt="logo" />
+                        <img class="sm:hidden inline-block" src="images/logo-mobile.png" alt="logo">
+                    </div>
+                    <div class="flex items-center">
+                        <ul class="list-none md:inline-flex hidden items-center p-0 m-0">
+                            <li class="text-base font-semibold leading-8 uppercase textColor-1 relative">
+                                <a href="#">home</a>
+                            </li>
+                            <li class="text-base font-semibold leading-8 uppercase textColor-1 lg:pl-20 pl-12">
+                                <a href="#">flowers</a>
+                            </li>
+                            <li class="text-base font-semibold leading-8 uppercase textColor-1 lg:pl-20 pl-12">
+                                <a href="#">plants</a>
+                            </li>
+                            <li class="text-base font-semibold leading-8 uppercase textColor-1 lg:pl-20 pl-12">
+                                <a href="#">gifts</a>
+                            </li>
+                        </ul>
+                        <div class="flex sm:pl-20">
+                            <div class="w-7">
+                                <a href="#">
+                                    <img src="images/shopping.png" alt="trolley" />
+                                </a>
+                            </div>
+                            <div class="w-6 sm:ml-12 ml-9 relative">
+                                <a href="#">
+                                    <img src="images/user.png" alt="profile-icon" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id='menu' class="side-menu">
+                        <div class="main-menu pt-10">
+                            <nav class="nav-bar">
+                                <ul class="site-nav">
+                                    <li class="menu-item font-poppins">
+                                        <input id="home-new-mobile" type="checkbox" name="quick-links" class="hidden input-hidden" />
+                                        <label for="home-new-mobile" class="text-xs font-bold leading-5 sm:border-0 p-5 text-black border-2c596b uppercase block" onclick="homeArrow()">
+                                            <img src="images/home.png" alt="home" class="mr-4 inline-block" /> Home  
+                                            
+                                            <img src="images/right-arrow.png" alt="right arrow" class="inline-block float-right nav-arrow" id="home-arrow" />
+                                            
+                                        </label>
+                                        <ul class="list-none pl-4 sm:pl-0 mb-0 submenu max-h-0 sm:max-h-fit overflow-hidden">
+                                            <div class="dropdown-item pl-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                            <div class="dropdown-item pl-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                            <div class="dropdown-item pl-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                            <div class="dropdown-item pl-4">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item">
+
+                                        <input id="flower-new-mobile" type="checkbox" name="quick-links" class="hidden input-hidden" />
+                                        <label for="flower-new-mobile" class="text-xs font-bold leading-5 sm:border-0 p-5 text-black border-2c596b uppercase block" onclick="flowerArrow()">
+                                            <img src="images/flowers.png" alt="home" class="mr-4 inline-block" /> Flowers  
+                                            
+                                            <img src="images/right-arrow.png" alt="right arrow" class="inline-block float-right nav-arrow" id="flower-arrow" />
+                                            
+                                        </label>
+                                        <ul class="list-none pl-4 sm:pl-0 mb-0 submenu max-h-0 sm:max-h-fit overflow-hidden">
+                                            <div class="dropdown-item pl-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                            <div class="dropdown-item pl-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                            <div class="dropdown-item pl-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                            <div class="dropdown-item pl-4">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item">
+                                        <input id="plants-new-mobile" type="checkbox" name="quick-links" class="hidden input-hidden" />
+                                        <label for="plants-new-mobile" class="text-xs font-bold leading-5 sm:border-0 p-5 text-black border-2c596b uppercase block" onclick="plantArrow()">
+                                            <img src="images/nav-plants.png" alt="home" class="mr-4 inline-block" /> Plants  
+                                            
+                                            <img src="images/right-arrow.png" alt="right arrow" class="inline-block float-right nav-arrow" id="plant-arrow" />
+                                            
+                                        </label>
+                                        <ul class="list-none pl-4 sm:pl-0 mb-0 submenu max-h-0 sm:max-h-fit overflow-hidden">
+                                            <div class="dropdown-item pl-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                            <div class="dropdown-item pl-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                            <div class="dropdown-item pl-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                            <div class="dropdown-item pl-4">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                        </ul>
+                                    </li>
+
+                                    <li class="menu-item">
+                                        <input id="gifts-new-mobile" type="checkbox" name="quick-links" class="hidden input-hidden" />
+                                        <label for="gifts-new-mobile" class="text-xs font-bold leading-5 sm:border-0 p-5 text-black border-2c596b uppercase block" onclick="giftArrow()">
+                                            <img src="images/gifts-nav.png" alt="home" class="mr-4 inline-block" /> Gifts  
+                                            
+                                            <img src="images/right-arrow.png" alt="right arrow" class="inline-block float-right nav-arrow" id="gift-arrow" />
+                                            
+                                        </label>
+                                        <ul class="list-none pl-4 sm:pl-0 mb-0 submenu max-h-0 sm:max-h-fit overflow-hidden">
+                                            <div class="dropdown-item px-4 py-2 border-b border-solid border-slate-300">
+                                                <a href="#" class="flex items-center">
+                                                    <span class="header-top-bg w-5 h-5 text-white rounded-full inline-block text-center float-left">1</span>
+                                                    <span class="text-xs font-normal textColor-3 leading-5 ml-3">Order #1234 to Alexandria, ETA ,4:30pm</span>
+                                                </a>
+                                            </div>
+                                            <div class="dropdown-item px-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 textColor-2 block" href="#">View last order</a>
+                                            </div>
+                                            <div class="dropdown-item px-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 textColor-2 block" href="#">My Account</a>
+                                            </div>
+                                            <div class="dropdown-item px-4">
+                                                <a class="text-xs font-normal leading-8 textColor-2 block" href="#">Sign out</a>
+                                            </div>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>  
+                        </div>
+
+                        <button class='close-button'>
+                            <img src="images/close.png" alt="close" />
+                        </button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    
+        <hr />
+        <!-- Main Header Section Ends -->
+
+        <!--Delivery Suburb Section stats Here-->
+        	<section class="font-poppins">
+                <div class="pg-container mx-auto w-full px-6">
+                    <div class="row sm:pt-5 sm:mb-80 mb-20">
+                        <div class="row-image-banner flex justify-center">
+                            <div class="image-banner my-12 flex justify-center items-center ">
+                                <h3 class="text-white font-semibold text-4xl">Delivery Suburb</h3>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-center sm:mt-3">
+                            <div class="overflow-auto icons-max-width w-full mt-1 mb-4">
+                                <div class="icons flex tabs  w-full">
+                                    <div class="mr-2 content-button ">
+                                        <button type="button" class=" selected flex items-center rounded icon-button-bg px-8 py-2.5 justify-evenly delivery-button-bg" onclick="question(event, 'tab1')" id="defaultOpen">
+                                            <img src="./new-images/Deliveries.png" alt="Image not Found">
+                                            <span class="text-sm font-semibold ml-5">Deliveries</span>
+                                        </button>
+                                    </div>
+                                    <div class="mr-2 content-button">
+                                        <button type="button" class="w-44 flex items-center rounded icon-button-bg py-2.5 justify-evenly" onclick="question(event, 'tab2')">
+                                            <img src="./new-images/payment-img.png" alt="Image not Found">
+                                            <span class="text-sm font-semibold ">Delivery Costs</span>
+                                        </button>
+                                    </div>
+                                    <div class="mr-3 content-button">
+                                        <button type="button" class="w-44 flex items-center rounded icon-button-bg py-2.5 justify-evenly"  onclick="question(event, 'tab3')">
+                                            <img src="./new-images/Delivery-time.png" alt="Image not Found">
+                                            <span class="text-sm font-semibold ">Delivery Times</span>
+                                        </button>
+                                    </div>
+                                    <div class="mr-3 content-button">
+                                        <button type="button" class="w-52 flex items-center rounded icon-button-bg py-2.5  justify-evenly" onclick="question(event, 'tab4')">
+                                            <img src="./new-images/shoping-img.png" alt="Image not Found">
+                                            <span class="text-sm font-semibold  ">Undeliverable Items</span>
+                                        </button>
+                                    </div>
+                                    <div>
+                                        <div class="content-button">
+                                        <button type="button" class="w-44 flex items-center rounded icon-button-bg py-2.5 justify-evenly" onclick="question(event, 'tab5')">
+                                            <img src="./new-images/compny-img.png" alt="Image not Found">
+                                            <span class="text-sm font-semibold ">Notifications</span>
+                                        </button>
+                                    </div>
+                                    </div>
+                                </div>   
+                            </div>
+                        </div>
+                        <div class="icons-max-width mx-auto">
+                            <div id="tab1" class="tabcontent">
+                                <div class="search-bar flex items-center justify-center py-5">
+                                <form action="#/" class="h-14 flex icons-max-width w-full border border-solid bg-form rounded-md">
+                                    <input type="text" id="myInput" onkeyup="mySearchBar()" placeholder="Enter a delivery Suburb, hospital name or postcode" class="w-full h-full bg-form pl-8 outline-none text-sm">
+                                    <button type="button" class="pr-5 ">
+                                        <img src="./new-images/Search-icon.png" alt="Image not found">
+                                    </button>
+                                </form>
+                                </div>
+                                <div class="suburb-table flex items-center justify-center mt-3">
+                                <div class=" icons-max-width w-full overflow-auto" >
+                                    <table class="w-full" id="myTable">
+                                        <tr class="table-row1-bg text-left text-xs">
+                                            <th class="pt-5 pb-3 px-7">Suburb</th>
+                                            <th class="pt-5 pb-3 px-7">Postcode</th>
+                                            <th class=" pt-5 pb-3 px-7">Cost</th>
+                                            <th class=" pt-5 pb-3 px-7 min-w">
+                                            <p>Express Available</p>
+                                            <p class="font-size-8 font-normal">$5.00 surcharge</p>
+                                        </th>
+                                            <th class=" pt-5 pb-3 min-w-1 ">
+                                                <p>Cut Off Time</p>
+                                                <p class="font-size-8 font-normal">For same day delivery</p>
+                                            </th>  
+                                        </tr>
+                                        <tr class="text-sm">
+                                            <td class="td-1 py-5 px-7">Abbotsford</td>
+                                            <td class="py-5 px-7">3067</td>
+                                            <td class="py-5 px-7">$100.90</td>
+                                            <td class="py-5 pl-14"><img src="./new-images/red-icon.png" alt="Image not found"></td>
+                                            <td class="py-5 px-7">2pm</td>
+                                        </tr>
+                                        <tr class="text-sm">
+                                            <td class="td-1 py-5 px-7">Canada</td>
+                                            <td class="py-5 px-7">3333</td>
+                                            <td class="py-5 px-7">$50.90</td>
+                                            <td class="py-5 pl-14"><img src="./new-images/red-icon.png" alt="Image not found"></td>
+                                            <td class="py-5 px-7">3pm</td>
+                                        </tr>
+                                        <tr class="text-sm">
+                                            <td class="td-1 py-5 px-7">Pakistan</td>
+                                            <td class="py-5 px-7">3062</td>
+                                            <td class="py-5 px-7">$60.90</td>
+                                            <td class="py-5 pl-14 "><img src="./new-images/red-icon.png" alt="Image not found"></td>
+                                            <td class="py-5 px-7">4pm</td>
+                                        </tr>
+                                        <tr class="text-sm">
+                                            <td class="td-1 py-5 px-7">Chania</td>
+                                            <td class="py-5 px-7">3061</td>
+                                            <td class="py-5 px-7">$80.90</td>
+                                            <td class="py-5 pl-14"><img src="./new-images/red-icon.png" alt="Image not found"></td>
+                                            <td class="py-5 px-7">5pm</td>
+                                        </tr>
+                                        <tr class="text-sm">
+                                            <td class="td-1 py-5 px-7">India</td>
+                                            <td class="py-5 px-7">3045</td>
+                                            <td class="py-5 px-7">$120.90</td>
+                                            <td class="py-5 pl-14 "><img src="./new-images/red-icon.png" alt="Image not found"></td>
+                                            <td class="py-5 px-7">7pm</td>
+                                        </tr>
+                                        <tr class="text-sm">
+                                            <td class="td-1 py-5 px-7">Abbotsford</td>
+                                            <td class="py-5 px-7">3032</td>
+                                            <td class="py-5 px-7">$35.90</td>
+                                            <td class="py-5 pl-14 "><img src="./new-images/red-icon.png" alt="Image not found"></td>
+                                            <td class="py-5 px-7">8pm</td>
+                                        </tr>
+                                        <tr class="text-sm">
+                                            <td class="td-1 py-5 px-7">Abbotsford</td>
+                                            <td class="py-5 px-7">3021</td>
+                                            <td class="py-5 px-7">$53.90</td>
+                                            <td class="py-5 pl-14 "><img src="./new-images/red-icon.png" alt="Image not found"></td>
+                                            <td class="py-5 px-7">11pm</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                </div>
+                            </div>
+                            <div id="tab2" class="tabcontent mt-7">
+                                <div class="mb-10 sm:px-9">
+                                <strong><h1 class="text-4xl font-medium">Delivery Costs</h1></strong>
+                            </div>
+                                <div class="link1 w-full sm:px-9 border-b mb-6">
+                                    <a href="#/" class="flex justify-between sm:pb-7 accordion">
+                                        <p class="text-sm sm:text-lg">Express Deliveries</p>
+                                        <button type="button">
+                                            <img src="./new-images/drop-down.png" alt="Image not found" class="max-w-none">
+                                        </button>
+                                    </a>
+                                    <div class="panel text-sm sm:py-8 sm:pl-16 sm:pr-20 my-7 px-5 py-5">
+                                        <div class="w-full">
+                                            <ul>
+                                                <li><p class="font-normal leading-7 mb-4">Express deliveries are deliveries requested to arrive at the destination before noon. There is a $5.00 surcharge for express deliveries.</p></li>
+                                                <li><p class="font-normal leading-7 mb-4">Express deliveries are available for most suburbs but must be ordered by midnight the night before delivery.</p></li>
+                                                <li><p class="font-normal leading-7 mb-4">Express deliveries are not available Saturdays or Sundays, Valentine's Day, or Mothers Day.</p></li>
+                                            </ul>
+                                            
+                                            
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="link1 w-full sm:px-9 border-b mb-6">
+                                    <a href="#/" class="flex justify-between sm:pb-7 accordion">
+                                        <p class="text-sm sm:text-lg">Valentine's Day Deliveries</p>
+                                        <button type="button">
+                                            <img src="./new-images/drop-down.png" alt="Image not found" class="max-w-none">
+                                        </button>
+                                    </a>
+                                    <div class="panel text-sm sm:py-8 sm:pl-16 sm:pr-20 my-7 px-5 py-5">
+                                        <div class="w-full">
+                                            <ul>
+                                                <li><p class="font-normal leading-7 mb-4">Express deliveries are not available on Valentine's Day.</p></li>
+                                            </ul>
+                                            
+                                            
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="link1 w-full sm:px-9 border-b mb-6">
+                                    <a href="#/" class="flex justify-between sm:pb-7 accordion">
+                                        <p class="text-sm sm:text-lg">Mothers Day Deliveries</p>
+                                        <button type="button">
+                                            <img src="./new-images/drop-down.png" alt="Image not found" class="max-w-none">
+                                        </button>
+                                    </a>
+                                    <div class="panel text-sm sm:py-8 sm:pl-16 sm:pr-20 my-7 px-5 py-5">
+                                        <div class="w-full">
+                                            <ul>
+                                                <li><p class="font-normal leading-7 mb-4">We offer delivery on Mothers Day Sunday, 8 May 2022.</p></li>
+                                                <li><p class="font-normal leading-7 mb-4">Express deliveries are not available on Mothers Day.</p></li>
+                                            </ul> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="link1 w-full sm:px-9 border-b mb-6">
+                                    <a href="#/" class="flex justify-between sm:pb-7 accordion">
+                                        <p class="text-sm sm:text-lg">Re-delivery charges</p>
+                                        <button type="button">
+                                            <img src="./new-images/drop-down.png" alt="Image not found" class="max-w-none">
+                                        </button>
+                                    </a>
+                                    <div class="panel text-sm sm:py-8 sm:pl-16 sm:pr-20 my-7 px-5 py-5">
+                                        <div class="w-full">
+                                            <ul>
+                                                <li><p class="font-normal leading-7 mb-4">If no-one is at the destination when our driver arrives, the driver will attempt to leave the delivery in a safe place. They will also leave a message card in the mailbox. Please let us know if you would prefer a redelivery instead of leaving safe. You can provide additional delivery instructions in the 'special delivery instructions' field during checkout.</p></li>
+                                                <li><p class="font-normal leading-7 mb-4">If there is no safe place to leave the order, or if the item is undeliverable due to incorrect address provided, we will attempt to contact you for further instructions. If a redelivery or forwarding address is requested, you will be charged an additional delivery fee equal to the cost of delivery to the suburb provided for redelivery.</p></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab3" class="tabcontent mt-7">
+                                <div class="mb-10 sm:px-9">
+                                    <strong><h1 class="text-4xl font-medium">Delivery Times</h1></strong>
+                                </div>
+                                <div class="link1 w-full sm:px-9 border my-6 alert-bg max-w-4xl mx-auto">
+                                <div class=" text-sm sm:pl-16 sm:pr-20 my-7 px-5">
+                                    <div class="w-full">
+                                        <ul>
+                                            <li><p class="font-normal leading-7 mb-4">We currently offer delivery 7 days a week, Monday through Sunday except public holidays.</p></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                                    <div class="link1 w-full sm:px-9 border-b mb-6">
+                                        <a href="#/" class="flex justify-between sm:pb-7 accordion">
+                                            <p class="text-sm sm:text-lg">Order cut off times</p>
+                                            <button type="button">
+                                                <img src="./new-images/drop-down.png" alt="Image not found" class="max-w-none">
+                                            </button>
+                                        </a>
+                                        <div class="panel text-sm sm:py-8 sm:pl-16 sm:pr-20 my-7 px-5 py-5">
+                                            <div class="w-full">
+                                                <ul>
+                                                    <li><p class="font-bold leading-7 mb-2">Express</p></li>
+                                                    <li><p class="font-normal leading-7 mb-4">If you would like to choose the express delivery option your order should be placed by midnight the night before the delivery date. Express options are not available for Saturdays, Mothers Day or Valentine's Day.</p></li>
+                                                    <li><p class="font-bold leading-7 mb-2">Same Day Standard</p></li>
+                                                    <li><p class="font-normal leading-7 mb-4">Orders placed by 2pm can be delivered on the same day to Metro Melbourne suburbs. Please note some distant suburbs cut off earlier in the day. We are always working hard towards expanding our range of suburbs that cut off at 2pm, please check back for updates..</p></li>
+                                                    <li><p class="font-bold leading-7 mb-2">Weekends</p></li>
+                                                    <li><p class="font-normal leading-7 mb-4">Saturdays/Sundays - Orders placed by 10am can be delivered on the same day, however we are currently unable to offer express delivery (by noon) on Saturdays or Sundays.</p></li>
+                                                </ul>    
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="link1 w-full sm:px-9 border-b mb-6">
+                                        <a href="#/" class="flex justify-between sm:pb-7 accordion">
+                                            <p class="text-sm sm:text-lg">Flower arrival times</p>
+                                            <button type="button">
+                                                <img src="./new-images/drop-down.png" alt="Image not found" class="max-w-none">
+                                            </button>
+                                        </a>
+                                        <div class="panel text-sm sm:py-8 sm:pl-16 sm:pr-20 my-7 px-5 py-5">
+                                            <div class="w-full">
+                                                <ul>
+                                                    <li><p class="font-bold leading-7 mb-2">Delivery Date</p></li>
+                                                    <li><p class="font-normal leading-7 mb-4">We guarantee delivery of your gift on the date you have selected (chosen during checkout), providing there are no delivery problems such as an incorrect address or there is no-one available to accept delivery and there is no where safe to leave the delivery.</p></li>
+                                                    <li><p class="font-bold leading-7 mb-2">Express</p></li>
+                                                    <li><p class="font-normal leading-7 mb-4">If you have chosen the express option (must be ordered by midnight the night prior to the delivery date) your order will arrive by 12pm noon for your requested delivery date. If, in the rare circumstance that arrival is after 12pm noon we will happily refund the express portion ($5.00) of your delivery fee (unless you have supplied an incorrect address or the delivery wasn't safe to leave and a re-delivery is required).</p></li>
+                                                    <li><p class="font-bold leading-7 mb-2">Standard Delivery</p></li>
+                                                    <li><p class="font-normal leading-7 mb-4">Orders will arrive between 9am and 5pm for business addresses and between 9am and 7pm for residential addresses. Most standard deliveries will arrive in the afternoon due to courier pick up times and delivery practices.</p></li>
+                                                    <li><p class="font-normal leading-7 mb-4">In general, due to the way our delivery runs are structured, the closer your delivery is to Melbourne CBD the more likely it is to be delivered earlier in the day. Some standard (non-express) deliveries may reach their destination before lunchtime (this is our goal) if ordered by 9am on the day of delivery. Additional orders that are placed later in the day are sent on the second delivery run of the day. Areas further away from Melbourne CBD may reach their destination later in the day. It is always our aim to deliver your gift as soon as possible.</p></li>
+                                                    <li><p class="font-bold leading-7 mb-2">Specific times</p></li>
+                                                    <li><p class="font-normal leading-7 mb-4">We're sorry, we cannot offer specific delivery times. You are welcome to request a preferred timeframe for delivery using the delivery instructions field on the checkout page and we will ask our couriers to try and accommodate your request, but unfortunately, we cannot guarantee specific times.</p></li>
+                                                    <li><p class="font-bold leading-7 mb-2">Valentine's Day Deliveries</p></li>
+                                                    <li><p class="font-normal leading-7 mb-4">Due to the amount of orders placed on Valentine's day, our couriers are unable to offer any timeframes for deliveries or accommodate any time specific deliveries. We also cannot offer our usual 'before noon' express option.</p></li>
+                                                    <li><p class="font-bold leading-7 mb-2">Mothers Day Deliveries</p></li>
+                                                    <li><p class="font-normal leading-7 mb-4">We deliver on Mothers Day Sunday, 8 May 2022, however we are unable to offer an express option for Mothers Day.</p></li>
+                                                    <li><p class="font-bold leading-7 mb-2">Public Holidays</p></li>
+                                                    <li><p class="font-normal leading-7 mb-4">We currently do not deliver on public holidays.</p></li>
+                                                    <li><p class="font-normal leading-7 mb-4">Please be aware that if you place an order for delivery the day before a public holiday and there is an address or delivery problem that we are unable to resolve that day, we will not be able to re-deliver an order until the next business day. If the address was incorrect or there was no-one available to accept the delivery, or no safe place to leave it, due to the perishable nature of flowers there will be an additional fee to remake your order and an additional re-delivery fee.</p></li>
+                                                    <li><p class="font-normal leading-7 mb-4">Most delivery issues are a result of incorrect addresses or someone not available to receive the delivery. We love nothing more than delivering successfully first time around, so ensuring the correct address is entered and that someone will be available to receive the delivery will increase the likelyhood of a successful order.</p></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="link1 w-full sm:px-9 border-b mb-6">
+                                        <a href="#/" class="flex justify-between pb-7 accordion">
+                                            <p class="text-sm sm:text-lg">Courier pick up times</p>
+                                            <button type="button">
+                                                <img src="./new-images/drop-down.png" alt="Image not found" class="max-w-none">
+                                            </button>
+                                        </a>
+                                        <div class="panel text-sm sm:py-8 sm:pl-16 sm:pr-20 my-7 px-5 py-5">
+                                            <div class="w-full">
+                                                <ul>
+                                                    <li><p class="font-normal leading-7 mb-4">We have several different courier pickup times throughout the day depending on delivery area and time the order is placed.</p></li>
+                                                    <li><p class="font-normal leading-7 mb-4">It is always our aim to deliver your order as soon as possible. If you wish to have your order out as soon as possible today, please order before 10.30am so we can try and place it with the morning courier (for likely early afternoon delivery). This is dependant on the suburb, so if you would like to check up on your ETA, just send an enquiry via our contact page or give us a call on 03 9999 7997.</p></li>
+                                                    <li><p class="font-normal leading-7 mb-4">We place a priority on express orders which always go out first thing in the morning to ensure they arrive by 12pm. If you place a standard (non-express) order before 8am on the day of delivery, it may be sent with the early morning courier and arrive before lunch time, but we only guarantee delivery by 12pm for express delivery orders.</p></li>
+                                                    <li><p class="font-normal leading-7 mb-4">If you would like to find out more about delivery times and options, please don't hesitate to call us on 03 9999 7997 or send an enquiry via our <a href="#/" class="text-blue hover:underline-offset-2">contact page</a>.</p></li>
+                                                </ul> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                   
+                            </div>
+                            <div id="tab4" class="tabcontent">
+                                <div class="mb-10 sm:px-9 mt-7">
+                                    <strong><h1 class="text-4xl font-medium">Undeliverable Items</h1></strong>
+                                </div>
+                                <div class="link1 w-full sm:px-9 border my-6 alert-bg max-w-4xl mx-auto ">
+                                    <div class=" text-sm sm:pl-16 sm:pr-20 my-7 px-5">
+                                        <div class="w-full">
+                                            <ul>
+                                                <li><p class="font-normal leading-7 mb-4">If no one is home, couriers make every effort to leave the flowers in a cool, safe place, however, sometimes nobody is home, gates are locked, or big scary dogs frighten off our couriers, so if this happens, we will attempt to contact you as soon as possible for further instructions.</p></li>
+                                                <li><p class="font-normal leading-7 mb-4">If we are unable to contact you or the recipient and there is no safe place to leave the delivery, the delivery driver will leave a message in the mailbox and return the delivery to us to await further instructions.</p></li>
+                                                <li><p class="font-normal leading-7 mb-4">In order to ensure quick delivery of your gift please provide as much info as may be needed for efficient delivery and double check that the delivery address is correct, as re-delivery will incur a further delivery fee.</p></li>
+                                                <li><p class="font-normal leading-7 mb-4">In many larger businesses and hospitals it may be their policy for deliveries to be left with reception or at a mailroom to be passed on to the recipient. In these cases the driver will leave as instructed and inline with the destination addresses policies. Due to being beyond our control, we are unable to accept responsibility if the gift was subsequently not passed on to the recipient by reception, the mailroom or a co-worker who accepted it on behalf of the recipient, however, if you are unsure that your gift was received, we would be happy to follow it up with the recipient for you, just <a href=""> get in touch</a>.</p></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab5" class="tabcontent">
+                                <div class="mb-10 sm:px-9 mt-7">
+                                    <strong><h1 class="text-4xl font-medium">Notifications</h1></strong>
+                                </div>
+                                <div class="link1 w-full sm:px-9 border my-6 alert-bg max-w-4xl mx-auto">
+                                    <div class=" text-sm sm:pl-16 sm:pr-20 my-7 px-5">
+                                        <div class="w-full">
+                                            <ul>
+                                                <li><p class="font-normal leading-7 mb-4">We like to keep our customers in the loop, and we understand that you're patiently waiting for that phone call from your excited friend or loved one, or just for piece of mind that everything was delivered without problem, which is why we like to send notifications and updates where possible.</p></li>
+                                                <li><p class="font-normal leading-7 mb-4">We will send an email to the senders email address provided by you on checkout to let you know when the delivery was made. We also include any relevant driver delivery notes in case the you need to relay any further instructions to the recipient to collect their delivery - for example, if the delivery was left with the receptionist.</p></li>
+                                                <li><p class="font-normal leading-7 mb-4">Our notification service is currently available for approximately 85% of our deliveries. Some areas and deliveries necessitate using outside couriers to ensure timely delivery, and unfortunately in some of these cases we have no confirmation of delivery that we can pass on, however, we may be able to provide further information on request, so please call us on 03 9999 7997 if you have any delivery queries.</p></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+
+        <!--Delivery Suburb  Ask Question Section Ends Here-->
+        <!-- Footer Section Starts -->
+        <footer class="font-poppins">
+            <div class="pg-container mx-auto w-full pt-6 sm:pb-16 pb-12 px-6">
+                <div class="flex flex-wrap lg:justify-between justify-start">
+                    <div class="sm:w-72 w-full sm:mr-4 sm:mb-4 mb-12">
+                        <div class="footer_create-bg flex justify-end items-end px-4 py-3">
+                            <button class="buttonBg text-white w-36 h-8 rounded text-xs font-semibold leading-8">Create a Bouquet</button>
+                        </div>
+                        <p class="text-sm font-normal leading-5 textColor-4 mt-6">Need flowers sent to Sydney?</p>
+                        <p><a class="text-sm font-normal leading-5 textColor-3" href="#">www.flowersacrosssydney.com.au</a></p>
+
+                        <p class="text-sm font-normal leading-5 textColor-4 mt-4">Send dried flowers throughout Australia</p>
+                        <p><a class="text-sm font-normal leading-5 textColor-3" href="#">flowersacrossaustralia.com.au</a></p>
+                    </div>
+                    <div class="sm:w-40 w-full sm:mb-4 mb-5 font-poppins">
+                        <h3 class="text-xs font-bold leading-5 flex justify-between items-center sm:border-0 border-b sm:pb-0 pb-5 sm:px-0 px-5 textColor-4 border-2c596b hidden sm:inline-block">Quick Links
+                            <span class="sm:hidden">
+                                <img src="images/footer-dropdown.png" />
+                            </span>
+                        </h3>
+
+                        <input id="quick-links" type="checkbox" name="quick-links" class="hidden input-hidden" />
+                        <label for="quick-links" class="text-xs font-bold leading-5 flex justify-between items-center sm:border-0 border-b sm:pb-0 pb-4 sm:px-0 px-4 textColor-4 border-2c596b sm:hidden" onclick="quickLinks()">Quick Links 
+                            <span class="sm:hidden">
+                                <img src="images/footer-dropdown.png" alt="dropdown" class="footer-arrow" id="quickLinks" />
+                            </span>
+                        </label>
+                        <ul class="list-none pl-4 sm:pl-0 pt-2 mb-0 submenu max-h-0 sm:max-h-fit overflow-hidden sm:overflow-visible">
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Home</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">FAQ</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Create-A-Bouquet</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Daily Flowers</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Flower Delivery</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Flower Subscriptions</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Pet Friendly Flowers</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Pickup Options</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Track Your Order</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sm:w-40 w-full lg:ml-4 sm:mb-4 mb-5 font-poppins">
+                        <h3 class="text-xs font-bold leading-5 flex justify-between items-center sm:border-0 border-b sm:pb-0 pb-5 sm:px-0 px-5 textColor-4 border-2c596b hidden sm:inline-block">More Links
+                            <span class="sm:hidden">
+                                <img src="images/footer-dropdown.png" />
+                            </span>
+                        </h3>
+
+                        <input id="more-links1" type="checkbox" name="more-links1" class="hidden input-hidden" />
+                        <label for="more-links1" class="text-xs font-bold leading-5 flex justify-between items-center sm:border-0 border-b sm:pb-0 pb-4 sm:px-0 px-4 textColor-4 border-2c596b block sm:hidden" onclick="moreLinks()">More Links 
+                            <span class="sm:hidden">
+                                <img src="images/footer-dropdown.png" alt="dropdown" class="footer-arrow" id="moreLinks" />
+                            </span>
+                        </label>
+                        <ul class="list-none pl-4 sm:pl-0 pt-2 mb-0 submenu max-h-0 sm:max-h-fit overflow-hidden sm:overflow-visible">
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Hospital Deliveries</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Customer Reviews</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Why Shop With Us?</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Givr</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Charity Givr</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Afterpay</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Zip Pay</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Florists Blog</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Site Map</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sm:w-40 w-full lg:ml-4 sm:mb-4 mb-5 font-poppins">
+                        <h3 class="text-xs font-bold leading-5 flex justify-between items-center sm:border-0 border-b sm:pb-0 pb-5 sm:px-0 px-5 textColor-4 border-2c596b hidden sm:inline-block">More Links
+                            <span class="sm:hidden">
+                                <img src="images/footer-dropdown.png" />
+                            </span>
+                        </h3>
+
+                        <input id="view-full-detail-new" type="checkbox" name="view-full-detail" class="hidden input-hidden" />
+                        <label for="view-full-detail-new" class="text-xs font-bold leading-5 flex justify-between items-center sm:border-0 border-b sm:pb-0 pb-4 sm:px-0 px-4 textColor-4 border-2c596b block sm:hidden" onclick="viewFullFooter()">View Full Details
+                            <span class="sm:hidden">
+                                <img src="images/footer-dropdown.png" alt="dropdown" class="footer-arrow" id="viewFull-details" />
+                            </span>
+                        </label>
+                        <ul class="list-none pl-4 sm:pl-0 pt-2 mb-0 submenu max-h-0 sm:max-h-fit overflow-hidden sm:overflow-visible">
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">
+                                    About Us
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">
+                                    Contact Us
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">
+                                    Privacy Policy
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">
+                                    Refunds & Returns
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">
+                                    Terms & Conditions
+                                </a>
+                            </li>
+                        </ul>
+                        
+                        <h3 class="text-xs font-bold leading-5 sm:block hidden mt-40 textColor-4">Connect</h3>
+                        <div class="flex sm:inline-flex hidden pt-7">
+                            <div class="w-7 h-7 flex justify-center items-center rounded-full connectBg">
+                                <img src="images/instagram.png" alt="instagram" />
+                            </div>
+                            <div class="w-7 h-7 flex justify-center items-center ml-2.5 rounded-full connectBg">
+                                <img src="images/twitter.png" alt="twitter" />
+                            </div>
+                            <div class="w-7 h-7 flex justify-center items-center ml-2.5 rounded-full connectBg">
+                                <img src="images/face-book.png" alt="facebook" />
+                            </div>
+                            <div class="w-7 h-7 flex justify-center items-center ml-2.5 rounded-full connectBg">
+                                <img src="images/pintrest.png" alt="pintrest" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sm:w-40 w-full lg:ml-4 order-1 font-poppins">
+                    <h3 class="text-xs font-bold leading-6 textColor-4">Phone</h3>
+                        <p class="text-xs font-normal leading-7 textColor-4 flex">
+                            <span class="pr-2">
+                                <img src="images/footer_phone.png" alt="phone" />
+                            </span>
+                            03 9999 7997
+                        </p>
+                        <h3 class="text-xs font-bold leading-6 mt-5 textColor-4">Address</h3>
+                        <p class="text-xs font-normal leading-7 textColor-4 flex">
+                            <span class="pr-3 pt-2">
+                                <img src="images/location.svg" alt="location-icon" />
+                            </span>
+                            <span class="mt-1 sm:mt-0">45b Quinn St Preston, 3072 VIC Australia</span>
+                        </p>
+                        <h3 class="text-xs font-bold leading-5 mt-7 sm:hidden textColor-4">Connect</h3>
+                        <div class="flex sm:hidden pt-7">
+                            <div class="w-7 h-7 flex justify-center items-center rounded-full connectBg">
+                                <img src="images/instagram.png" alt="instagram" /> 
+                            </div>
+                            <div class="w-7 h-7 flex justify-center items-center ml-2.5 rounded-full connectBg">
+                                <img src="images/twitter.png" alt="twitter" />
+                            </div>
+                            <div class="w-7 h-7 flex justify-center items-center ml-2.5 rounded-full connectBg">
+                                <img src="images/face-book.png" alt="facebook" />
+                            </div>
+                            <div class="w-7 h-7 flex justify-center items-center ml-2.5 rounded-full connectBg">
+                                <img src="images/pintrest.png" alt="pintrest" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="pg-container mx-auto w-full py-8 px-6">
+                    <div class="flex sm:flex-row flex-col sm:justify-between justify-center">
+                        <p class="text-xs font-normal leading-6 text-center sm:mb-0 mb-4 textColor-4 font-poppins">Copyright Flowers Across Melbourne 2009 - 2021</p>
+                        <div class="flex justify-center">
+                            <span><img src="images/visa.png" alt="visa card" /></span>
+                            <span class="ml-5"><img src="images/master-card.png" alt="master card" /></span>
+                            <span class="ml-5"><img src="images/amex.png" alt="card" /></span>
+                            <span class="ml-5"><img src="images/paypal.png" alt="paypal" /></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer Section Ends -->
+    </div>
+
+    
+    <!-- Scripts Used -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.js"></script>
+    <script type="text/javascript">
+        var open = document.getElementById('open-button');
+        var overlay = document.getElementsByClassName('wrapper-overlay')[0];
+        var close = document.getElementsByClassName('close-button')[0];
+        var menu = document.getElementById('menu');
+
+        open.addEventListener('click', () => {
+            menu.classList.add('open'),
+            overlay.classList.add('open')
+        })
+
+        close.addEventListener('click', () => {
+            menu.classList.remove('open'),
+            overlay.classList.remove('open')
+        })
+
+        overlay.addEventListener('click', () => {
+            overlay.classList.remove('open'),
+            menu.classList.remove('open')
+        })
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            var owl = $('.product-slider');
+            owl.owlCarousel({
+                margin: 10,
+                nav: true,
+                loop: true,
+                items: 1,
+                dots: true
+                })
+        })
+
+
+        $(document).ready(function() {
+            var owl = $('.hand-picked-slider');
+            owl.owlCarousel({
+                margin: 10,
+                nav: true,
+                loop: true,
+                dots: true,
+                responsive:{
+                    0:{
+                        items:2
+                    },
+                    600:{
+                        items:3
+                    },
+                    1000:{
+                        items:5
+                    }
+                }
+            })
+        })
+    </script>
+
+    <script type="text/javascript">
+         $(document).scroll(function() {
+            if($(window).scrollTop() < 850){
+                $(".footer-sticky").css("display","none");
+            }
+            else if(($(window).scrollTop() > 850) && ($(window).scrollTop() < 3250)){
+                $(".footer-sticky").css("position","fixed");
+                $(".footer-sticky").css("width","100%");
+                $(".footer-sticky").css("bottom","0");
+                $(".footer-sticky").css("z-index","999");
+                $(".footer-sticky").css("display","block"); 
+            }
+            else if($(window).scrollTop() > 3250){
+                $(".footer-sticky").css("display","none");
+            }
+        });
+    </script>
+
+    <script>
+        window.onscroll = function() {stickyHeader()};
+
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+
+        var productBody = document.getElementById("body-content");
+        var productBodySticky = productBody.offsetTop;
+
+        function stickyHeader() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+                productBody.classList.add("product-content");
+            } 
+            else {
+                header.classList.remove("sticky");
+                productBody.classList.remove("product-content");
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+        function rotateOrangeArrow() {
+            var orangeArrow = document.getElementById("sticky-orange-arrow");
+            orangeArrow.classList.toggle("rotate");
+        }
+
+        function viewDetailsRotate() {
+            var orangeArrow = document.getElementById("orange-arrow");
+            orangeArrow.classList.toggle("rotate");
+        }
+
+        function viewMobDetailsRotate() {
+            var orangeArrow = document.getElementById("view-detail-mob");
+            orangeArrow.classList.toggle("rotate");
+        }
+
+        function faqMobRotate() {
+            var orangeArrow = document.getElementById("faq-last");
+            orangeArrow.classList.toggle("rotate");
+        }
+
+        function faqRotate() {
+            var orangeArrow = document.getElementById("faq");
+            orangeArrow.classList.toggle("rotate");
+        }
+
+        function quickLinks() {
+            var orangeArrow = document.getElementById("quickLinks");
+            orangeArrow.classList.toggle("rotate");
+        }
+
+        function moreLinks() {
+            var orangeArrow = document.getElementById("moreLinks");
+            orangeArrow.classList.toggle("rotate");
+        }
+
+        function viewFullFooter() {
+            var orangeArrow = document.getElementById("viewFull-details");
+            orangeArrow.classList.toggle("rotate");
+        }
+
+        function homeArrow() {
+            var orangeArrow = document.getElementById("home-arrow");
+            orangeArrow.classList.toggle("rotate");
+        }
+
+        function flowerArrow() {
+            var orangeArrow = document.getElementById("flower-arrow");
+            orangeArrow.classList.toggle("rotate");
+        }
+
+        function plantArrow() {
+            var orangeArrow = document.getElementById("plant-arrow");
+            orangeArrow.classList.toggle("rotate");
+        }
+
+        function giftArrow() {
+            var orangeArrow = document.getElementById("gift-arrow");
+            orangeArrow.classList.toggle("rotate");
+        }
+
+    </script>
+
+<script>
+    function mySearchBar() {
+      var input, filter, table, tr, td, cell, i, j;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+      for (i = 1; i < tr.length; i++) {
+        tr[i].style.display = "none";
+      
+        td = tr[i].getElementsByTagName("td");
+        for (var j = 0; j < td.length; j++) {
+          cell = tr[i].getElementsByTagName("td")[j];
+          if (cell) {
+            if (cell.innerHTML.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+              break;
+            } 
+          }
+        }
+      }
+    }
+    </script>
+    <script>
+            function question(evt, cityName) {
+              var i, tabcontent, tablinks;
+              tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+              tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+              document.getElementById(cityName).style.display = "block";
+              evt.currentTarget.className += " active";
+            }
+
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+    </script>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight === "inherit") {
+            panel.style.maxHeight = "0";
+            panel.style.paddingTop = "0px"
+            panel.style.paddingBottom = "0px"
+            panel.style.margin = "0px"
+            } 
+            
+            else {
+            panel.style.maxHeight = "inherit";
+            panel.style.paddingTop = "32px"
+            panel.style.paddingBottom = "32px"
+            panel.style.margin = "30px 0px"
+            }
+        });
+        }
+    </script>
+
+<script>
+    $('button').on('click', function(){
+    $('button').removeClass('selected');
+    $(this).addClass('selected');
+});
+</script>
+    
+  </body>
+</html>

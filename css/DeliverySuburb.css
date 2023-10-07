@@ -1,0 +1,116 @@
+.image-banner {
+    width: 100%;
+    max-width: 1131px;
+    background: url(../new-images/deliverySuburb-banner.png);
+    height: 283px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.icon-button-bg{
+    background: #F7F7F7;
+    border-radius: 100px;
+    
+}
+
+.delivery-button-bg img {
+    filter: brightness(0) invert(1) grayscale(100%) invert(100%);
+}
+
+.content-button button.selected{
+    background: #FFF6F0;
+    color: #EC8C77 ;
+}
+
+
+.content-button button.selected img {
+    filter: invert(77%) sepia(76%) saturate(1047%) hue-rotate(305deg) brightness(92%) contrast(102%);
+}
+
+
+.button-padding{
+   padding: 10px 30px; 
+}
+.outline button {
+    outline: none;
+}
+.icons-max-width {
+        max-width: 951px;
+}
+#undeliver-btn{
+    width: 210px;
+}
+.bg-form {
+  background-color: #F6F6F6;
+}
+.table-row1-bg{
+    background: #E1E8EB !important;
+    color: #2C596B;
+}
+table{
+    background: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    box-sizing: border-box;
+}
+.td-1{
+    color: #EC8C77;
+}
+tr:nth-child(odd) {
+   background: #F7F7F7;
+  }
+.font-size-8 {
+    font-size: 8px;
+}
+
+.link1 button :focus {
+    outline: none;
+}
+
+.search-bar button {
+    outline: none;
+}
+
+
+ .icons button:focus {
+    outline: 0px;
+  }
+  .tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+}
+
+.panel {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    max-height: 0px;
+    margin: 0px;
+    overflow: hidden;
+    background-color: #FFF6F0;
+    transition: 0.3s;
+  }
+
+  .alert-bg {
+    background-color: #FFF6F0;
+  }
+@media screen and (max-width: 690px){
+    .min-w{
+        min-width: 184px;
+    }
+    .min-w-1 {
+        min-width: 184px
+    }
+    
+}
+
+@media screen  and (min-width: 768px){
+    .image-banner h3 {
+        line-height: 85px;
+    }
+}

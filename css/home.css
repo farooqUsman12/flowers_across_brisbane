@@ -1,0 +1,66 @@
+.banner-bg {
+	background-image: url(../images/bouquet.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: auto;
+}
+
+.banner-title {
+	font-size: 72px;
+	line-height: 85px;
+	max-width: 630px;
+}
+
+.font-lora {
+	font-family: 'Lora', serif;
+}
+
+
+
+.flower-img {
+	max-width: 165px;
+	left: -20px;
+	top: -30px;
+}
+
+.plants-img {
+	max-width: 115px;
+	left: 10px;
+	top: -40px;
+}
+
+.gifts-img {
+	max-width: 160px;
+	left: -10px;
+	top: -20px;
+}
+
+
+
+@media (max-width: 767px) {
+	.banner-title {
+		font-size: 48px;
+		line-height: 44px;
+	}
+}
+
+@media (max-width: 576px) {
+	.banner-title {
+		font-size: 36px;
+		line-height: 44px;
+	}
+}
+
+@media (max-width: 767px) {
+	.banner-title {
+		font-size: 48px;
+		line-height: 44px;
+	}
+}
+
+@media (max-width: 350px) {
+	.banner-title {
+		font-size: 30px;
+		line-height: 32px;
+	}
+}

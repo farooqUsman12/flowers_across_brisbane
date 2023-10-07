@@ -1,0 +1,415 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="images/logo-mobile.png">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/order-details.css">
+        <link rel="stylesheet" href="css/menu-sidebar.css">
+        <script src="https://cdn.tailwindcss.com/3.0.24"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            primaryBrand: '#8a6ccf',
+                            primary: '#ec8c77',
+                            dark: '#272727',
+                            lightPink: '#fff6f0',
+                            neutralDarkest: '#3c3949',
+                            greenLightest: '#E4F8F1'
+                        }
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="wrapper" onclick="hideSidebar()"></div>
+        <header class="flex justify-between items-center bg-white lg:px-10 px-4 lg:py-4 py-2">
+            <div class="flex items-center">
+                <div class="sm:hidden mr-11">
+                    <button  onclick="adminSidebar()">
+                        <img src="images/menu-bars.png">
+                    </button>
+                </div>
+                <div class="lg:w-7 w-6 lg:h-12 h-10">
+                    <img class="w-full h-full" src="images/logo.png">
+                </div>
+            </div>
+            <div class="flex items-center">
+                <div class="mr-14">
+                    <img src="images/header-search.png" />
+                </div>
+                <div>
+                    <img src="images/bell.png" />
+                </div>
+            </div>
+        </header>
+        <div class="flex">
+            <div id="admin-sidebar" class="flex h-full p-0 menu-sidebar fixed">
+            <div class="lg:w-60 sm:w-14 h-full bg-eeec4f font-inter">
+                <div class="lg:pt-20 pt-9 h-full mob-width bg-eeec4f">
+                    
+                    <div class="h-full overflow-auto  bg-eeec4f">
+                        <a class="block flex items-center lg:py-0 sm:py-4 px-5 text-neutralDarkest sidebar-items" href="#/">
+                            <span>
+                                <img src="images/dashboard.png" />
+                            </span>
+                            <span class="text-base font-normal leading-6 w-full py-3 lg:block sm:hidden block border-b border-e1dfe9 ml-3.5">Dashboard</span>
+                        </a>
+                        <a class="block flex items-center lg:py-0 sm:py-4 px-5 text-neutralDarkest sidebar-items" href="#/">
+                            <span>
+                                <img src="images/goals.png" />
+                            </span>
+                            <span class="text-base font-normal leading-6 w-full py-3 lg:block sm:hidden block border-b border-e1dfe9 ml-3.5">Goals</span>
+                        </a>
+                        <a class="block flex items-center lg:py-0 sm:py-4 px-5 text-neutralDarkest sidebar-items sidebar-dropdown" href="#/" onclick="orders()">
+                            <span>
+                                <img src="images/orders.png" />
+                            </span>
+                            <span class="flex justify-between items-center w-full pr-5 lg:flex sm:hidden border-b border-e1dfe9 ">
+                                <span class="text-base font-normal leading-6 w-full py-3 ml-3.5">Orders </span>
+                                <span>
+                                    <img class="right-arrow" src="images/right-arrow-sidebar.png" id="orders">
+                                </span>
+                            </span>
+                        </a>
+                        <div class="dropdown-content">
+                            <div class="text-xs font-semibold leading-4 bg-white pl-5 py-2.5 border-b border-e1dfe9 text-726f80 sidebar-menu-items sidebar-dropdown-submenu">
+                                Manual Transactions
+                            </div>
+                            <div class="">
+                                <div class="py-2 pl-7 pr-5 border-b border-e1dfe9 bg-eeec4f">
+                                    <a class="flex items-center w-full" href="#">
+                                        <span>
+                                            <img src="images/submenu-arrow.png">
+                                        </span>
+                                        <span class="text-sm font-normal leading-5 pl-3.5 text-neutralDarkest">New Transaction</span>
+                                    </a>
+                                </div>
+                                <div class="py-2 pl-7 pr-5 border-b border-e1dfe9 bg-eeec4f">
+                                    <a class="flex items-center w-full" href="#">
+                                        <span>
+                                            <img src="images/submenu-arrow.png">
+                                        </span>
+                                        <span class="text-sm font-normal leading-5 pl-3.5 text-neutralDarkest">View Drafts</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="text-xs font-semibold leading-4 bg-white pl-5 py-2.5 border-b border-e1dfe9 text-726f80 sidebar-menu-items sidebar-dropdown-submenu">
+                                Current Orders
+                            </div>
+                            <div class="">
+                                <div class="py-2 pl-7 pr-5 border-b border-e1dfe9 bg-eeec4f">
+                                    <a class="flex items-center w-full" href="#">
+                                        <span>
+                                            <img src="images/submenu-arrow.png">
+                                        </span>
+                                        <span class="text-sm font-normal leading-5 pl-3.5 text-neutralDarkest">Todays Orders</span>
+                                    </a>
+                                </div>
+                                <div class="py-2 pl-7 pr-5 border-b border-e1dfe9 bg-eeec4f">
+                                    <a class="flex justify-between items-center w-full" href="#">
+                                        <div class="flex items-center">
+                                            <span>
+                                                <img src="images/submenu-arrow.png">
+                                            </span>
+                                            <span class="text-sm font-normal leading-5 pl-3.5 text-neutralDarkest">Delivery Issues</span>
+                                        </div>
+                                        <div class="w-5 h-5 flex justify-center items-center rounded-full text-xs font-semibold leading-4 text-white bg-cf6c7f">2</div>
+                                    </a>
+                                </div>
+                                <div class="py-2 pl-7 pr-5 border-b border-e1dfe9 bg-eeec4f">
+                                    <a class="flex items-center w-full" href="#">
+                                        <span>
+                                            <img src="images/submenu-arrow.png">
+                                        </span>
+                                        <span class="text-sm font-normal leading-5 pl-3.5 text-neutralDarkest">On Hold</span>
+                                    </a>
+                                </div>
+                                <div class="py-2 pl-7 pr-5 border-b border-e1dfe9 bg-eeec4f">
+                                    <a class="flex items-center w-full" href="#">
+                                        <span>
+                                            <img src="images/submenu-arrow.png">
+                                        </span>
+                                        <span class="text-sm font-normal leading-5 pl-3.5 text-neutralDarkest">Declined Orders</span>
+                                    </a>
+                                </div>
+                                <div class="py-2 pl-7 pr-5 border-b border-e1dfe9 bg-eeec4f">
+                                    <a class="flex items-center w-full" href="#">
+                                        <span>
+                                            <img src="images/submenu-arrow.png">
+                                        </span>
+                                        <span class="text-sm font-normal leading-5 pl-3.5 text-neutralDarkest">Subscription Orders</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="block flex items-center lg:py-0 sm:py-4 px-5 text-neutralDarkest sidebar-items" href="#/">
+                            <span>
+                                <img src="images/product.png" />
+                            </span>
+                            <span class="flex justify-between items-center w-full pr-5 lg:flex sm:hidden border-b border-e1dfe9 ">
+                                <span class="text-base font-normal leading-6 w-full py-3 ml-3.5">Products</span>
+                                <span>
+                                    <img class="right-arrow" src="images/right-arrow-sidebar.png">
+                                </span>
+                            </span>
+                        </a>
+                        <a class="block flex items-center lg:py-0 sm:py-4 px-5 text-neutralDarkest sidebar-items" href="#/">
+                            <span>
+                                <img src="images/reports.png" />
+                            </span>
+                            <span class="flex justify-between items-center w-full pr-5 lg:flex sm:hidden border-b border-e1dfe9 ">
+                                <span class="text-base font-normal leading-6 w-full py-3 ml-3.5">Reports</span>
+                                <div class="flex items-center">
+                                    <div class="w-5 h-5 flex justify-center items-center rounded-full text-xs font-semibold leading-4 text-white bg-cf6c7f">9+</div>
+                                    <span class="w-2 h-1 ml-3">
+                                        <img class="right-arrow" src="images/right-arrow-sidebar.png">
+                                    </span>
+                                </div>
+                            </span>
+                        </a>
+                        <a class="block flex items-center lg:py-0 sm:py-4 px-5 text-neutralDarkest sidebar-items" href="#/">
+                            <span>
+                                <img src="images/map.png" />
+                            </span>
+                            <span class="flex justify-between items-center w-full pr-5 lg:flex sm:hidden border-b border-e1dfe9 ">
+                                <span class="text-base font-normal leading-6 w-full py-3 ml-3.5">Maps</span>
+                                <span>
+                                    <img class="right-arrow" src="images/right-arrow-sidebar.png">
+                                </span>
+                            </span>
+                        </a>
+                        <a class="block flex items-center lg:py-0 sm:py-4 px-5 text-neutralDarkest sidebar-items" href="#/">
+                            <span>
+                                <img src="images/admin.png" />
+                            </span>
+                            <span class="flex justify-between items-center w-full pr-5 lg:flex sm:hidden border-b border-e1dfe9 ">
+                                <span class="text-base font-normal leading-6 w-full py-3 ml-3.5">Admin</span>
+                                <span>
+                                    <img class="right-arrow" src="images/right-arrow-sidebar.png">
+                                </span>
+                            </span>
+                        </a>
+                        <a class="block flex items-center lg:py-0 sm:py-4 px-5  text-neutralDarkest sidebar-items" href="#/">
+                            <span>
+                                <img src="images/setting.png" />
+                            </span>
+                            <span class="flex justify-between items-center w-full pr-5 lg:flex sm:hidden border-b border-e1dfe9 ">
+                                <span class="text-base font-normal leading-6 w-full py-3 ml-3.5">Setting</span>
+                                <span>
+                                    <img class="right-arrow" src="images/right-arrow-sidebar.png">
+                                </span>
+                            </span>
+                        </a>
+                        <a class="block flex items-center lg:py-0 sm:py-4 px-5 text-neutralDarkest sidebar-items" href="#/">
+                            <span>
+                                <img src="images/store.png" />
+                            </span>
+                            <span class="flex justify-between items-center w-full pr-5 lg:flex sm:hidden border-b border-e1dfe9 ">
+                                <span class="text-base font-normal leading-6 w-full py-3 ml-3.5">Visit Store</span>
+                                <span>
+                                    <img class="right-arrow" src="images/right-arrow-sidebar.png">
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="sm:hidden ml-4 mt-12">
+                <button onclick="hideSidebar()" class="w-9 h-9 rounded-full bg bg-black p-2">
+                    <img src="images/close.png" alt="close" />
+                </button>
+            </div>
+            </div>
+            <div class="body-right-content font-inter">
+                <div class="px-4 pt-12 w-full mx-auto max-w-992">
+                    <div>
+                        <div>
+                            <button class="text-base font-normal leading-6 flex items-center text-[#726f80]">
+                                <span class="mr-3">
+                                    <img src="images/left-arrow.png" />
+                                </span>
+                                Back to all orders
+                            </button>
+                        </div>
+                        <div class="flex justify-between items-center mt-4">
+                            <h1 class="fs-32 font-semibold leading-10 text-neutralDarkest">Order Details</h1>
+                            <div class="flex items-center">
+                                <div>
+                                    <button class="flex items-center text-base font-semibold leading-6 p-2 text-726f80">
+                                        <span class="mr-2.5">
+                                            <img src="images/edit-icon.png" />
+                                        </span>
+                                        Edit
+                                    </button>
+                                </div>
+                                <div class="w-24 pl-2 relative">
+                                    <select class="text-base font-semibold leading-6 text-white rounded-lg h-10 w-full bg-primaryBrand px-3">Print
+                                        <option>Print</option>
+                                    </select>
+                                    <img class="w-3.5 h-2 absolute top-4 right-4" src="images/dropdown-select.png" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex mt-6">
+                            <div class="max-w-720 w-full">
+                                <div class="py-12 px-10 bg-white rounded-l-3xl">
+                                    <div class="flex mb-4">
+                                        <h3 class="w-48 text-base font-semibold leading-6 text-neutralDarkest mr-2">Date Purchased::</h3>
+                                        <p class="text-base font-normal leading-6 text-neutralDarkest">22 March 2022 10:53AM AEST</p>
+                                    </div>
+                                    <div class="flex mb-4">
+                                        <h3 class="w-48 text-base font-semibold leading-6 text-neutralDarkest mr-2">Order Number:</h3>
+                                        <p class="text-base font-normal leading-6 text-neutralDarkest">22 March #FAS-12913</p>
+                                    </div>
+                                    <div class="flex mb-4">
+                                        <h3 class="w-48 text-base font-semibold leading-6 text-neutralDarkest mr-2">Delivery Date:</h3>
+                                        <p class="text-base font-normal leading-6 text-neutralDarkest">22 March Wednesday, 23 March 2022</p>
+                                    </div>
+                                    <div class="flex">
+                                        <h3 class="w-48 text-base font-semibold leading-6 text-neutralDarkest mr-2">Delivery Option:</h3>
+                                        <p class="text-base font-normal leading-6 text-neutralDarkest">22 March Standard</p>
+                                    </div>
+                                    <div class="mt-12">
+                                        <div class="flex items-center mb-4">
+                                            <h1 class="text-xl font-semibold leading-6 mr-2 text-primaryBrand">Recipient</h1>
+                                            <div class="border-b w-full max-w-full"></div>
+                                        </div>
+                                        <div class="flex mb-4">
+                                            <h3 class="w-48 text-base font-semibold leading-6 text-neutralDarkest mr-2">Name:</h3>
+                                            <p class="text-base font-normal leading-6 text-neutralDarkest">22 Recipient Test One</p>
+                                        </div>
+                                        <div class="flex mb-4">
+                                            <h3 class="w-48 text-base font-semibold leading-6 text-neutralDarkest mr-2">Company:</h3>
+                                            <p class="text-base font-normal leading-6 text-neutralDarkest">22 Bobs Burgers</p>
+                                        </div>
+                                        <div class="flex mb-4">
+                                            <h3 class="w-48 text-base font-semibold leading-6 text-neutralDarkest mr-2">Phone:</h3>
+                                            <p class="text-base font-normal leading-6 text-neutralDarkest">22 0123 789 765</p>
+                                        </div>
+                                        <div class="flex mb-4">
+                                            <h3 class="w-48 text-base font-semibold leading-6 text-neutralDarkest mr-2">Address 1:</h3>
+                                            <p class="text-base font-normal leading-6 text-neutralDarkest">22 10 Waterhouse St.</p>
+                                        </div>
+                                        <div class="flex mb-4">
+                                            <h3 class="w-48 text-base font-semibold leading-6 text-neutralDarkest mr-2">Suburb:</h3>
+                                            <p class="text-base font-normal leading-6 text-neutralDarkest">22 10 Abbotsbury, 2176</p>
+                                        </div>
+                                        <div class="flex mb-4">
+                                            <h3 class="w-48 text-base font-semibold leading-6 text-neutralDarkest mr-2">Message on Card:</h3>
+                                            <div class="w-full max-w-md pl-2">
+                                                <div class="px-4 pt-3 pb-4 bg-greenLightest">
+                                                    <p class="text-sm font-normal leading-6 text-neutralDarkest">Remember, you may be older than you’ve ever been before…but you’re also younger than you’ll ever be again!!.</p>
+                                                    <p class="text-sm font-normal leading-6 text-neutralDarkest">Happy Birthday!</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex mb-4">
+                                            <h3 class="w-48 text-base font-semibold leading-6 text-neutralDarkest mr-2">Delivery Instructions: </h3>
+                                            <p class="text-base font-normal leading-6 text-neutralDarkest">22 10 Deliver to back door</p>
+                                        </div>
+                                        <div class="flex mb-4">
+                                            <h3 class="w-48 text-base font-semibold leading-6 text-neutralDarkest mr-2">Delivery Date: </h3>
+                                            <p class="text-base font-normal leading-6 text-neutralDarkest">Wednesday, 23 March 2022</p>
+                                        </div>
+                                    </div>
+                                    <div class="mt-12">
+                                        <div class="flex items-center mb-4">
+                                            <h1 class="text-xl font-semibold leading-6 mr-2 text-primaryBrand">Sender</h1>
+                                            <div class="border-b w-full max-w-full"></div>
+                                        </div>
+                                        <div class="flex mb-4">
+                                            <h3 class="w-48 text-base font-semibold leading-6 text-neutralDarkest mr-2">Name:</h3>
+                                            <p class="text-base font-normal leading-6 text-neutralDarkest">Rob Lambert</p>
+                                        </div>
+                                        <div class="flex mb-4">
+                                            <h3 class="w-48 text-base font-semibold leading-6 text-neutralDarkest mr-2">Phone:</h3>
+                                            <p class="text-base font-normal leading-6 text-neutralDarkest">0413 464 138</p>
+                                        </div>
+                                        <div class="flex">
+                                            <h3 class="w-48 text-base font-semibold leading-6 text-neutralDarkest mr-2">Email:</h3>
+                                            <p class="text-base font-normal leading-6 text-neutralDarkest">roblambert@company.com</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-5 pt-10 bg-lightPink w-60 max-w-full rounded-r-3xl">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+        <script>
+            var coll = document.getElementsByClassName("sidebar-dropdown");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                  content.style.maxHeight = null;
+                } else {
+                  content.style.maxHeight = content.scrollHeight + "px";
+                } 
+              });
+            }
+        </script>
+        <script>
+            var coll = document.getElementsByClassName("sidebar-dropdown-submenu");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                  content.style.maxHeight = null;
+                } else {
+                  content.style.maxHeight = content.scrollHeight + "px";
+                } 
+              });
+            }
+        </script>
+        
+        <script>
+            function adminSidebar() {
+                   let element = document.getElementById("admin-sidebar");
+                   element.classList.toggle("admin-sidebar-style");
+
+
+                  let wrapperID = document.getElementById("wrapper");
+                  wrapperID.classList.add("wrapperStyle");
+                
+            }
+
+            function hideSidebar() {
+                let element = document.getElementById("admin-sidebar");
+                 element.classList.remove("admin-sidebar-style");
+
+                 let wrapperID = document.getElementById("wrapper");
+                  wrapperID.classList.remove("wrapperStyle");
+            }
+
+        </script>
+        <script>
+            function orders() {
+            var orangeArrow = document.getElementById("orders");
+            orangeArrow.classList.toggle("rotate");
+            }
+        </script>
+    </body>
+</html>

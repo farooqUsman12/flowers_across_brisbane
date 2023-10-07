@@ -1,0 +1,1826 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="images/logo-mobile.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/product.css">
+</head>
+<body>
+    <div>
+        <div class="wrapper-overlay"></div>
+
+        <!-- Top Header Section Starts -->
+        <div class="header-top-bg">
+            <div class="pg-container mx-auto w-full py-4 px-6">
+                <div class="flex font-poppins">
+                    <p class="text-sm font-normal leading-5 text-white flex">
+                        <span class="sm:pr-4 pr-2.5"><img src="images/phone.png" alt="phone-icon" /></span>
+                        <b>Call us</b> <span class="sm:inline-block hidden pl-1">03 9999 7997</span>
+                    </p>
+                    <p class="sm:text-sm text-xs font-normal leading-5 text-white flex sm:pl-14 pl-8">
+                        <span class="sm:pr-4 pr-2.5"><img src="images/truck.png" alt="deliver-truck" /></span>
+                        Order by 2pm for same day
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Top Header Section Ends -->
+
+
+
+        <!-- Main Header Section Starts -->
+        <div id="myHeader" class="border-b border-opacity bg-white z-10">
+            <div class="pg-container mx-auto w-full px-6">
+                <nav class="flex items-center justify-between py-2.5 font-poppins">
+                    <div class="md:hidden" id='open-button'>
+                        <img src="images/bars.png" alt="bars" />
+                    </div>
+                    <div class="sm:w-32 w-10 sm:ml-0 ml-12">
+                        <img class="sm:inline-block hidden" src="images/logo.png" alt="logo" />
+                        <img class="sm:hidden inline-block" src="images/logo-mobile.png" alt="logo">
+                    </div>
+                    <div class="flex items-center">
+                        <ul class="list-none md:inline-flex hidden items-center p-0 m-0">
+                            <li class="text-base font-semibold leading-8 uppercase textColor-1 relative">
+                                <a href="#">home</a>
+                            </li>
+                            <li class="text-base font-semibold leading-8 uppercase textColor-1 lg:pl-20 pl-12">
+                                <a href="#">flowers</a>
+                            </li>
+                            <li class="text-base font-semibold leading-8 uppercase textColor-1 lg:pl-20 pl-12">
+                                <a href="#">plants</a>
+                            </li>
+                            <li class="text-base font-semibold leading-8 uppercase textColor-1 lg:pl-20 pl-12">
+                                <a href="#">gifts</a>
+                            </li>
+                        </ul>
+                        <div class="flex sm:pl-20">
+                            <div class="w-7">
+                                <a href="#">
+                                    <img src="images/shopping.png" alt="trolley" />
+                                </a>
+                            </div>
+                            <div class="w-6 sm:ml-12 ml-9 relative">
+                                <a href="#">
+                                    <img src="images/user.png" alt="profile-icon" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id='menu' class="side-menu">
+                        <div class="main-menu pt-10">
+                            <nav class="nav-bar">
+                                <ul class="site-nav">
+                                    <li class="menu-item font-poppins">
+                                        <input id="home-new-mobile" type="checkbox" name="quick-links" class="hidden input-hidden" />
+                                        <label for="home-new-mobile" class="text-xs font-bold leading-5 sm:border-0 p-5 text-black border-2c596b uppercase block" onclick="homeArrow()">
+                                            <img src="images/home.png" alt="home" class="mr-4 inline-block" /> Home  
+                                            
+                                            <img src="images/right-arrow.png" alt="right arrow" class="inline-block float-right nav-arrow" id="home-arrow" />
+                                            
+                                        </label>
+                                        <ul class="list-none pl-4 sm:pl-0 mb-0 submenu max-h-0 sm:max-h-fit overflow-hidden">
+                                            <div class="dropdown-item pl-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                            <div class="dropdown-item pl-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                            <div class="dropdown-item pl-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                            <div class="dropdown-item pl-4">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item">
+
+                                        <input id="flower-new-mobile" type="checkbox" name="quick-links" class="hidden input-hidden" />
+                                        <label for="flower-new-mobile" class="text-xs font-bold leading-5 sm:border-0 p-5 text-black border-2c596b uppercase block" onclick="flowerArrow()">
+                                            <img src="images/flowers.png" alt="home" class="mr-4 inline-block" /> Flowers  
+                                            
+                                            <img src="images/right-arrow.png" alt="right arrow" class="inline-block float-right nav-arrow" id="flower-arrow" />
+                                            
+                                        </label>
+                                        <ul class="list-none pl-4 sm:pl-0 mb-0 submenu max-h-0 sm:max-h-fit overflow-hidden">
+                                            <div class="dropdown-item pl-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                            <div class="dropdown-item pl-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                            <div class="dropdown-item pl-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                            <div class="dropdown-item pl-4">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item">
+                                        <input id="plants-new-mobile" type="checkbox" name="quick-links" class="hidden input-hidden" />
+                                        <label for="plants-new-mobile" class="text-xs font-bold leading-5 sm:border-0 p-5 text-black border-2c596b uppercase block" onclick="plantArrow()">
+                                            <img src="images/nav-plants.png" alt="home" class="mr-4 inline-block" /> Plants  
+                                            
+                                            <img src="images/right-arrow.png" alt="right arrow" class="inline-block float-right nav-arrow" id="plant-arrow" />
+                                            
+                                        </label>
+                                        <ul class="list-none pl-4 sm:pl-0 mb-0 submenu max-h-0 sm:max-h-fit overflow-hidden">
+                                            <div class="dropdown-item pl-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                            <div class="dropdown-item pl-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                            <div class="dropdown-item pl-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                            <div class="dropdown-item pl-4">
+                                                <a class="text-xs font-normal leading-8 lowercase textColor-2 block" href="#">Item one</a>
+                                            </div>
+                                        </ul>
+                                    </li>
+
+                                    <li class="menu-item">
+                                        <input id="gifts-new-mobile" type="checkbox" name="quick-links" class="hidden input-hidden" />
+                                        <label for="gifts-new-mobile" class="text-xs font-bold leading-5 sm:border-0 p-5 text-black border-2c596b uppercase block" onclick="giftArrow()">
+                                            <img src="images/gifts-nav.png" alt="home" class="mr-4 inline-block" /> Gifts  
+                                            
+                                            <img src="images/right-arrow.png" alt="right arrow" class="inline-block float-right nav-arrow" id="gift-arrow" />
+                                            
+                                        </label>
+                                        <ul class="list-none pl-4 sm:pl-0 mb-0 submenu max-h-0 sm:max-h-fit overflow-hidden">
+                                            <div class="dropdown-item px-4 py-2 border-b border-solid border-slate-300">
+                                                <a href="#" class="flex items-center">
+                                                    <span class="header-top-bg w-5 h-5 text-white rounded-full inline-block text-center float-left">1</span>
+                                                    <span class="text-xs font-normal textColor-3 leading-5 ml-3">Order #1234 to Alexandria, ETA ,4:30pm</span>
+                                                </a>
+                                            </div>
+                                            <div class="dropdown-item px-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 textColor-2 block" href="#">View last order</a>
+                                            </div>
+                                            <div class="dropdown-item px-4 border-b border-solid border-slate-300">
+                                                <a class="text-xs font-normal leading-8 textColor-2 block" href="#">My Account</a>
+                                            </div>
+                                            <div class="dropdown-item px-4">
+                                                <a class="text-xs font-normal leading-8 textColor-2 block" href="#">Sign out</a>
+                                            </div>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>  
+                        </div>
+
+                        <button class='close-button'>
+                            <img src="images/close.png" alt="close" />
+                        </button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    
+        <hr />
+        <!-- Main Header Section Ends -->
+
+
+
+        <!-- Mobile Label Bar Starts -->
+        <div class="sm:hidden flex justify-between px-6 pt-0.875 py-3.5 font-poppins">
+            <div class="flex items-center">
+                <img src="images/chat.png" alt="chat" class="h-4 mr-3" />
+                <span class="textColor-3 text-xs font-normal leading-5">Chat now</span>
+            </div>
+
+            <div class="flex items-center">
+                <span class="textColor-3 text-xs font-normal leading-5 mr-3">More info</span>
+                <img src="images/footer-dropdown.png" alt="footer-dropdown" class="mr-4 h-1" />
+            </div>
+        </div>
+
+        <hr class="sm:hidden" />
+        <!-- Mobile Label Bar Ends -->
+
+
+
+        <!-- Product Section Starts -->
+        <section id="body-content" class="pg-container w-full mx-auto px-6 pt-8 font-poppins">
+            <div class="flex lg:flex-row flex-col md:justify-between justify-center">
+                <h1 class="text-2xl lg:hidden font-semibold leading-4 mb-4">Name of the plant</h1>
+                <div class="flex lg:hidden items-center lg:mb-0 mb-5">
+                    <span class="mr-4">
+                        <img src="images/rating-star.png" alt="Rating Star" />
+                    </span>
+                    <a class="textColor-3 text-xs font-normal leading-5 underline" href="#">2 Options</a>
+                </div>
+                
+
+
+                <div class="w-full mx-auto product-slider owl-carousel owl-theme">
+                    <div class="w-full product-slider item">
+                        <img class="w-full" src="images/image-21.png" alt="Flowers" />
+                    </div>
+
+                    <div class="w-full product-slider item">
+                        <img class="w-full" src="images/balloons.png" alt="balloons" />
+                    </div>
+
+                    <div class="w-full product-slider item">
+                        <img class="w-full" src="images/dark_teddy.png" alt="dark_teddy" />
+                    </div>
+
+                    <div class="w-full product-slider item">
+                        <img class="w-full" src="images/image-21.png" alt="Flowers" />
+                    </div>
+
+                    <div class="w-full product-slider item">
+                        <img class="w-full" src="images/image-21.png" alt="Flowers" />
+                    </div>
+
+                    <div class="w-full product-slider item">
+                        <img class="w-full" src="images/image-21.png" alt="Flowers" />
+                    </div>
+
+                    <div class="w-full product-slider item">
+                        <img class="w-full" src="images/image-21.png" alt="Flowers" />
+                    </div>
+                </div>
+
+
+                <div class="w-full md:product-detail lg:ml-24">
+                    <h1 class="text-4xl lg:block hidden font-semibold leading-10 mb-6">Name of the plant</h1>
+                    <div class="flex lg:inline-flex hidden items-center">
+                        <span class="mr-4">
+                            <img src="images/rating-star.png" alt="Rating Star" />
+                        </span>
+                        <a class="textColor-3 text-xs font-normal leading-5 underline" href="#">2 Options</a>
+                    </div>
+
+                    <div class="lg:block hidden">
+                        <div class="w-full border-b sm:mb-4 mt-9 font-poppins">
+                            <input id="view-full-detail1" type="checkbox" name="more-links1" class="hidden input-hidden" />
+                            <label for="view-full-detail1">
+                                <div class="flex justify-between items-center w-full mb-2.5 cursor-pointer" onclick="viewDetailsRotate()">
+                                    <h4 class="fs-22 font-normal leading-8 text-black">View Full Details</h4>
+                                    <span><img src="images/dropdown.png" alt="dropdown-arrow" class="oragne-icon" id="orange-arrow" /></span>
+                                </div>
+                            </label>
+                            <ul class="list-none sm:pl-0 pt-2 mb-0 submenu max-h-0 sm:max-h-fit overflow-hidden">
+                                <p class="fs-13 font-normal leading-5 text-black mb-4 pr-3">Lorem ipsum dolor sit amet, consectetur dolor lore adipiscing elit. Vestibulum finibus finibus lame sollicitudin. Nullam et orci eu odio laoreet elementum. Vestibulum finibus finibus lorem ipsu. laoreet elementum. Vestibulum finibus finibus lorem ipsu.</p>
+                            </ul>
+                        </div>
+
+                        <div class="border-b mt-5 mb-11">
+                            <input id="faq1" type="checkbox" name="more-links1" class="hidden input-hidden" />
+                            <label for="faq1">
+                                <div class="flex justify-between items-center w-full mb-2.5 cursor-pointer" onclick="faqRotate()">
+                                    <h4 class="fs-22 font-normal leading-8 text-black">FAQ</h4>
+                                    <span><img src="images/dropdown.png" alt="dropdown-arrow" class="oragne-icon" id="faq"></span>
+                                </div>
+                            </label>
+                            <ul class="list-none sm:pl-0 pt-2 mb-0 submenu max-h-0 sm:max-h-fit overflow-hidden">    
+                                <div class="mb-6">
+                                    <h5 class="fs-13 font-semibold leading-5 text-black">Lorem ipsum</h5>
+                                    <p class="fs-13 font-normal leading-5 text-black opacity-50">Lorem ipsum dolor sit amet, consectetur dolor lore adipiscing elit. Vestibulum finibus finibus lame sollicitudin. Nullam et orci eu odio laoreet.</p>
+                                </div>
+                                <div class="mb-6">
+                                    <h5 class="fs-13 font-semibold leading-5 text-black">Lorem ipsum</h5>
+                                    <p class="fs-13 font-normal leading-5 text-black opacity-50">Lorem ipsum dolor sit amet, consectetur dolor lore adipiscing elit. Vestibulum finibus finibus lame sollicitudin. Nullam et orci eu odio laoreet.</p>
+                                </div>
+                                <div>
+                                    <h5 class="fs-13 font-semibold leading-5 text-black">Lorem ipsum</h5>
+                                    <p class="fs-13 font-normal leading-5 text-black opacity-50">Lorem ipsum dolor sit amet, consectetur dolor lore adipiscing elit. Vestibulum finibus finibus lame sollicitudin. Nullam et orci eu odio laoreet.</p>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="md:mt-7 mt-3">
+                        <p class="text-sm font-semibold leading-5 text-black mb-5">Choose your Color</p>
+                        <div class="flex">
+                            <div class="w-8 h-8 rounded-full border bg-white" style="border-color: #e2e2e2;"></div>
+                            <div class="w-8 h-8 rounded-full ml-4 productColor1"></div>
+                            <div class="w-8 h-8 rounded-full ml-4 productColor2"></div>
+                            <div class="w-8 h-8 rounded-full ml-4 productColor3"></div>
+                            <div class="w-8 h-8 rounded-full ml-4 productColor4"></div>
+                            <div class="w-8 h-8 rounded-full ml-4 productColor5"></div>
+                        </div>
+                        <div class="border bg-white pl-8 pr-9 py-2.5 mt-7 rounded-md">
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <div class="w-12 mr-6">
+                                        <img src="images/image-19.png" alt="flower" />
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-semibold leading-5 text-black">Choose a size</p>
+                                        <p class="text-sm font-normal leading-5 text-black">Standard x 6</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="sm:inline-block hidden">
+                                        <p class="text-2xl font-bold leading-9 text-black">$49.00</p>
+                                        <p class="text-sm font-bold leading-5 -mt-1.5 opacity-30 textColor-2">$69.00</p>
+                                    </div>
+                                    <div class="ml-4">
+                                        <img src="images/dropdown.png" alt="dropdown" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sm:hidden flex justify-between items-center mt-7 pt-0.5">
+                            <div class="flex items-center">
+                                <p class="text-2xl font-bold leading-9 text-black">$49.00</p>
+                                <p class="text-xs font-bold leading-5 ml-2 opacity-30 textColor-2">$69.00</p>
+                            </div>
+                            <div class="sm:hidden">
+                                <button class="text-base font-bold leading-6 text-white flex justify-center rounded buttonBg py-1.5 sm:px-8 px-7 w-full mx-w-327">
+                                    <span class="mr-3"><img src="images/lock.png" alt="lock" /></span>
+                                    Buy Now
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex text-xs flex-wrap justify-between mt-4 pl-1">
+                            <p class="font-normal leading-4 textColor-1 flex items-start lg:mb-0 mb-2">
+                                <span class="flex items-center">
+                                    <img src="images/i_image.svg">
+                                    <span class="w-16 ml-4 mr-2">
+                                        <img class="w-full" src="images/image-22.png">
+                                    </span>
+                                </span>
+                                Or 4 installments of $11.50 by
+                            </p>
+                            <p class="flex items-start lg:mb-0 mb-2 textColor-1">
+                                <span class="mr-2.5 mt-1">
+                                    <img src="images/truck-gray.png" alt="truck" />
+                                </span>
+                                Price includes delivery of $11.90 to<a class="textColor-3 text-xs font-normal leading-5 underline pl-1" href="#">Albanvale</a>
+                            </p>
+                        </div>
+                        <div class="md:mt-6 pt-0.5 sm:block hidden mt-4">
+                            <button class="text-base font-semibold leading-6 text-white flex justify-center items-center rounded buttonBg py-3.5 px-8 w-full mx-w-327">
+                                <span class="mr-3"><img src="images/lock.png" alt="lock" /></span>
+                                Buy Now
+                            </button>
+                        </div>
+                        
+                        <div class="lg:hidden block">
+                            <div class="w-full border-b sm:mb-4 mb-5 mt-8 font-poppins">
+                                <input id="view-full-detail" type="checkbox" name="more-links1" class="hidden input-hidden" />
+                                <label for="view-full-detail">
+                                    <div class="flex justify-between items-center w-full mb-2.5 cursor-pointer" onclick="viewMobDetailsRotate()">
+                                        <h4 class="fs-22 font-normal leading-8 text-black">View Full Details</h4>
+                                        <span><img src="images/dropdown.png" alt="dropdown-arrow" class="oragne-icon" id="view-detail-mob" /></span>
+                                    </div>
+                                </label>
+                                <ul class="list-none sm:pl-0 pt-2 mb-0 submenu max-h-0 sm:max-h-fit overflow-hidden">
+                                    <p class="fs-13 font-normal leading-5 text-black mb-4">Lorem ipsum dolor sit amet, consectetur dolor lore adipiscing elit. Vestibulum finibus finibus lame sollicitudin. Nullam et orci eu odio laoreet elementum. Vestibulum finibus finibus lorem ipsu. laoreet elementum. Vestibulum finibus finibus lorem ipsu.</p>
+                                </ul>
+                            </div>
+
+                            <div class="border-b my-5 pt-2.5 pb-2">
+                                <input id="faq-mob" type="checkbox" name="more-links1" class="hidden input-hidden" />
+                                <label for="faq-mob">
+                                    <div class="flex justify-between items-center w-full mb-2.5 cursor-pointer" onclick="faqMobRotate()">
+                                        <h4 class="fs-22 font-normal leading-8 text-black">FAQ</h4>
+                                        <span><img src="images/dropdown.png" alt="dropdown-arrow" class="oragne-icon" id="faq-last"></span>
+                                    </div>
+                                </label>
+                                <ul class="list-none sm:pl-0 pt-2 mb-0 submenu max-h-0 sm:max-h-fit overflow-hidden">    
+                                    <div class="mb-6">
+                                        <h5 class="fs-13 font-normal leading-5 text-black">Lorem ipsum</h5>
+                                        <p class="fs-13 font-normal leading-5 text-black opacity-50">Lorem ipsum dolor sit amet, consectetur dolor lore adipiscing elit. Vestibulum finibus finibus lame sollicitudin. Nullam et orci eu odio laoreet.</p>
+                                    </div>
+                                    <div class="mb-6">
+                                        <h5 class="fs-13 font-normal leading-5 text-black">Lorem ipsum</h5>
+                                        <p class="fs-13 font-normal leading-5 text-black opacity-50">Lorem ipsum dolor sit amet, consectetur dolor lore adipiscing elit. Vestibulum finibus finibus lame sollicitudin. Nullam et orci eu odio laoreet.</p>
+                                    </div>
+                                    <div>
+                                        <h5 class="fs-13 font-normal leading-5 text-black">Lorem ipsum</h5>
+                                        <p class="fs-13 font-normal leading-5 text-black opacity-50">Lorem ipsum dolor sit amet, consectetur dolor lore adipiscing elit. Vestibulum finibus finibus lame sollicitudin. Nullam et orci eu odio laoreet.</p>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sm:mt-11 mt-6 mb-8">
+                            <div class="sm:w-96 w-full pr-2">
+                                <p class="text-base font-normal leading-6">
+                                    <span class="font-semibold">Step 1 -</span>
+                                    Dress to impress with a vase?
+                                </p>
+                                <div class="flex mt-7 pb-7 border-opacity border-b">
+                                    <div class="text-center">
+                                        <div class="w-20 h-20 rounded-full border-2 flex justify-center items-center vase">
+                                            <img src="images/no-thanks.png" alt="flower" />
+                                        </div>
+                                        <p class="fs-13 font-normal leading-5 mt-4 text-black">No Thanks</p>
+                                        <p class="text-sm font-semibold leading-5 text-black">Free</p>
+                                    </div>
+                                    <div class="text-center ml-7">
+                                        <div class="w-20 h-20 rounded-full border-2 flex justify-center items-center vase">
+                                            <img src="images/standard.png" alt="flower" />
+                                        </div>
+                                        <p class="fs-13 font-normal leading-5 mt-4 text-black">Standard</p>
+                                        <p class="text-sm font-semibold leading-5 text-black">$45.00</p>
+                                    </div>
+                                </div>
+                                <div class="mt-7 pb-7 border-opacity border-b">
+                                    <p class="text-base font-normal leading-6">
+                                        <span class="font-semibold">Step 2 -</span>Select a destination suburb
+                                    </p>
+                                    <div class="sm:mx-w-327 w-full mt-5">
+                                      <select name="location" class="w-full fs-13 font-normal leading-5 py-3.5 px-5 bg-white border rounded loc-select">
+                                        <option>United States</option>
+                                        <option selected>Albert Park, 3202</option>
+                                        <option>Mexico</option>
+                                      </select>
+                                    </div>
+                                </div>
+                                <div class="mt-7 pb-7">
+                                    <p class="text-base font-normal leading-6">
+                                        <span class="font-semibold">Step 3 -</span>Select a delivery date
+                                    </p>
+                                    <div class="sm:mx-w-327 w-full mt-5">
+                                      <select name="date" class="w-full fs-13 font-normal leading-5 py-3.5 px-5 bg-white border rounded loc-select">
+                                        <option>United States</option>
+                                        <option selected>Sep, 14 2021</option>
+                                        <option>Mexico</option>
+                                      </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Product Section Ends -->
+
+
+
+        <!-- Ingredient Section Starts -->
+        <section class="ingredients font-poppins">
+            <div class="pg-container mx-auto w-full mt-2 sm:px-6 px-5 md:pt-16 pt-10 md:pb-16 pb-10">
+                <div class="text-center w-full max-w-3xl mx-auto pt-1">
+                    <h2 class="sm:text-2xl text-base font-semibold leading-9 textColor-2 sm:mb-7 mb-3">Hand-picked ingredients</h2>
+                    <p class="sm:text-lg text-sm font-normal sm:leading-7 leading-5 text-black">Some of the freshest, in-season blooms and greens that make this bouquet sweet-smelling and long-lasting.</p>
+                </div>
+                <div class="hand-picked-slider flex sm:justify-between justify-center items-center flex-wrap pt-12 owl-carousel owl-theme">
+                    <div class="w-full mx-w-142 text-center item">
+                        <div class="px-5 h-40">
+                            <img class="w-full h-full" src="images/hand-picked-plant-updated.png" alt="plant" />
+                        </div>
+                        <h6 class="text-sm font-bold leading-5 text-black mt-7 mb-2">Solidago</h6>
+                        <p class="text-sm font-normal leading-5 text-black -mt-1">Lorem ipsum dolor</p>
+                    </div>
+                    <div class="w-full mx-w-142 text-center item">
+                        <div class="px-5 h-40">
+                            <img class="w-full h-full" src="images/hand-picked-plant-updated.png" alt="plant" />
+                        </div>
+                        <h6 class="text-sm font-bold leading-5 text-black mt-7 mb-2">Solidago</h6>
+                        <p class="text-sm font-normal leading-5 text-black -mt-1">Lorem ipsum dolor</p>
+                    </div>
+                    <div class="w-full mx-w-142 text-center item">
+                        <div class="px-5 h-40">
+                            <img class="w-full h-full" src="images/hand-picked-plant-updated.png" alt="plant" />
+                        </div>
+                        <h6 class="text-sm font-bold leading-5 text-black mt-7 mb-2">Solidago</h6>
+                        <p class="text-sm font-normal leading-5 text-black -mt-1">Lorem ipsum dolor</p>
+                    </div>
+                    <div class="w-full mx-w-142 text-center item">
+                        <div class="px-5 h-40">
+                            <img class="w-full h-full" src="images/hand-picked-plant-updated.png" alt="plant" />
+                        </div>
+                        <h6 class="text-sm font-bold leading-5 text-black mt-7 mb-2">Solidago</h6>
+                        <p class="text-sm font-normal leading-5 text-black -mt-1">Lorem ipsum dolor</p>
+                    </div>
+                    <div class="w-full mx-w-142 text-center item">
+                        <div class="px-5 h-40">
+                            <img class="w-full h-full" src="images/hand-picked-plant-updated.png" alt="plant" />
+                        </div>
+                        <h6 class="text-sm font-bold leading-5 text-black mt-7 mb-2">Solidago</h6>
+                        <p class="text-sm font-normal leading-5 text-black -mt-1">Lorem ipsum dolor</p>
+                    </div>
+                    <div class="w-full mx-w-142 text-center item">
+                        <div class="px-5 h-40">
+                            <img class="w-full h-full" src="images/hand-picked-plant-updated.png" alt="plant" />
+                        </div>
+                        <h6 class="text-sm font-bold leading-5 text-black mt-7 mb-2">Solidago</h6>
+                        <p class="text-sm font-normal leading-5 text-black -mt-1">Lorem ipsum dolor</p>
+                    </div>
+                    <div class="w-full mx-w-142 text-center item">
+                        <div class="px-5 h-40">
+                            <img class="w-full h-full" src="images/hand-picked-plant-updated.png" alt="plant" />
+                        </div>
+                        <h6 class="text-sm font-bold leading-5 text-black mt-7 mb-2">Solidago</h6>
+                        <p class="text-sm font-normal leading-5 text-black -mt-1">Lorem ipsum dolor</p>
+                    </div>
+                    <div class="w-full mx-w-142 text-center item">
+                        <div class="px-5 h-40">
+                            <img class="w-full h-full" src="images/hand-picked-plant-updated.png" alt="plant" />
+                        </div>
+                        <h6 class="text-sm font-bold leading-5 text-black mt-7 mb-2">Solidago</h6>
+                        <p class="text-sm font-normal leading-5 text-black -mt-1">Lorem ipsum dolor</p>
+                    </div>
+                    <div class="w-full mx-w-142 text-center item">
+                        <div class="px-5 h-40">
+                            <img class="w-full h-full" src="images/hand-picked-plant-updated.png" alt="plant" />
+                        </div>
+                        <h6 class="text-sm font-bold leading-5 text-black mt-7 mb-2">Solidago</h6>
+                        <p class="text-sm font-normal leading-5 text-black -mt-1">Lorem ipsum dolor</p>
+                    </div>
+                    <div class="w-full mx-w-142 text-center item">
+                        <div class="px-5 h-40">
+                            <img class="w-full h-full" src="images/hand-picked-plant-updated.png" alt="plant" />
+                        </div>
+                        <h6 class="text-sm font-bold leading-5 text-black mt-7 mb-2">Solidago</h6>
+                        <p class="text-sm font-normal leading-5 text-black -mt-1">Lorem ipsum dolor</p>
+                    </div>
+                    <div class="w-full mx-w-142 text-center item">
+                        <div class="px-5 h-40">
+                            <img class="w-full h-full" src="images/hand-picked-plant-updated.png" alt="plant" />
+                        </div>
+                        <h6 class="text-sm font-bold leading-5 text-black mt-7 mb-2">Solidago</h6>
+                        <p class="text-sm font-normal leading-5 text-black -mt-1">Lorem ipsum dolor</p>
+                    </div>
+                    <div class="w-full mx-w-142 text-center item">
+                        <div class="px-5 h-40">
+                            <img class="w-full h-full" src="images/hand-picked-plant-updated.png" alt="plant" />
+                        </div>
+                        <h6 class="text-sm font-bold leading-5 text-black mt-7 mb-2">Solidago</h6>
+                        <p class="text-sm font-normal leading-5 text-black -mt-1">Lorem ipsum dolor</p>
+                    </div>
+                    <div class="w-full mx-w-142 text-center item">
+                        <div class="px-5 h-40">
+                            <img class="w-full h-full" src="images/hand-picked-plant-updated.png" alt="plant" />
+                        </div>
+                        <h6 class="text-sm font-bold leading-5 text-black mt-7 mb-2">Solidago</h6>
+                        <p class="text-sm font-normal leading-5 text-black -mt-1">Lorem ipsum dolor</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Ingredient Section Ends -->
+
+
+
+        <!-- Review Section Starts -->
+        <section class="bg-white font-poppins">
+            <div class="pg-container mx-auto w-full px-6 md:pt-16 pt-10">
+                <div class="border-b border-opacity md:pb-20 pb-10">
+                    <h2 class="text-2xl font-semibold leading-9 textColor-2 mt-0.5 md:mb-10 mb-7">Reviews</h2>
+                    <div class="flex sm:border-b border-opacity pb-5 mb-8">
+                        <div class="flex">
+                            <div class="sm:w-16 w-8 sm:h-16 h-8 rounded-full">
+                                <img class="w-full h-full rounded-full" src="images/profile-photo.jpg" alt="profile" />
+                            </div>
+                            <div class="sm:ml-5 md:ml-3 ml-2 sm:w-48 w-64 md:pt-1.5">
+                                <div class="mb-2.5">
+                                    <img src="images/rating-star.png" alt="Rating" />
+                                </div>
+                                <p class="sm:hidden fs-13 font-normal leading-5 text-black">So thankful for the fast delivery, beautiful quality of flowers.</p>
+                                <p class="text-sm font-semibold leading-5 text-black">Louise, 23 August 2021</p>
+                            </div>
+                        </div>
+                        <p class="fs-13 sm:block hidden font-normal leading-5 text-black md:pl-16 lg:pr-28">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et gravida neque. In lobortis nisi finibus, euismod odio ac, sollicitudin ante. Suspendisse dui risus, mollis a sem non</p>
+                    </div>
+                    <div class="flex sm:border-b border-opacity pb-5 mb-8">
+                        <div class="flex">
+                            <div class="sm:w-16 w-8 sm:h-16 h-8 rounded-full">
+                                <img class="w-full h-full rounded-full" src="images/profile-photo.jpg" alt="profile" />
+                            </div>
+                            <div class="sm:ml-5 ml-3 sm:w-48 w-64 md:pt-1.5">
+                                <div class="mb-2.5">
+                                    <img src="images/rating-star.png" alt="Rating" />
+                                </div>
+                                <p class="sm:hidden fs-13 font-normal leading-5 text-black">So thankful for the fast delivery, beautiful quality of flowers.</p>
+                                <p class="text-sm font-semibold leading-5 text-black">Louise, 23 August 2021</p>
+                            </div>
+                        </div>
+                        <p class="fs-13 sm:block hidden font-normal leading-5 text-black md:pl-16 lg:pr-28">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et gravida neque. In lobortis nisi finibus, euismod odio ac, sollicitudin ante. Suspendisse dui risus, mollis a sem non</p>
+                    </div>
+                    <div class="flex mb-10">
+                        <div class="flex">
+                            <div class="sm:w-16 w-8 sm:h-16 h-8 rounded-full">
+                                <img class="w-full h-full rounded-full" src="images/profile-photo.jpg" alt="profile" />
+                            </div>
+                            <div class="sm:ml-5 ml-3 sm:w-48 w-64 md:pt-1.5">
+                                <div class="mb-2.5">
+                                    <img src="images/rating-star.png" alt="Rating" />
+                                </div>
+                                <p class="sm:hidden fs-13 font-normal leading-5 text-black">So thankful for the fast delivery, beautiful quality of flowers.</p>
+                                <p class="text-sm font-semibold leading-5 text-black">Louise, 23 August 2021</p>
+                            </div>
+                        </div>
+                        <p class="fs-13 sm:block hidden font-normal leading-5 text-black md:pl-16 lg:pr-28">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et gravida neque. In lobortis nisi finibus, euismod odio ac, sollicitudin ante. Suspendisse dui risus, mollis a sem non</p>
+                    </div>
+                    <div class="ingredients p-9 md:block hidden">
+                        <div class="flex justify-between">
+                            <div>
+                                <h2 class="fs-22 font-semibold leading-8 textColor-2 mb-2.5">Rating review</h2>
+                                <p class="fs-13 font-normal leading-5 text-black mb-4">2500 opiniones</p>
+                                <div class="flex">
+                                    <span>
+                                        <img src="images/star-fill.png" alt="star" />
+                                    </span>
+                                    <span class="ml-3">
+                                        <img src="images/star.png" alt="star" />
+                                    </span>
+                                    <span class="ml-3">
+                                        <img src="images/star.png" alt="star" />
+                                    </span>
+                                    <span class="ml-3">
+                                        <img src="images/star.png" alt="star" />
+                                    </span>
+                                    <span class="ml-3">
+                                        <img src="images/star.png" alt="star" />
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <div class="lg:ml-12">
+                                <p class="fs-13 font-normal leading-5 text-black">Califications</p>
+                                <div>
+                                    <div class="flex mb-2.5">
+                                        <div class="flex w-20 h-2.5">
+                                            <div class="w-3">
+                                                <img src="images/star-fill.png" alt="star" />
+                                            </div>
+                                            <div class="w-3 ml-0.5">
+                                                <img src="images/star-fill.png" alt="star" />
+                                            </div>
+                                            <div class="w-3 ml-0.5">
+                                                <img src="images/star-fill.png" alt="star" />
+                                            </div>
+                                            <div class="w-3 ml-0.5">
+                                                <img src="images/star-fill.png" alt="star" />
+                                            </div>
+                                            <div class="w-3 ml-0.5">
+                                                <img src="images/star-fill.png" alt="star" />
+                                            </div>
+                                        </div>
+                                        <div class="w-60 px-1 pt-px">
+                                            <div class="w-full border progress-boder h-2.5">
+                                                <div class="w-2/5 h-full"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex mb-2.5">
+                                        <div class="flex w-20 h-2.5">
+                                            <div class="w-3">
+                                                <img src="images/star-fill.png" alt="star" />
+                                            </div>
+                                            <div class="w-3 ml-0.5">
+                                                <img src="images/star-fill.png" alt="star" />
+                                            </div>
+                                            <div class="w-3 ml-0.5">
+                                                <img src="images/star-fill.png" alt="star" />
+                                            </div>
+                                            <div class="w-3 ml-0.5">
+                                                <img src="images/star-fill.png" alt="star" />
+                                            </div>
+                                            <div class="w-3 ml-0.5">
+                                                <img src="images/star-fill.png" alt="star" />
+                                            </div>
+                                        </div>
+                                        <div class="w-60 px-1 pt-px">
+                                            <div class="w-full border progress-boder h-2.5">
+                                                <div class="w-3/4 h-full"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex mb-2.5">
+                                        <div class="flex w-20 h-2.5">
+                                            <div class="w-3">
+                                                <img src="images/star-fill.png" alt="star" />
+                                            </div>
+                                            <div class="w-3 ml-0.5">
+                                                <img src="images/star-fill.png" alt="star" />
+                                            </div>
+                                            <div class="w-3 ml-0.5">
+                                                <img src="images/star-fill.png" alt="star" />
+                                            </div>
+                                            <div class="w-3 ml-0.5">
+                                                <img src="images/star-fill.png" alt="star" />
+                                            </div>
+                                            <div class="w-3 ml-0.5">
+                                                <img src="images/star-fill.png" alt="star" />
+                                            </div>
+                                        </div>
+                                        <div class="w-60 px-1 pt-px">
+                                            <div class="w-full border progress-boder h-2.5">
+                                                <div class="w-1/6 h-full"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-56 pt-5 px-1">
+                                <a href="#leaveReview-modal" class="text-base font-semibold rounded text-white leading-7 block text-center w-full buttonBg py-3 leaveReview">Leave a review</a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="md:hidden text-center mt-2">
+                        <a href="#leaveReview-modal-mobile" class="text-xs font-semibold leading-8 border px-8 py-2 rounded buttonBorder textColor-3">Leave a review</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Review Section Ends -->
+
+
+
+        <!-- Complete your Gift Section Starts -->
+        <section class="font-poppins">
+            <div class="pg-container mx-auto w-full md:py-20 pt-7 md:pb-9 pb-7 px-6 md:border-0 border-b border-opacity">
+                <p class="textColor-2 font-semibold sm:text-2xl font-base leading-9">Complete your gift
+                    <a class="textColor-3 pl-3 fs-13 md:hidden font-normal leading-5 underline" href="#">View all</a>
+                </p>
+                <div class="flex items-center justify-between flex-wrap lg:mt-0  mt-7 lg:pt-0 pt-0.5">
+                    <div class="w-1/2 lg:w-56">
+                        <div class="medium-width image-height h-36 mx-auto lg:mt-11 mb-6">
+                            <img src="images/dark_teddy.png" class="mx-auto h-full" alt="dark brown teddy bear" />
+                        </div>
+                        <p class="font-normal not-italic text-sm leading-5 text-center text-black">William Teddy Bear</p>
+                        <p class="font-bold text-sm leading-5 text-center text-black mt-1 mb-4">$49.00</p>
+                        <div class="text-center w-28 mx-auto px-1 text-center mb-14">
+                            <a href="#addTocart" class="hidden sm:block  border-solid border-2 buttonBorder rounded not-italic font-semibold text-xs leading-8 text-center textColor-3">Add to cart</a>
+                        </div>
+                        
+                    </div>
+
+                    <div class="w-1/2 lg:w-56">
+                        <div class="medium-width image-height h-36 mx-auto lg:mt-11 mb-6">
+                            <img src="images/balloons.png" class="mx-auto h-full " alt="dark brown teddy bear" />
+                        </div>
+                        <p class="font-normal not-italic text-sm leading-5 text-center text-black">10 Balloons</p>
+                        <p class="font-bold text-sm leading-5 text-center text-black mt-1 mb-4">$49.00</p>
+                        <div class="text-center w-28 mx-auto px-1 text-center mb-14">
+                            <a href="#addTocart" class="hidden sm:block  border-solid border-2 buttonBorder rounded not-italic font-semibold text-xs leading-8 text-center textColor-3">Add to cart</a>
+                        </div>
+                    </div>
+
+                    <div class="w-1/2 lg:w-56">    
+                        <div class="medium-width image-height h-36 mx-auto lg:mt-11 mb-6">
+                            <img src="images/wine.png" class="mx-auto h-full" alt="dark brown teddy bear" />
+                        </div>
+                        <p class="font-normal not-italic text-sm leading-5 text-center text-black">Bottle of Wine</p>
+                        <p class="font-bold text-sm leading-5 text-center text-black mt-1 mb-4">$49.00</p>
+                        <div class="text-center w-28 mx-auto px-1 text-center mb-14">
+                            <a href="#addTocart" class="hidden sm:block  border-solid border-2 buttonBorder rounded not-italic font-semibold text-xs leading-8 text-center textColor-3">Add to cart</a>
+                        </div>
+                    </div>
+
+                    <div class="w-1/2 lg:w-56">
+                        <div class="medium-width image-height h-36 mx-auto lg:mt-11 mb-6">
+                            <img src="images/light_teddy.png" class="mx-auto h-full" alt="dark brown teddy bear" />
+                        </div>
+                        <p class="font-normal not-italic text-sm leading-5 text-center text-black">William Teddy Bear</p>
+                        <p class="font-bold text-sm leading-5 text-center text-black mt-1 mb-4">$49.00</p>
+                        <div class="text-center w-28 mx-auto px-1 text-center mb-14">
+                            <a href="#addTocart" class="hidden sm:block  border-solid border-2 buttonBorder rounded not-italic font-semibold text-xs leading-8 text-center textColor-3">Add to cart</a>
+                        </div>
+                    </div>                    
+                </div> 
+                <div class="md:w-52 text-center w-28 mx-auto px-1 text-center">
+                    <a href="#viewAll-gifts" class="text-xs font-semibold leading-8 border block rounded buttonBorder textColor-3">View all</a>
+                </div>
+            </div>
+        </section>
+        <!-- Complete your Gift Section Ends -->
+
+
+
+        <!-- Social Media Section Starts -->
+        <section>
+            <div class="pg-container mx-auto w-full px-6 md:pb-20 pb-10 font-poppins">
+                <div class="flex justify-between">
+                    <div>
+                        <p class="text-base font-semibold leading-6 text-black mb-1 md:mt-0 mt-7">Follow us @flowersacrossmelb</p>
+                        <p class="fs-13 font-normal leading-5 text-black">Get your daily dose of flower beauty <a class="textColor-3" href="#">@flowersacrossmelb</a></p>
+                    </div>
+                    <div class="sm:block hidden w-52 pl-2.5">
+                        <a href="#" class="border-2 rounded w-full py-0.5 buttonBorder text-xs font-semibold leading-7 textColor-3 inline-block text-center">Follow us</a>
+                    </div>
+                </div>
+                <div class="overflow-x-auto lg:overflow-hidden">
+                    <div class="flex sm:justify-between items-center md:mt-9 mt-4 followUs">
+                        <div class="sm:w-60 w-40 sm:h-60 h-40 sm:mr-1 sm:pr-0 pr-2">
+                            <img src="images/followus_img.png" alt="flowers" />
+                        </div>
+                        <div class="sm:w-60 w-40 sm:h-60 h-40 sm:mr-1 sm:pr-0 pr-2">
+                            <img src="images/follow-us1.png" alt="flowers" />
+                        </div>
+                        <div class="sm:w-60 w-40 sm:h-60 h-40 sm:mr-1 sm:pr-0 pr-2">
+                            <img src="images/follow-us2.png" alt="flowers" />
+                        </div>
+                        <div class="sm:w-60 w-40 sm:h-60 h-40 sm:mr-1 sm:pr-0 pr-2">
+                            <img src="images/follow-us3.png" alt="flowers" />
+                        </div>
+                        <div class="sm:w-60 w-40 sm:h-60 h-40 sm:pr-0 pr-2">
+                            <img src="images/follow-us4.png" alt="flowers" />
+                        </div>
+                    </div>
+                </div>
+                <div class="sm:hidden w-28 pr-1 mt-5">
+                    <button class="border w-full py-0.5 buttonBorder text-xs font-semibold leading-7 textColor-3">Follow us</button>
+                </div>
+            </div>
+        </section>  
+        <!-- Social Media Section Ends -->
+
+
+
+        <!-- Footer Section Starts -->
+        <footer class="font-poppins">
+            <div class="pg-container mx-auto w-full pt-6 sm:pb-16 pb-12 px-6">
+                <div class="flex flex-wrap lg:justify-between justify-start">
+                    <div class="sm:w-72 w-full sm:mr-4 sm:mb-4 mb-12">
+                        <div class="footer_create-bg flex justify-end items-end px-4 py-3">
+                            <button class="buttonBg text-white w-36 h-8 rounded text-xs font-semibold leading-8">Create a Bouquet</button>
+                        </div>
+                        <p class="text-sm font-normal leading-5 textColor-4 mt-6">Need flowers sent to Sydney?</p>
+                        <p><a class="text-sm font-normal leading-5 textColor-3" href="#">www.flowersacrosssydney.com.au</a></p>
+
+                        <p class="text-sm font-normal leading-5 textColor-4 mt-4">Send dried flowers throughout Australia</p>
+                        <p><a class="text-sm font-normal leading-5 textColor-3" href="#">flowersacrossaustralia.com.au</a></p>
+                    </div>
+                    <div class="sm:w-40 w-full sm:mb-4 mb-5 font-poppins">
+                        <h3 class="text-xs font-bold leading-5 flex justify-between items-center sm:border-0 border-b sm:pb-0 pb-5 sm:px-0 px-5 textColor-4 border-2c596b hidden sm:inline-block">Quick Links
+                            <span class="sm:hidden">
+                                <img src="images/footer-dropdown.png" />
+                            </span>
+                        </h3>
+
+                        <input id="quick-links" type="checkbox" name="quick-links" class="hidden input-hidden" />
+                        <label for="quick-links" class="text-xs font-bold leading-5 flex justify-between items-center sm:border-0 border-b sm:pb-0 pb-4 sm:px-0 px-4 textColor-4 border-2c596b sm:hidden" onclick="quickLinks()">Quick Links 
+                            <span class="sm:hidden">
+                                <img src="images/footer-dropdown.png" alt="dropdown" class="footer-arrow" id="quickLinks" />
+                            </span>
+                        </label>
+                        <ul class="list-none pl-4 sm:pl-0 pt-2 mb-0 submenu max-h-0 sm:max-h-fit overflow-hidden sm:overflow-visible">
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Home</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">FAQ</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Create-A-Bouquet</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Daily Flowers</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Flower Delivery</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Flower Subscriptions</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Pet Friendly Flowers</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Pickup Options</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Track Your Order</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sm:w-40 w-full lg:ml-4 sm:mb-4 mb-5 font-poppins">
+                        <h3 class="text-xs font-bold leading-5 flex justify-between items-center sm:border-0 border-b sm:pb-0 pb-5 sm:px-0 px-5 textColor-4 border-2c596b hidden sm:inline-block">More Links
+                            <span class="sm:hidden">
+                                <img src="images/footer-dropdown.png" />
+                            </span>
+                        </h3>
+
+                        <input id="more-links1" type="checkbox" name="more-links1" class="hidden input-hidden" />
+                        <label for="more-links1" class="text-xs font-bold leading-5 flex justify-between items-center sm:border-0 border-b sm:pb-0 pb-4 sm:px-0 px-4 textColor-4 border-2c596b block sm:hidden" onclick="moreLinks()">More Links 
+                            <span class="sm:hidden">
+                                <img src="images/footer-dropdown.png" alt="dropdown" class="footer-arrow" id="moreLinks" />
+                            </span>
+                        </label>
+                        <ul class="list-none pl-4 sm:pl-0 pt-2 mb-0 submenu max-h-0 sm:max-h-fit overflow-hidden sm:overflow-visible">
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Hospital Deliveries</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Customer Reviews</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Why Shop With Us?</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Givr</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Charity Givr</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Afterpay</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Zip Pay</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Florists Blog</a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">Site Map</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sm:w-40 w-full lg:ml-4 sm:mb-4 mb-5 font-poppins">
+                        <h3 class="text-xs font-bold leading-5 flex justify-between items-center sm:border-0 border-b sm:pb-0 pb-5 sm:px-0 px-5 textColor-4 border-2c596b hidden sm:inline-block">More Links
+                            <span class="sm:hidden">
+                                <img src="images/footer-dropdown.png" />
+                            </span>
+                        </h3>
+
+                        <input id="view-full-detail-new" type="checkbox" name="view-full-detail" class="hidden input-hidden" />
+                        <label for="view-full-detail-new" class="text-xs font-bold leading-5 flex justify-between items-center sm:border-0 border-b sm:pb-0 pb-4 sm:px-0 px-4 textColor-4 border-2c596b block sm:hidden" onclick="viewFullFooter()">View Full Details
+                            <span class="sm:hidden">
+                                <img src="images/footer-dropdown.png" alt="dropdown" class="footer-arrow" id="viewFull-details" />
+                            </span>
+                        </label>
+                        <ul class="list-none pl-4 sm:pl-0 pt-2 mb-0 submenu max-h-0 sm:max-h-fit overflow-hidden sm:overflow-visible">
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">
+                                    About Us
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">
+                                    Contact Us
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">
+                                    Privacy Policy
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">
+                                    Refunds & Returns
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-xs font-normal leading-7 textColor-4" href="#">
+                                    Terms & Conditions
+                                </a>
+                            </li>
+                        </ul>
+                        
+                        <h3 class="text-xs font-bold leading-5 sm:block hidden mt-40 textColor-4">Connect</h3>
+                        <div class="flex sm:inline-flex hidden pt-7">
+                            <div class="w-7 h-7 flex justify-center items-center rounded-full connectBg">
+                                <img src="images/instagram.png" alt="instagram" />
+                            </div>
+                            <div class="w-7 h-7 flex justify-center items-center ml-2.5 rounded-full connectBg">
+                                <img src="images/twitter.png" alt="twitter" />
+                            </div>
+                            <div class="w-7 h-7 flex justify-center items-center ml-2.5 rounded-full connectBg">
+                                <img src="images/face-book.png" alt="facebook" />
+                            </div>
+                            <div class="w-7 h-7 flex justify-center items-center ml-2.5 rounded-full connectBg">
+                                <img src="images/pintrest.png" alt="pintrest" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sm:w-40 w-full lg:ml-4 order-1 font-poppins">
+                    <h3 class="text-xs font-bold leading-6 textColor-4">Phone</h3>
+                        <p class="text-xs font-normal leading-7 textColor-4 flex">
+                            <span class="pr-2">
+                                <img src="images/footer_phone.png" alt="phone" />
+                            </span>
+                            03 9999 7997
+                        </p>
+                        <h3 class="text-xs font-bold leading-6 mt-5 textColor-4">Address</h3>
+                        <p class="text-xs font-normal leading-7 textColor-4 flex">
+                            <span class="pr-3 pt-2">
+                                <img src="images/location.svg" alt="location-icon" />
+                            </span>
+                            <span class="mt-1 sm:mt-0">45b Quinn St Preston, 3072 VIC Australia</span>
+                        </p>
+                        <h3 class="text-xs font-bold leading-5 mt-7 sm:hidden textColor-4">Connect</h3>
+                        <div class="flex sm:hidden pt-7">
+                            <div class="w-7 h-7 flex justify-center items-center rounded-full connectBg">
+                                <img src="images/instagram.png" alt="instagram" /> 
+                            </div>
+                            <div class="w-7 h-7 flex justify-center items-center ml-2.5 rounded-full connectBg">
+                                <img src="images/twitter.png" alt="twitter" />
+                            </div>
+                            <div class="w-7 h-7 flex justify-center items-center ml-2.5 rounded-full connectBg">
+                                <img src="images/face-book.png" alt="facebook" />
+                            </div>
+                            <div class="w-7 h-7 flex justify-center items-center ml-2.5 rounded-full connectBg">
+                                <img src="images/pintrest.png" alt="pintrest" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="pg-container mx-auto w-full py-8 px-6">
+                    <div class="flex sm:flex-row flex-col sm:justify-between justify-center">
+                        <p class="text-xs font-normal leading-6 text-center sm:mb-0 mb-4 textColor-4 font-poppins">Copyright Flowers Across Melbourne 2009 - 2021</p>
+                        <div class="flex justify-center">
+                            <span><img src="images/visa.png" alt="visa card" /></span>
+                            <span class="ml-5"><img src="images/master-card.png" alt="master card" /></span>
+                            <span class="ml-5"><img src="images/amex.png" alt="card" /></span>
+                            <span class="ml-5"><img src="images/paypal.png" alt="paypal" /></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer Section Ends -->
+
+
+
+        <!-- Sticky Footer Section Starts -->
+        <div class="bg-white footer-sticky mt-20 lg:py-6 pb-4 font-poppins">
+            <div class="w-full font-poppins lg:hidden">
+                <input id="view-full-detailx" type="checkbox" name="more-links1" class="hidden input-hidden" />
+                <label for="view-full-detailx">
+                    <div class="flex justify-center items-center w-full mb-2.5 cursor-pointer" onclick="rotateOrangeArrow()">
+                        <img src="images/orange-upper-arrow.png" alt="arrow" class="mt-4 oragne-icon" id="sticky-orange-arrow" />
+                    </div>
+                </label>
+                <ul class="list-none mb-0 submenu max-h-0 sm:max-h-fit overflow-hidden">
+                    <div class="lg:px-16 px-6 border-b mb-4">
+                        <div class="flex justify-between mb-3.5">
+                            <div class="flex text-xs text-black">    
+                                <div><span>1</span> x Dreamy Duet</div>
+                                <div class="font-semibold ml-6">$45</div>
+                            </div>
+                            <a href="#" class="textColor-3 text-xs">Remove</a>
+                        </div>
+
+                        <div class="flex justify-between mb-3.5">
+                            <div class="flex text-xs text-black">    
+                                <div><span>1</span> x Dreamy Duet</div>
+                                <div class="font-semibold ml-6">$45</div>
+                            </div>
+                            <a href="#" class="textColor-3 text-xs">Remove</a>
+                        </div>
+
+                        <div class="text-xs">
+                            <p class="font-normal leading-4 textColor-1 mb-2 flex">
+                                <span class="flex items-center">
+                                    <img src="images/i_image.svg">
+                                    <span class="w-16 ml-2 mr-2">
+                                        <img class="w-full" src="images/image-22.png">
+                                    </span>
+                                </span>
+                                Or 4 installments of $11.50 by
+                            </p>
+                            <p class="textColor-1 flex items-start lg:mb-0 mb-2">
+                                <span class="mr-2 mt-1">
+                                    <img src="images/truck-gray.png" alt="truck" />
+                                </span>
+                                Price includes delivery of $11.90 to Albanvale
+                            </p>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            <div class="flex md:flex-row flex-col justify-end items-center lg:px-16 px-6">
+                <div class="text-xs lg:block hidden md:border-r border-opacity lg:pr-8 md:pr-4">
+                    <p class="font-normal leading-4 textColor-1 flex md:justify-end items-start mb-2">
+                        <span class="flex items-center">
+                            <img src="images/i_image.svg">
+                            <span class="w-16 ml-2 mr-2">
+                                <img class="w-full" src="images/image-22.png">
+                            </span>
+                        </span>
+                        Or 4 installments of $11.50 by
+                    </p>
+                    <p class="textColor-1 flex items-start lg:mb-0 mb-2">
+                        <span class="mr-2 mt-1">
+                            <img src="images/truck-gray.png" alt="truck" />
+                        </span>
+                        Price includes delivery of $11.90 to<a class="textColor-3 text-xs font-normal leading-5 underline pl-1" href="#">Albanvale</a>
+                    </p>
+                </div>
+                <div class="text-xs lg:block hidden  border-r border-opacity ml-8 pr-8 text-right">
+                    <p class="text-sm font-semibold leading-5 text-black">Choose a size</p>
+                    <p class="fs-13 font-normal leading-5 text-black">Standard x 6</p>
+                </div>
+                <div class="flex lg:w-auto w-full justify-between">
+                    <div class="lg:ml-8 md:mr-10">
+                        <div class="flex items-center">
+                            <div>
+                                <div class="flex md:flex-col flex-row items-center">
+                                    <p class="text-2xl font-bold leading-9 text-black">$49.00</p>
+                                    <p class="text-sm font-bold leading-5 md:ml-0 ml-2 md:-mt-1.5 opacity-30 textColor-2">$69.00</p>
+                                </div>
+                                <p class="fs-13 font-normal leading-5 text-black block md:hidden">2 Items</p>
+                            </div>
+                            <div class="md:inline-flex hidden ml-4">
+                                <img src="images/dropdown.png" alt="dropdown">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-60 w-40 md:px-0.5 px-1.5">
+                        <button class="text-base font-bold leading-6 text-white flex justify-center rounded buttonBg py-2 md:px-8 w-full mx-w-327">
+                            <span class="mr-3"><img src="images/lock.png" alt="lock" /></span>
+                            Check out
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Sticky Footer Section Ends -->
+
+
+
+
+        <!-- All Product Modals Starts -->
+
+        <!-- Add to Cart Modal -->
+        <div id="addTocart" class="addTocart z-40 fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center">
+            <div class="max-w-xl mx-auto w-full sm:px-7 z-40">
+                <div class="bg-white rounded">
+                    <div class="sm:pt-7 sm:px-7 px-5 pt-5 font-poppins sm:block flex flex-col justify-between modal__content">
+                        <div>
+                            <div class="sm:flex justify-between relative">
+                                <div class="h-5 sm:hidden">
+                                    <a href="#/">
+                                        <img src="images/close.png" alt="close" />
+                                    </a>
+                                </div>
+                                <h2 class="fs-22 font-semibold leading-8 text-black">   1 Product Added</h2>
+                                <div class="h-5 sm:block hidden absolute -right-3 -top-2">
+                                    <a href="#/" class="text-6xl font-light block h-full w-full">
+                                        <img src="images/close.png" alt="close" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center mt-7 py-3.5 px-5 border-2 addcart-modal">
+                                <div class="w-28 sm:h-28 sm:pr-1 pr-4">
+                                    <img class="w-full" src="images/Asplenium.png" alt="plants" />
+                                </div>
+                                <div class="sm:w-auto w-3/5">
+                                    <p class="text-sm font-semibold leading-5 text-black">Asplenium 2 lines title <span class="sm:inline-block hidden">can go here</span></p>
+                                    
+                                    <div class="sm:mt-4 mt-2">
+                                        <div class="flex sm:justify-start justify-between sm:mb-5 mb-4">
+                                            <p class="flex items-center">Color:<span class="w-4 h-4 rounded-full inline-block ml-2 productColor1"></span>
+                                                <span class="w-4 h-4 ml-5 inline-block">
+                                                    <img src="images/standard.png" />
+                                                </span>
+                                            </p>
+                                            <p class="text-sm font-bold leading-5 sm:pl-9">$49.00</p>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <p>Qty:1</p>
+                                            <p class="flex items-center">
+                                                <a href="#" class="fs-13 font-normal leading-5 textColor-3">Delete</a>
+                                                <a href="#" class="fs-13 font-normal leading-5 textColor-3 pl-5">Edit</a>
+                                                <span class="pl-3"><img src="images/right-arrow.svg" /></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center sm:py-5 py-8">
+                                <p class="text-sm font-normal leading-5 text-black">6 Items in Your Bag</p>
+                                <p class="text-sm font-normal leading-5 text-black">Subtotal $133.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="addcart-modal border-b m-0">
+                    <div class="pt-5 sm:px-7 px-5 pt-8 font-poppins sm:block flex flex-col justify-between modal__content">
+                        <p class="fs-13 font-semibold leading-5 text-black sm:mb-3 mb-7">You'll also love</p>
+                        <div class="flex flex-wrap add-cart-subproducts">
+                            <div class="sm:w-1/4 w-2/6 text-center">
+                                <div class="w-full">
+                                    <div class="w-16 h-16 pb-1.5 mx-auto">
+                                        <img class="h-full mx-auto" src="images/dark_teddy.png" alt="dark_teddy" />
+                                    </div>
+                                    <p class="text-sm font-normal leading-5 text-black h-10 mt-2.5">William Teddy Bear</p>
+                                    <p class="font-bold text-xs leading-5 text-center text-black mt-1 mb-4">$49.00</p>
+                                </div>
+                            </div>
+                            <div class="sm:w-1/4 w-2/6 text-center">
+                                <div class="w-full">
+                                    <div class="w-16 h-16 pb-1.5 mx-auto">
+                                        <img class="h-full mx-auto" src="images/dark_teddy.png" alt="dark_teddy" />
+                                    </div>
+                                    <p class="text-sm font-normal leading-5 text-black h-10 mt-2.5">William Teddy Bear</p>
+                                    <p class="font-bold text-xs leading-5 text-center text-black mt-1 mb-4">$49.00</p>
+                                </div>
+                            </div>
+                            <div class="sm:w-1/4 w-2/6 text-center">
+                                <div class="w-full">
+                                    <div class="w-16 h-16 pb-1.5 mx-auto">
+                                        <img class="h-full mx-auto" src="images/dark_teddy.png" alt="dark_teddy" />
+                                    </div>
+                                    <p class="text-sm font-normal leading-5 text-black h-10 mt-2.5">William Teddy Bear</p>
+                                    <p class="font-bold text-xs leading-5 text-center text-black mt-1 mb-4">$49.00</p>
+                                </div>
+                            </div>
+                            <div class="sm:w-1/4 w-2/6 text-center">
+                                <div class="w-full">
+                                    <div class="w-16 h-16 pb-1.5 mx-auto">
+                                        <img class="h-full mx-auto" src="images/dark_teddy.png" alt="dark_teddy" />
+                                    </div>
+                                    <p class="text-sm font-normal leading-5 text-black h-10 mt-2.5">William Teddy Bear</p>
+                                    <p class="font-bold text-xs leading-5 text-center text-black mt-1 mb-4">$49.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex py-8 bg-white">
+                            <div class="w-6/12 sm:pr-3 pr-2.5">
+                                <button class="sm:text-base xs-fs-13 w-full border rounded text-black font-semibold leading-7 py-2.5 textColor-3 buttonBorder">Continue shopping</button>
+                            </div>
+                            <div class="w-6/12 sm:pl-3 pl-2.5">
+                                <button class="sm:text-base xs-fs-13 w-full border rounded text-black font-semibold leading-7 py-2.5 text-white buttonBg">Checkout</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#/" class="fixed top-0 bottom-0 left-0 right-0 opacity-0 block z-20 cursor-pointer closeoverlay"></a>
+        </div>
+        <!-- Add to Cart Modal -->
+
+
+        <!-- View All Gifts Modal -->
+        <div id="viewAll-gifts" class="viewAll-gifts z-20 fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center">
+            <div class="md:max-w-3xl max-w-xl mx-auto w-full z-20 sm:px-6">
+                <div class="bg-white p-7 rounded h-auto font-poppins modal__content">
+                    <div>
+                        <div class="sm:flex justify-between sm:flex-row-reverse">
+                            <div class="h-4 w-4">
+                                <a href="#/" class="text-6xl font-light block h-full w-full">
+                                    <img src="images/close.png" alt="close" />
+                                </a>
+                            </div>
+                            <h2 class="fs-22 font-semibold leading-8 text-black mt-0 sm:mt-8 mb-2 sm:mb-0">Add Some Special Extras</h2>
+                        </div>
+                        <p class="text-sm font-normal leading-5 text-black mt-3">Cuddly bears, Delicious chocolate, Decadent wines & more...</p>
+                    </div>
+                    <div class="product-height over-scroll">
+                        <div class="flex flex-wrap mt-5">
+                            <div class="md:w-1/4 w-2/4 text-center">
+                                <div class="w-full">
+                                    <div class="w-28 h-36 pb-1.5 mx-auto">
+                                        <img class="h-full mx-auto" src="images/dark_teddy.png" alt="dark_teddy" />
+                                    </div>
+                                    <p class="text-sm font-semibold leading-5 text-black h-16 mt-2.5">Teddy Bear</p>
+                                    <div class="text-center w-28 mx-auto px-1 mt-4 text-center mb-7">
+                                        <a href="#view-Product" class="block border-solid border-2 buttonBorder rounded not-italic font-semibold text-xs leading-8 text-center textColor-3">Choose</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:w-1/4 w-2/4 text-center">
+                                <div class="w-full">
+                                    <div class="w-28 h-36 pb-1.5 mx-auto">
+                                        <img class="h-full mx-auto" src="images/wine.png" alt="wine" />
+                                    </div>
+                                    <p class="text-sm font-semibold leading-5 text-black h-16 mt-2.5">Wine, Champagne & Alcohol</p>
+                                    <div class="text-center w-28 mx-auto px-1 mt-4 text-center mb-7">
+                                        <a href="#view-Product" class="block border-solid border-2 buttonBorder rounded not-italic font-semibold text-xs leading-8 text-center textColor-3">Choose</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:w-1/4 w-2/4 text-center">
+                                <div class="w-full">
+                                    <div class="w-28 h-36 pb-1.5 mx-auto">
+                                        <img class="h-full mx-auto" src="images/balloons.png" alt="Balloons" />
+                                    </div>
+                                    <p class="text-sm font-semibold leading-5 text-black h-16 mt-2.5">Balloons</p>
+                                    <div class="text-center w-28 mx-auto px-1 mt-4 text-center mb-7">
+                                        <a href="#view-Product" class="block border-solid border-2 buttonBorder rounded not-italic font-semibold text-xs leading-8 text-center textColor-3">Choose</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:w-1/4 w-2/4 text-center">
+                                <div class="w-full">
+                                    <div class="w-28 h-36 pb-1.5 mx-auto">
+                                        <img class="h-full mx-auto" src="images/light_teddy.png" alt="dark_teddy" />
+                                    </div>
+                                    <p class="text-sm font-semibold leading-5 text-black h-16 mt-2.5">William Teddy Bear</p>
+                                    <div class="text-center w-28 mx-auto px-1 mt-4 text-center mb-7">
+                                        <a href="#view-Product" class="block border-solid border-2 buttonBorder rounded not-italic font-semibold text-xs leading-8 text-center textColor-3">Choose</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:w-1/4 w-2/4 text-center">
+                                <div class="w-full">
+                                    <div class="w-28 h-36 pb-1.5 mx-auto">
+                                        <img class="h-full mx-auto" src="images/dark_teddy.png" alt="dark_teddy" />
+                                    </div>
+                                    <p class="text-sm font-semibold leading-5 text-black h-16 mt-2.5">William Teddy Bear</p>
+                                    <div class="text-center w-28 mx-auto px-1 mt-4 text-center mb-7">
+                                        <a href="#view-Product" class="block border-solid border-2 buttonBorder rounded not-italic font-semibold text-xs leading-8 text-center textColor-3">Choose</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:w-1/4 w-2/4 text-center">
+                                <div class="w-full">
+                                    <div class="w-28 h-36 pb-1.5 mx-auto">
+                                        <img class="h-full mx-auto" src="images/light_teddy.png" alt="dark_teddy" />
+                                    </div>
+                                    <p class="text-sm font-semibold leading-5 text-black h-16 mt-2.5">William Teddy Bear</p>
+                                    <div class="text-center w-28 mx-auto px-1 mt-4 text-center mb-7">
+                                        <a href="#view-Product" class="block border-solid border-2 buttonBorder rounded not-italic font-semibold text-xs leading-8 text-center textColor-3">Choose</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:w-1/4 w-2/4 text-center">
+                                <div class="w-full">
+                                    <div class="w-28 h-36 pb-1.5 mx-auto">
+                                        <img class="h-full mx-auto" src="images/dark_teddy.png" alt="dark_teddy" />
+                                    </div>
+                                    <p class="text-sm font-semibold leading-5 text-black h-16 mt-2.5">William Teddy Bear</p>
+                                    <div class="text-center w-28 mx-auto px-1 mt-4 text-center mb-7">
+                                        <a href="#view-Product" class="block border-solid border-2 buttonBorder rounded not-italic font-semibold text-xs leading-8 text-center textColor-3">Choose</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:w-1/4 w-2/4 text-center">
+                                <div class="w-full">
+                                    <div class="w-28 h-36 pb-1.5 mx-auto">
+                                        <img class="h-full mx-auto" src="images/light_teddy.png" alt="dark_teddy" />
+                                    </div>
+                                    <p class="text-sm font-semibold leading-5 text-black h-16 mt-2.5">William Teddy Bear</p>
+                                    <div class="text-center w-28 mx-auto px-1 mt-4 text-center mb-7">
+                                        <a href="#view-Product" class="block border-solid border-2 buttonBorder rounded not-italic font-semibold text-xs leading-8 text-center textColor-3">Choose</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:w-1/4 w-2/4 text-center">
+                                <div class="w-full">
+                                    <div class="w-28 h-36 pb-1.5 mx-auto">
+                                        <img class="h-full mx-auto" src="images/dark_teddy.png" alt="dark_teddy" />
+                                    </div>
+                                    <p class="text-sm font-semibold leading-5 text-black h-16 mt-2.5">William Teddy Bear</p>
+                                    <div class="text-center w-28 mx-auto px-1 mt-4 text-center mb-7">
+                                        <a href="#view-Product" class="block border-solid border-2 buttonBorder rounded not-italic font-semibold text-xs leading-8 text-center textColor-3">Choose</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:w-1/4 w-2/4 text-center">
+                                <div class="w-full">
+                                    <div class="w-28 h-36 pb-1.5 mx-auto">
+                                        <img class="h-full mx-auto" src="images/light_teddy.png" alt="dark_teddy" />
+                                    </div>
+                                    <p class="text-sm font-semibold leading-5 text-black h-16 mt-2.5">William Teddy Bear</p>
+                                    <div class="text-center w-28 mx-auto px-1 mt-4 text-center mb-7">
+                                        <a href="#view-Product" class="block border-solid border-2 buttonBorder rounded not-italic font-semibold text-xs leading-8 text-center textColor-3">Choose</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-56 pl-3 mt-0.5 ml-auto pt-2">
+                        <button class="text-base font-semibold leading-6 text-white rounded buttonBg py-3.5 px-8 w-full">Done</button>
+                    </div>
+                </div>
+            </div>
+            <a href="#/" class="fixed top-0 bottom-0 left-0 right-0 opacity-0 block cursor-pointer closeoverlay"></a>
+        </div>
+        <!-- View All Gifts Modal -->
+
+
+        <!-- View Choose Details Modal -->
+        <div id="view-Product" class="view-Product z-20 fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center">
+            <div class="md:max-w-3xl max-w-xl mx-auto w-full z-20 sm:px-6">
+                <div class="bg-white p-7 rounded h-auto font-poppins modal__content">
+                    <div class="flex justify-between relative">
+                        <h2 class="fs-22 font-semibold leading-8 text-black">Teddy Bears</h2>
+                        <div class="h-4 w-4 absolute -top-2.5 -right-2.5">
+                            <a href="#viewAll-gifts" class="text-6xl font-light block h-full w-full">
+                                <img src="images/close.png" alt="close" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-height over-scroll">
+                        <div class="flex flex-wrap mt-5">
+                            <div class="md:w-1/4 w-2/4 text-center">
+                                <div class="w-full">
+                                    <div class="w-28 h-36 pb-1.5 mx-auto">
+                                        <img class="h-full mx-auto" src="images/dark_teddy.png" alt="dark_teddy" />
+                                    </div>
+                                    <p class="text-sm font-normal leading-5 text-black">William Teddy Bear</p>
+                                    <p class="text-sm font-bold leading-5 text-black">$49.00</p>
+                                    <div class="text-center w-28 mx-auto px-1 mt-4 text-center mb-7">
+                                        <a href="#addTocart" class="block border-solid border-2 buttonBorder rounded not-italic font-semibold text-xs leading-8 text-center textColor-3">Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:w-1/4 w-2/4 text-center">
+                                <div class="w-full">
+                                    <div class="w-28 h-36 pb-1.5 mx-auto">
+                                        <img class="h-full mx-auto" src="images/dark_teddy.png" alt="dark_teddy" />
+                                    </div>
+                                    <p class="text-sm font-normal leading-5 text-black">William Teddy Bear</p>
+                                    <p class="text-sm font-bold leading-5 text-black">$49.00</p>
+                                    <div class="text-center w-28 mx-auto px-1 mt-4 text-center mb-7">
+                                        <a href="#addTocart" class="block border-solid border-2 buttonBorder rounded not-italic font-semibold text-xs leading-8 text-center textColor-3">Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:w-1/4 w-2/4 text-center">
+                                <div class="w-full">
+                                    <div class="w-28 h-36 pb-1.5 mx-auto">
+                                        <img class="h-full mx-auto" src="images/dark_teddy.png" alt="dark_teddy" />
+                                    </div>
+                                    <p class="text-sm font-normal leading-5 text-black">William Teddy Bear</p>
+                                    <p class="text-sm font-bold leading-5 text-black">$49.00</p>
+                                    <div class="text-center w-28 mx-auto px-1 mt-4 text-center mb-7">
+                                        <a href="#addTocart" class="block border-solid border-2 buttonBorder rounded not-italic font-semibold text-xs leading-8 text-center textColor-3">Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:w-1/4 w-2/4 text-center">
+                                <div class="w-full">
+                                    <div class="w-28 h-36 pb-1.5 mx-auto">
+                                        <img class="h-full mx-auto" src="images/dark_teddy.png" alt="dark_teddy" />
+                                    </div>
+                                    <p class="text-sm font-normal leading-5 text-black">William Teddy Bear</p>
+                                    <p class="text-sm font-bold leading-5 text-black">$49.00</p>
+                                    <div class="text-center w-28 mx-auto px-1 mt-4 text-center mb-7">
+                                        <a href="#addTocart" class="block border-solid border-2 buttonBorder rounded not-italic font-semibold text-xs leading-8 text-center textColor-3">Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:w-1/4 w-2/4 text-center">
+                                <div class="w-full">
+                                    <div class="w-28 h-36 pb-1.5 mx-auto">
+                                        <img class="h-full mx-auto" src="images/dark_teddy.png" alt="dark_teddy" />
+                                    </div>
+                                    <p class="text-sm font-normal leading-5 text-black">William Teddy Bear</p>
+                                    <p class="text-sm font-bold leading-5 text-black">$49.00</p>
+                                    <div class="text-center w-28 mx-auto px-1 mt-4 text-center mb-7">
+                                        <a href="#addTocart" class="block border-solid border-2 buttonBorder rounded not-italic font-semibold text-xs leading-8 text-center textColor-3">Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:w-1/4 w-2/4 text-center">
+                                <div class="w-full">
+                                    <div class="w-28 h-36 pb-1.5 mx-auto">
+                                        <img class="h-full mx-auto" src="images/dark_teddy.png" alt="dark_teddy" />
+                                    </div>
+                                    <p class="text-sm font-normal leading-5 text-black">William Teddy Bear</p>
+                                    <p class="text-sm font-bold leading-5 text-black">$49.00</p>
+                                    <div class="text-center w-28 mx-auto px-1 mt-4 text-center mb-7">
+                                        <a href="#addTocart" class="block border-solid border-2 buttonBorder rounded not-italic font-semibold text-xs leading-8 text-center textColor-3">Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:w-1/4 w-2/4 text-center">
+                                <div class="w-full">
+                                    <div class="w-28 h-36 pb-1.5 mx-auto">
+                                        <img class="h-full mx-auto" src="images/dark_teddy.png" alt="dark_teddy" />
+                                    </div>
+                                    <p class="text-sm font-normal leading-5 text-black">William Teddy Bear</p>
+                                    <p class="text-sm font-bold leading-5 text-black">$49.00</p>
+                                    <div class="text-center w-28 mx-auto px-1 mt-4 text-center mb-7">
+                                        <a href="#addTocart" class="block border-solid border-2 buttonBorder rounded not-italic font-semibold text-xs leading-8 text-center textColor-3">Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:w-1/4 w-2/4 text-center">
+                                <div class="w-full">
+                                    <div class="w-28 h-36 pb-1.5 mx-auto">
+                                        <img class="h-full mx-auto" src="images/dark_teddy.png" alt="dark_teddy" />
+                                    </div>
+                                    <p class="text-sm font-normal leading-5 text-black">William Teddy Bear</p>
+                                    <p class="text-sm font-bold leading-5 text-black">$49.00</p>
+                                    <div class="text-center w-28 mx-auto px-1 mt-4 text-center mb-7">
+                                        <a href="#addTocart" class="block border-solid border-2 buttonBorder rounded not-italic font-semibold text-xs leading-8 text-center textColor-3">Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:w-1/4 w-2/4 text-center">
+                                <div class="w-full">
+                                    <div class="w-28 h-36 pb-1.5 mx-auto">
+                                        <img class="h-full mx-auto" src="images/dark_teddy.png" alt="dark_teddy" />
+                                    </div>
+                                    <p class="text-sm font-normal leading-5 text-black">William Teddy Bear</p>
+                                    <p class="text-sm font-bold leading-5 text-black">$49.00</p>
+                                    <div class="text-center w-28 mx-auto px-1 mt-4 text-center mb-7">
+                                        <a href="#addTocart" class="block border-solid border-2 buttonBorder rounded not-italic font-semibold text-xs leading-8 text-center textColor-3">Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:w-1/4 w-2/4 text-center">
+                                <div class="w-full">
+                                    <div class="w-28 h-36 pb-1.5 mx-auto">
+                                        <img class="h-full mx-auto" src="images/dark_teddy.png" alt="dark_teddy" />
+                                    </div>
+                                    <p class="text-sm font-normal leading-5 text-black">William Teddy Bear</p>
+                                    <p class="text-sm font-bold leading-5 text-black">$49.00</p>
+                                    <div class="text-center w-28 mx-auto px-1 mt-4 text-center mb-7">
+                                        <a href="#addTocart" class="block border-solid border-2 buttonBorder rounded not-italic font-semibold text-xs leading-8 text-center textColor-3">Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-56 pl-3 mt-0.5 ml-auto">
+                        <button class="text-base font-semibold leading-6 text-white rounded buttonBg py-3.5 px-8 w-full">Done</button>
+                    </div>
+                </div>
+            </div>
+            <a href="#/" class="fixed top-0 bottom-0 left-0 right-0 opacity-0 block cursor-pointer closeoverlay"></a>
+        </div>
+        <!-- View Choose Details Modal -->
+
+
+        <!-- Desktop Leave Review Modal -->
+        <div id="leaveReview-modal" class="leaveReview_modal z-40 fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center">
+            <div class="max-w-xl mx-auto w-full sm:px-6 sm:-mt-28 z-40">
+                <div class="bg-white rounded sm:p-10 p-6 sm:h-auto h-screen font-poppins sm:block flex flex-col justify-between modal__content">
+                    <div>
+                        <div class="sm:flex justify-between relative">
+                            <h2 class="fs-22 font-semibold leading-6 text-black">Leave a Review</h2>
+                            <div class="h-5 sm:block hidden absolute -right-5 -top-5">
+                                <a href="#/" class="text-6xl font-light block h-full w-full">
+                                    <img src="images/close.png" alt="close" />
+                                </a>
+                            </div>
+                        </div>
+                        <form class="mt-6" action="#" method="post">
+                            <div class="flex flex-col">
+                                <label class="fs-13 font-normal leading-4 text-black mb-2">Name</label>
+                                <input class="border rounded px-2.5 py-2.5 input-borderColor" type="name" name="fname" />
+                            </div>
+                            <div class="flex flex-col mt-7 pt-0.5">
+                                <label class="fs-13 font-normal leading-4 text-black mb-4">Rating review</label>
+                                <div class="flex">
+                                    <div class="w-8 h-8 px-px">
+                                        <img class="w-full" src="images/star-fill.png" alt="star" />
+                                    </div>
+                                    <div class="w-8 h-8 px-px ml-3">
+                                        <img class="w-full" src="images/star.png" alt="star" />
+                                    </div>
+                                    <div class="w-8 h-8 px-px ml-3">
+                                        <img class="w-full" src="images/star.png" alt="star" />
+                                    </div>
+                                    <div class="w-8 h-8 px-px ml-3">
+                                        <img class="w-full" src="images/star.png" alt="star" />
+                                    </div>
+                                    <div class="w-8 h-8 px-px ml-3">
+                                        <img class="w-full" src="images/star.png" alt="star" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col mt-7 pt-0.5">
+                                <label class="fs-13 font-normal leading-4 text-black mb-2">Leave a comment</label>
+                                <input class="border rounded px-2.5 py-2.5 input-borderColor" type="name" name="fname" />
+                            </div>
+
+                            <div class="text-right pt-10">
+                                <button class="mx-w-327 rounded w-full buttonBg py-3 text-white text-base font-semibold leading-7" type="submit">Publish review</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <a href="#/" class="fixed top-0 bottom-0 left-0 right-0 opacity-0 block z-20 cursor-pointer closeoverlay"></a>
+        </div>
+        <!-- Desktop Leave Review Modal -->
+
+
+        <!-- Mobile Leave Review Modal -->
+        <div id="leaveReview-modal-mobile" class="leaveReview_modal-mobile z-40 fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center">
+            <div class="max-w-xl mx-auto w-full sm:px-6 -mt-2.5 z-40">
+                <div class="bg-white sm:p-10 p-6 sm:h-auto h-screen font-poppins sm:block flex flex-col justify-between modal__content">
+                    <div>
+                        <div class="relative">
+                            <div class="w-8 h-4.5 mb-7 pb-0.5 md:hidden">
+                                <a href="#/">
+                                    <img src="images/back-arrow.png" alt="back-arrow" />
+                                </a>
+                            </div>
+                            <h2 class="fs-22 font-semibold leading-6 text-black">Leave a Review</h2>
+                        </div>
+                        <form class="mt-6" action="#" method="post">
+                            <div class="flex flex-col">
+                                <label class="fs-13 font-normal leading-4 text-black mb-2">Name</label>
+                                <input class="border rounded px-2.5 py-2.5 input-borderColor" type="name" name="fname" />
+                            </div>
+                            <div class="flex flex-col mt-7 pt-0.5">
+                                <label class="fs-13 font-normal leading-4 text-black mb-4">Rating review</label>
+                                <div class="flex">
+                                    <div class="w-8 h-8 px-px">
+                                        <img class="w-full" src="images/star-fill.png" alt="star" />
+                                    </div>
+                                    <div class="w-8 h-8 px-px ml-3">
+                                        <img class="w-full" src="images/star.png" alt="star" />
+                                    </div>
+                                    <div class="w-8 h-8 px-px ml-3">
+                                        <img class="w-full" src="images/star.png" alt="star" />
+                                    </div>
+                                    <div class="w-8 h-8 px-px ml-3">
+                                        <img class="w-full" src="images/star.png" alt="star" />
+                                    </div>
+                                    <div class="w-8 h-8 px-px ml-3">
+                                        <img class="w-full" src="images/star.png" alt="star" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col mt-7 pt-0.5">
+                                <label class="fs-13 font-normal leading-4 text-black mb-2">Leave a comment</label>
+                                <input class="border rounded px-2.5 py-2.5 input-borderColor" type="name" name="fname" />
+                            </div>
+
+                            <div class="text-right pt-10">
+                                <button class="mx-w-327 rounded w-full buttonBg py-3 text-white text-base font-semibold leading-7" type="submit">Publish review</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <a href="#/" class="fixed top-0 bottom-0 left-0 right-0 opacity-0 block z-20 cursor-pointer closeoverlay"></a>
+        </div>
+        <!-- Mobile Leave Review Modal -->
+
+        <!-- All Product Modals End -->
+    </div>
+
+    
+    <!-- Scripts Used -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.js"></script>
+    <script type="text/javascript">
+        var open = document.getElementById('open-button');
+        var overlay = document.getElementsByClassName('wrapper-overlay')[0];
+        var close = document.getElementsByClassName('close-button')[0];
+        var menu = document.getElementById('menu');
+
+        open.addEventListener('click', () => {
+            menu.classList.add('open'),
+            overlay.classList.add('open')
+        })
+
+        close.addEventListener('click', () => {
+            menu.classList.remove('open'),
+            overlay.classList.remove('open')
+        })
+
+        overlay.addEventListener('click', () => {
+            overlay.classList.remove('open'),
+            menu.classList.remove('open')
+        })
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            var owl = $('.product-slider');
+            owl.owlCarousel({
+                margin: 10,
+                nav: true,
+                loop: true,
+                items: 1,
+                dots: true
+                })
+        })
+
+
+        $(document).ready(function() {
+            var owl = $('.hand-picked-slider');
+            owl.owlCarousel({
+                margin: 10,
+                nav: true,
+                loop: true,
+                dots: true,
+                responsive:{
+                    0:{
+                        items:2
+                    },
+                    600:{
+                        items:3
+                    },
+                    1000:{
+                        items:5
+                    }
+                }
+            })
+        })
+    </script>
+
+    <script type="text/javascript">
+         $(document).scroll(function() {
+            if($(window).scrollTop() < 850){
+                $(".footer-sticky").css("display","none");
+            }
+            else if(($(window).scrollTop() > 850) && ($(window).scrollTop() < 3250)){
+                $(".footer-sticky").css("position","fixed");
+                $(".footer-sticky").css("width","100%");
+                $(".footer-sticky").css("bottom","0");
+                $(".footer-sticky").css("z-index","999");
+                $(".footer-sticky").css("display","block"); 
+            }
+            else if($(window).scrollTop() > 3250){
+                $(".footer-sticky").css("display","none");
+            }
+        });
+    </script>
+
+    <script>
+        window.onscroll = function() {stickyHeader()};
+
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+
+        var productBody = document.getElementById("body-content");
+        var productBodySticky = productBody.offsetTop;
+
+        function stickyHeader() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+                productBody.classList.add("product-content");
+            } 
+            else {
+                header.classList.remove("sticky");
+                productBody.classList.remove("product-content");
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+        function rotateOrangeArrow() {
+            var orangeArrow = document.getElementById("sticky-orange-arrow");
+            orangeArrow.classList.toggle("rotate");
+        }
+
+        function viewDetailsRotate() {
+            var orangeArrow = document.getElementById("orange-arrow");
+            orangeArrow.classList.toggle("rotate");
+        }
+
+        function viewMobDetailsRotate() {
+            var orangeArrow = document.getElementById("view-detail-mob");
+            orangeArrow.classList.toggle("rotate");
+        }
+
+        function faqMobRotate() {
+            var orangeArrow = document.getElementById("faq-last");
+            orangeArrow.classList.toggle("rotate");
+        }
+
+        function faqRotate() {
+            var orangeArrow = document.getElementById("faq");
+            orangeArrow.classList.toggle("rotate");
+        }
+
+        function quickLinks() {
+            var orangeArrow = document.getElementById("quickLinks");
+            orangeArrow.classList.toggle("rotate");
+        }
+
+        function moreLinks() {
+            var orangeArrow = document.getElementById("moreLinks");
+            orangeArrow.classList.toggle("rotate");
+        }
+
+        function viewFullFooter() {
+            var orangeArrow = document.getElementById("viewFull-details");
+            orangeArrow.classList.toggle("rotate");
+        }
+
+        function homeArrow() {
+            var orangeArrow = document.getElementById("home-arrow");
+            orangeArrow.classList.toggle("rotate");
+        }
+
+        function flowerArrow() {
+            var orangeArrow = document.getElementById("flower-arrow");
+            orangeArrow.classList.toggle("rotate");
+        }
+
+        function plantArrow() {
+            var orangeArrow = document.getElementById("plant-arrow");
+            orangeArrow.classList.toggle("rotate");
+        }
+
+        function giftArrow() {
+            var orangeArrow = document.getElementById("gift-arrow");
+            orangeArrow.classList.toggle("rotate");
+        }
+
+    </script>
+  </body>
+</html>
